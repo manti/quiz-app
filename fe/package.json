@@ -43,9 +43,6 @@
     "react-addons-test-utils": "^0.14.7",
     "webpack": "^1.12.13"
   },
-  "directories": {
-    "test": "test"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/manti/quiz-app.git"
