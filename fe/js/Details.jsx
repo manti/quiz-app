@@ -2,6 +2,7 @@ const React = require('react')
 const Header = require('./Header')
 const axios = require('axios')
 const { connector } = require('./Store')
+const TestPaper = require('./TestPaper')
 
 class Details extends React.Component {
   constructor (props) {
@@ -37,6 +38,7 @@ class Details extends React.Component {
           <h1 className='video-title'>{title}</h1>
           {rating}
         </div>
+        <TestPaper />
       </div>
     )
   }
