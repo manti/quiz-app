@@ -1,0 +1,190 @@
+{
+  "sections": [
+    {
+      "section": "1",
+      "duration": "20mins",
+      "title": "Aptitude & mathematics",
+      "questions": [
+        {
+          "id": 1,
+          "type": "mcq",
+          "question": "Chord makes an angle of 60",
+          "image-url": "https://i.redd.it/5r88ygnf6v1y.jpg",
+          "options": [
+            {
+              "A": "Quantity A is greater",
+              "B": "Quantity B is greater",
+              "C": "Two quantities are equal",
+              "D": "Relationship cannot be determined"
+            }
+          ],
+          "answer": "A"
+        },
+        {
+          "id": 2,
+          "type": "passage",
+          "passage": "100 people have been surveyed on Four Tests Providing Companies. The survey has been performed using four judging parameters. Average of the ratings given by the people on the Companies are provided below:",
+          "image-url": "http://i.imgur.com/mCL3Ksi.jpg",
+          "questions": [
+            {
+              "id": 1,
+              "type": "mcq",
+              "question": "Chord makes an angle of 60",
+              "image-url": "https://i.redd.it/5r88ygnf6v1y.jpg",
+              "options": [
+                {
+                  "A": "Quantity A is greater",
+                  "B": "Quantity B is greater",
+                  "C": "Two quantities are equal",
+                  "D": "Relationship cannot be determined"
+                }
+              ],
+              "answer": "A"
+            },
+            {
+              "id": 2,
+              "type": "mcq",
+              "question": "Chord makes an angle of 60",
+              "image-url": "https://i.redd.it/5r88ygnf6v1y.jpg",
+              "options": [
+                {
+                  "A": "Quantity A is greater",
+                  "B": "Quantity B is greater",
+                  "C": "Two quantities are equal",
+                  "D": "Relationship cannot be determined"
+                }
+              ],
+              "answer": "A"
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "type": "blank",
+          "question": "A code of six digit number have to be generated. The code should be divisible by both 4 and as well 10. Then the possible number of codes is:",
+          "image-url": "https://i.redd.it/5r88ygnf6v1y.jpg",
+          "answer": "300"
+        },
+        {
+          "id": 4,
+          "type": "multi-answer",
+          "question": "(x, y) = (2, 1) satisfies the equation 2x+by+c=0. Given 0≤b≤3, then what values can ‘c’ take? Indicate all such apply:",
+          "image-url": "https://i.redd.it/5r88ygnf6v1y.jpg",
+          "options": [
+            {
+              "1": "-7",
+              "2": "-6",
+              "3": "-4",
+              "4": "0",
+              "5": "4",
+              "6": "7"
+            }
+          ],
+          "answer": [
+            2,
+            5,
+            6
+          ]
+        },
+        {
+          "id": 5,
+          "type": "fraction",
+          "question": "What fraction of internet users in 2012 from country C are the internet users in 2000 from country A",
+          "image-url": "https://i.redd.it/5r88ygnf6v1y.jpg",
+          "answer": "[25,183]"
+        },
+        {
+          "id": 6,
+          "type": "1-blank",
+          "question": "What fraction of internet users in 2012 from country C are the internet users in 2000 from country A",
+          "image-url": "https://i.redd.it/5r88ygnf6v1y.jpg",
+          "options": [
+            {
+              "blank-1": {
+                "1": "unpalatable",
+                "2": "Productive",
+                "3": "Destructive",
+                "4": "Fervid",
+                "5": "Creative"
+              }
+            }
+          ],
+          "answer": "[3]"
+        },
+        {
+          "id": 7,
+          "type": "2-blank",
+          "question": "What fraction of internet users in 2012 from country C are the internet users in 2000 from country A",
+          "image-url": "https://i.redd.it/5r88ygnf6v1y.jpg",
+          "options": [
+            {
+              "blank-1": {
+                "1": "unpalatable",
+                "2": "Productive",
+                "3": "Destructive",
+                "4": "Fervid",
+                "5": "Creative"
+              },
+              "blank-2": {
+                "1": "unpalatable",
+                "2": "Productive",
+                "3": "Destructive",
+                "4": "Fervid",
+                "5": "Creative"
+              }
+            }
+          ],
+          "answer": "[3, 5]"
+        },
+        {
+          "id": 8,
+          "type": "3-blank",
+          "question": "What fraction of internet users in 2012 from country C are the internet users in 2000 from country A",
+          "image-url": "https://i.redd.it/5r88ygnf6v1y.jpg",
+          "options": [
+            {
+              "blank-1": {
+                "1": "unpalatable",
+                "2": "Productive",
+                "3": "Destructive",
+                "4": "Fervid",
+                "5": "Creative"
+              },
+              "blank-2": {
+                "1": "unpalatable",
+                "2": "Productive",
+                "3": "Destructive",
+                "4": "Fervid",
+                "5": "Creative"
+              },
+              "blank-3": {
+                "1": "unpalatable",
+                "2": "Productive",
+                "3": "Destructive",
+                "4": "Fervid",
+                "5": "Creative"
+              }
+            }
+          ],
+          "answer": "[3,1,2]"
+        },
+        {
+          "id": 9,
+          "type": "multi-blank",
+          "question": "What fraction of internet users in 2012 from country C are the internet users in 2000 from country A",
+          "image-url": "https://i.redd.it/5r88ygnf6v1y.jpg",
+          "options": [
+            {
+              "1": "unpalatable",
+              "2": "Productive",
+              "3": "Destructive",
+              "4": "Fervid",
+              "5": "Creative"
+            }
+          ],
+          "answer": "[3,2,4]"
+        }
+      ]
+    }
+  ]
+}
