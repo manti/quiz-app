@@ -13,13 +13,13 @@ const Search = React.createClass({
     return (
       <div className='container'>
         <Header showSearch />
-        <div className='shows'>
+        <ul className='list-group'>
           {this.props.shows
             .filter((show) => `${show.title} ${show.description}`.toUpperCase().indexOf(this.props.searchTerm.toUpperCase()) >= 0)
             .map((show) => (
               <ShowCard {...show} key={show.imdbID} />
           ))}
-        </div>
+        </ul>
       </div>
     )
   }

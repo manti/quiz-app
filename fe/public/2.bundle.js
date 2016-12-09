@@ -33,8 +33,8 @@ webpackJsonp([2],{
 	      { className: 'container' },
 	      React.createElement(Header, { showSearch: true }),
 	      React.createElement(
-	        'div',
-	        { className: 'shows' },
+	        'ul',
+	        { className: 'list-group' },
 	        this.props.shows.filter(function (show) {
 	          return (show.title + ' ' + show.description).toUpperCase().indexOf(_this.props.searchTerm.toUpperCase()) >= 0;
 	        }).map(function (show) {
@@ -61,32 +61,15 @@ webpackJsonp([2],{
 
 	var ShowCard = function ShowCard(props) {
 	  return React.createElement(
-	    Link,
-	    { to: '/details/' + props.imdbID },
+	    'li',
+	    { className: 'list-group-item' },
 	    React.createElement(
-	      'div',
-	      { className: 'show-card' },
-	      React.createElement('img', { src: 'public/img/posters/' + props.poster, className: 'show-card-img' }),
+	      Link,
+	      { to: '/details/' + props.imdbID },
 	      React.createElement(
-	        'div',
-	        { className: 'show-card-text' },
-	        React.createElement(
-	          'h3',
-	          { className: 'show-card-title' },
-	          props.title
-	        ),
-	        React.createElement(
-	          'h4',
-	          { className: 'show-card-year' },
-	          '(',
-	          props.year,
-	          ')'
-	        ),
-	        React.createElement(
-	          'p',
-	          { className: 'show-card-description' },
-	          props.description
-	        )
+	        'h5',
+	        { className: 'show-card-title' },
+	        props.title
 	      )
 	    )
 	  );

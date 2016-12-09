@@ -57,7 +57,7 @@ webpackJsonp([1],{
 	        React.createElement(
 	          'h1',
 	          { className: 'title' },
-	          'svideo'
+	          'Title'
 	        ),
 	        React.createElement(
 	          'form',
