@@ -53,21 +53,20 @@ webpackJsonp([1],{
 	    value: function render() {
 	      return React.createElement(
 	        'div',
-	        { className: 'home-info' },
+	        { className: 'container' },
 	        React.createElement(
-	          'h1',
-	          { className: 'title' },
-	          'Title'
-	        ),
-	        React.createElement(
-	          'form',
-	          { onSubmit: this.gotoSearch },
-	          React.createElement('input', { value: this.props.searchTerm, onChange: this.handleSearchTermEvent, className: 'search', type: 'text', placeholder: 'Search' })
-	        ),
-	        React.createElement(
-	          Link,
-	          { to: '/search', className: 'browse-all' },
-	          ' or Browse All'
+	          'div',
+	          { className: 'vertical-center' },
+	          React.createElement(
+	            'h2',
+	            null,
+	            'App title'
+	          ),
+	          React.createElement(
+	            Link,
+	            { to: '/search', className: 'browse-all btn btn-primary' },
+	            ' Login '
+	          )
 	        )
 	      );
 	    }

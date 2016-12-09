@@ -31,7 +31,7 @@ const Header = React.createClass({
           <Navbar.Header>
             <Navbar.Brand>
               <Link to='/' className='brand-link'>
-                App banner
+                App title
               </Link>
             </Navbar.Brand>
             <Navbar.Toggle />

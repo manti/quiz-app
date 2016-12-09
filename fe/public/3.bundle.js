@@ -65,7 +65,7 @@ webpackJsonp([3],Array(250).concat([
 	            React.createElement(
 	              Link,
 	              { to: '/', className: 'brand-link' },
-	              'App banner'
+	              'App title'
 	            )
 	          ),
 	          React.createElement(Navbar.Toggle, null)
