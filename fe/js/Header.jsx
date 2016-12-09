@@ -14,7 +14,7 @@ const Header = React.createClass({
   render () {
     let utilSpace
     if (this.props.showSearch) {
-      utilSpace = <input type='text' className='search-input' placeholder='search' value={this.props.searchTerm} onChange={this.handleSearchTermEvent} />
+      utilSpace = <h3>Available tests</h3>
     } else {
       utilSpace = (
         <h2 className='header-back'>
@@ -28,7 +28,7 @@ const Header = React.createClass({
       <header className='header'>
         <h1 className='brand'>
           <Link to='/' className='brand-link'>
-            svideo
+            App banner
           </Link>
         </h1>
         {utilSpace}

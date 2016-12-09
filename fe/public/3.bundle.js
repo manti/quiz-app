@@ -32,7 +32,11 @@ webpackJsonp([3],{
 	  render: function render() {
 	    var utilSpace = void 0;
 	    if (this.props.showSearch) {
-	      utilSpace = React.createElement('input', { type: 'text', className: 'search-input', placeholder: 'search', value: this.props.searchTerm, onChange: this.handleSearchTermEvent });
+	      utilSpace = React.createElement(
+	        'h3',
+	        null,
+	        'Available tests'
+	      );
 	    } else {
 	      utilSpace = React.createElement(
 	        'h2',
@@ -53,7 +57,7 @@ webpackJsonp([3],{
 	        React.createElement(
 	          Link,
 	          { to: '/', className: 'brand-link' },
-	          'svideo'
+	          'App banner'
 	        )
 	      ),
 	      utilSpace
@@ -113,7 +117,7 @@ webpackJsonp([3],{
 	  }, {
 	    key: 'assignShow',
 	    value: function assignShow(id) {
-	      var showArray = this.props.shows.filter(function (show) {
+	      var showArray = this.props.tests.filter(function (show) {
 	        return show.imdbID === id;
 	      });
 	      return showArray[0];
@@ -123,10 +127,7 @@ webpackJsonp([3],{
 	    value: function render() {
 	      var _assignShow = this.assignShow(this.props.params.id),
 	          title = _assignShow.title,
-	          description = _assignShow.description,
-	          year = _assignShow.year,
-	          poster = _assignShow.poster,
-	          trailer = _assignShow.trailer;
+	          year = _assignShow.year;
 
 	      var rating = void 0;
 	      if (this.state.omdbData.imdbRating) {
@@ -148,25 +149,7 @@ webpackJsonp([3],{
 	            { className: 'video-title' },
 	            title
 	          ),
-	          React.createElement(
-	            'h2',
-	            { className: 'video-year' },
-	            '(',
-	            year,
-	            ')'
-	          ),
-	          rating,
-	          React.createElement('img', { className: 'video-poster', src: '/public/img/posters/' + poster }),
-	          React.createElement(
-	            'p',
-	            { className: 'video-description' },
-	            description
-	          )
-	        ),
-	        React.createElement(
-	          'div',
-	          { className: 'video-container' },
-	          React.createElement('iframe', { src: 'https://www.youtube-nocookie.com/embed/' + trailer + '?rel=0&amp;controls=0&amp;showinfo=0', frameBorder: '0', allowFullScreen: true })
+	          rating
 	        )
 	      );
 	    }
@@ -182,7 +165,7 @@ webpackJsonp([3],{
 
 	Details.propTypes = {
 	  params: object,
-	  shows: arrayOf(object).isRequired
+	  tests: arrayOf(object).isRequired
 	};
 
 	module.exports = connector(Details);

@@ -6,7 +6,7 @@ const { connector } = require('./Store')
 
 const Search = React.createClass({
   propTypes: {
-    shows: arrayOf(object),
+    tests: arrayOf(object),
     searchTerm: string
   },
   render () {
@@ -14,7 +14,7 @@ const Search = React.createClass({
       <div className='container'>
         <Header showSearch />
         <ul className='list-group'>
-          {this.props.shows
+          {this.props.tests
             .filter((show) => `${show.title} ${show.description}`.toUpperCase().indexOf(this.props.searchTerm.toUpperCase()) >= 0)
             .map((show) => (
               <ShowCard {...show} key={show.imdbID} />
