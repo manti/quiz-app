@@ -7,7 +7,7 @@ webpackJsonp([2],Array(248).concat([
 	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 	var React = __webpack_require__(1);
-	var ShowCard = __webpack_require__(249);
+	var TestCard = __webpack_require__(520);
 	var Header = __webpack_require__(250);
 	var _React$PropTypes = React.PropTypes,
 	    object = _React$PropTypes.object,
@@ -37,7 +37,7 @@ webpackJsonp([2],Array(248).concat([
 	        this.props.tests.filter(function (show) {
 	          return (show.title + ' ' + show.description).toUpperCase().indexOf(_this.props.searchTerm.toUpperCase()) >= 0;
 	        }).map(function (show) {
-	          return React.createElement(ShowCard, _extends({}, show, { key: show.imdbID }));
+	          return React.createElement(TestCard, _extends({}, show, { key: show.imdbID }));
 	        })
 	      )
 	    );
@@ -47,69 +47,7 @@ webpackJsonp([2],Array(248).concat([
 	module.exports = connector(Search);
 
 /***/ },
-/* 249 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var React = __webpack_require__(1);
-
-	var _require = __webpack_require__(162),
-	    Link = _require.Link;
-
-	var _require2 = __webpack_require__(269),
-	    ButtonGroup = _require2.ButtonGroup,
-	    Button = _require2.Button;
-
-	var ShowCard = function ShowCard(props) {
-	  return React.createElement(
-	    'li',
-	    { className: 'list-group-item' },
-	    React.createElement(
-	      Link,
-	      { to: '/details/' + props.imdbID },
-	      React.createElement(
-	        'h5',
-	        null,
-	        props.title
-	      ),
-	      React.createElement(
-	        ButtonGroup,
-	        null,
-	        React.createElement(
-	          Button,
-	          null,
-	          'Take test'
-	        ),
-	        React.createElement(
-	          Button,
-	          null,
-	          'View report card'
-	        ),
-	        React.createElement(
-	          Button,
-	          null,
-	          'Solutions'
-	        )
-	      )
-	    )
-	  );
-	};
-
-	var string = React.PropTypes.string;
-
-
-	ShowCard.propTypes = {
-	  title: string.isRequired,
-	  description: string.isRequired,
-	  year: string.isRequired,
-	  poster: string.isRequired,
-	  imdbID: string.isRequired
-	};
-
-	module.exports = ShowCard;
-
-/***/ },
+/* 249 */,
 /* 250 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -127,6 +65,9 @@ webpackJsonp([2],Array(248).concat([
 
 	var _require2 = __webpack_require__(225),
 	    connector = _require2.connector;
+
+	var _require3 = __webpack_require__(269),
+	    Navbar = _require3.Navbar;
 
 	var Header = React.createClass({
 	  displayName: 'Header',
@@ -149,8 +90,8 @@ webpackJsonp([2],Array(248).concat([
 	      );
 	    } else {
 	      utilSpace = React.createElement(
-	        'h2',
-	        { className: 'header-back' },
+	        'h4',
+	        { className: 'header-back pull-right' },
 	        React.createElement(
 	          Link,
 	          { to: '/search' },
@@ -162,12 +103,21 @@ webpackJsonp([2],Array(248).concat([
 	      'header',
 	      { className: 'header' },
 	      React.createElement(
-	        'h1',
-	        { className: 'brand' },
+	        Navbar,
+	        { inverse: true, collapseOnSelect: true },
 	        React.createElement(
-	          Link,
-	          { to: '/', className: 'brand-link' },
-	          'App banner'
+	          Navbar.Header,
+	          null,
+	          React.createElement(
+	            Navbar.Brand,
+	            null,
+	            React.createElement(
+	              Link,
+	              { to: '/', className: 'brand-link' },
+	              'App banner'
+	            )
+	          ),
+	          React.createElement(Navbar.Toggle, null)
 	        )
 	      ),
 	      utilSpace
@@ -19049,6 +18999,69 @@ webpackJsonp([2],Array(248).concat([
 	exports.bootstrapUtils = _bootstrapUtils;
 	exports.createChainedFunction = _createChainedFunction3['default'];
 	exports.ValidComponentChildren = _ValidComponentChildren3['default'];
+
+/***/ },
+/* 520 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+
+	var _require = __webpack_require__(162),
+	    Link = _require.Link;
+
+	var _require2 = __webpack_require__(269),
+	    ButtonGroup = _require2.ButtonGroup,
+	    Button = _require2.Button;
+
+	var TestCard = function TestCard(props) {
+	  return React.createElement(
+	    'li',
+	    { className: 'list-group-item' },
+	    React.createElement(
+	      'span',
+	      { className: 'lead' },
+	      props.title
+	    ),
+	    React.createElement(
+	      ButtonGroup,
+	      { bsClass: 'pull-right' },
+	      React.createElement(
+	        Link,
+	        { to: '/details/' + props.imdbID },
+	        React.createElement(
+	          Button,
+	          { bsStyle: 'link' },
+	          'Take test'
+	        )
+	      ),
+	      React.createElement(
+	        Button,
+	        { bsStyle: 'link' },
+	        'View report card'
+	      ),
+	      React.createElement(
+	        Button,
+	        { bsStyle: 'link' },
+	        'Solutions'
+	      )
+	    )
+	  );
+	};
+
+	var string = React.PropTypes.string;
+
+
+	TestCard.propTypes = {
+	  title: string.isRequired,
+	  description: string.isRequired,
+	  year: string.isRequired,
+	  poster: string.isRequired,
+	  imdbID: string.isRequired
+	};
+
+	module.exports = TestCard;
 
 /***/ }
 ]));

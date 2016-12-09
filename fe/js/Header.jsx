@@ -2,6 +2,7 @@ const React = require('react')
 const { Link } = require('react-router')
 const { func, bool, string } = React.PropTypes
 const { connector } = require('./Store')
+const { Navbar } = require('react-bootstrap')
 const Header = React.createClass({
   propTypes: {
     setSearchTerm: func,
@@ -17,20 +18,25 @@ const Header = React.createClass({
       utilSpace = <h3>Available tests</h3>
     } else {
       utilSpace = (
-        <h2 className='header-back'>
+        <h4 className='header-back pull-right'>
           <Link to='/search'>
             Back
           </Link>
-        </h2>
+        </h4>
       )
     }
     return (
       <header className='header'>
-        <h1 className='brand'>
-          <Link to='/' className='brand-link'>
-            App banner
-          </Link>
-        </h1>
+        <Navbar inverse collapseOnSelect>
+          <Navbar.Header>
+            <Navbar.Brand>
+              <Link to='/' className='brand-link'>
+                App banner
+              </Link>
+            </Navbar.Brand>
+            <Navbar.Toggle />
+          </Navbar.Header>
+        </Navbar>
         {utilSpace}
       </header>
     )

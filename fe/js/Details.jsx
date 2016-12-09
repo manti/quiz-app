@@ -25,7 +25,7 @@ class Details extends React.Component {
     return showArray[0]
   }
   render () {
-    const { title, year } = this.assignShow(this.props.params.id)
+    const {title} = this.assignShow(this.props.params.id)
     let rating
     if (this.state.omdbData.imdbRating) {
       rating = <h3 className='video-rating'>{this.state.omdbData.imdbRating}</h3>
