@@ -21,6 +21,7 @@ const Routes = ClientApp.Routes
 const app = express()
 
 app.use('/public', express.static('./public'))
+app.use('/node_modules', express.static('./node_modules'))
 
 app.use((req, res) => {
   match({ routes: Routes, location: req.url }, (error, redirectLocation, renderProps) => {
