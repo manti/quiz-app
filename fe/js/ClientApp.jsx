@@ -36,6 +36,14 @@ const rootRoute = {
           cb(null, require('./Details'))
         })
       }
+    },
+    {
+      path: 'q/:id',
+      getComponent (location, cb) {
+        require.ensure([], () => {
+          cb(null, require('./Passage'))
+        })
+      }
     }
   ]
 }

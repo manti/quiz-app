@@ -26,16 +26,16 @@ class Details extends React.Component {
     return showArray[0]
   }
   render () {
-    const {title} = this.assignShow(this.props.params.id)
+    const {title} = this.assignShow(this.props.params.id) || 'Ttit'
     let rating
     if (this.state.omdbData.imdbRating) {
-      rating = <h3 className='video-rating'>{this.state.omdbData.imdbRating}</h3>
+      rating = <h3>{this.state.omdbData.imdbRating}</h3>
     }
     return (
       <div className='container'>
         <Header />
-        <div className='video-info'>
-          <h1 className='video-title'>{title}</h1>
+        <div>
+          <h1>{title}</h1>
           {rating}
         </div>
         <TestPaper />

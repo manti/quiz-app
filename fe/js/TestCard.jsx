@@ -1,6 +1,6 @@
 const React = require('react')
 const { Link } = require('react-router')
-const {ButtonGroup, Button} = require('react-bootstrap')
+const { ButtonGroup, Button } = require('react-bootstrap')
 
 const TestCard = (props) => (
   <li className="list-group-item">

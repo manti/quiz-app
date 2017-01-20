@@ -1,5 +1,5 @@
 {
-  "sections": [
+  "section1": 
     {
       "section": "1",
       "duration": "20mins",
@@ -10,7 +10,7 @@
           "type": "mcq",
           "question": "Chord makes an angle of 60",
           "image-url": "https://i.redd.it/5r88ygnf6v1y.jpg",
-          "options": [
+          "options":[ 
             {
               "A": "Quantity A is greater",
               "B": "Quantity B is greater",
@@ -186,5 +186,5 @@
         }
       ]
     }
-  ]
+  
 }
