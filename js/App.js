@@ -1,20 +1,29 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { BrowserRouter, Match } from 'react-router'
-import MasterList from './components/quiz/MasterList'
+import { BrowserRouter, Match, Link } from 'react-router'
+import { Navbar } from 'react-bootstrap'
+import TestsList from './components/quiz/TestsList'
+import Landing from './components/quiz/Landing'
 import DepartmentCRUD from './components/quiz/DepartmentCRUD'
-import { Button } from 'react-bootstrap'
 
 const App = React.createClass({
   render () {
-    console.log(Button)
     return (
       <BrowserRouter>
         {/* Change to HashRouter if not using webpack dev server */}
         <div className='app'>
-          <h3>Quiz</h3>
-          <Button bsStyle='link'>Login</Button>
-          <Match exactly pattern='/list' component={MasterList} />
+          <Navbar inverse collapseOnSelect>
+            <Navbar.Header>
+              <Navbar.Brand>
+                <Link to='/' className='brand-link'>
+                  App title
+                </Link>
+              </Navbar.Brand>
+              <Navbar.Toggle />
+            </Navbar.Header>
+          </Navbar>
+          <Match exactly pattern='/' component={Landing} />
+          <Match exactly pattern='/tests' component={TestsList} />
           <Match exactly pattern='/add' component={DepartmentCRUD} />
         </div>
       </BrowserRouter>
