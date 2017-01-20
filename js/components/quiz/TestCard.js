@@ -1,11 +1,14 @@
-const React = require('react')
-const { ButtonGroup, Button } = require('react-bootstrap')
+import React from 'react'
+import { ButtonGroup, Button } from 'react-bootstrap'
+import { Link } from 'react-router'
 
 const TestCard = (props) => (
   <li className='list-group-item'>
     <span className='lead'>{props.title}</span>
     <ButtonGroup bsClass='pull-right'>
-      <Button bsStyle='link'>Take test</Button>
+      <Link to={`/tests/${props.testId}`}>
+        <Button bsStyle='link'>Take test</Button>
+      </Link>
       <Button bsStyle='link'>View report card</Button>
       <Button bsStyle='link'>Solutions</Button>
     </ButtonGroup>
@@ -15,7 +18,8 @@ const TestCard = (props) => (
 const { string } = React.PropTypes
 
 TestCard.propTypes = {
-  title: string.isRequired
+  title: string.isRequired,
+  testId: string.isRequired
 }
 
-module.exports = TestCard
+export default TestCard
