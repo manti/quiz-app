@@ -1,22 +1,17 @@
 import React from 'react'
-import MasterSearch from './MasterSearch'
-import ItemsList from './ItemsList'
-import Pagination from './Pagination'
 import './scss/masterlist.scss'
-import { Link } from 'react-router'
+import TestCard from './TestCard'
 
-const MasterList = React.createClass({
+const TestsList = React.createClass({
   render () {
     return (
-      <div className='MasterList'>
-        DepartmentMasterList page
-        <MasterSearch />
-        <Pagination />
-        <ItemsList />
-        <Link to='/add'>Add New Department</Link>
+      <div className='TestsList'>
+        <TestCard title='Test 1' />
+        <TestCard title='Test 2' />
+        <TestCard title='Test 3' />
       </div>
     )
   }
 })
 
-export default MasterList
+export default TestsList

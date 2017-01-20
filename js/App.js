@@ -4,14 +4,13 @@ import { BrowserRouter, Match, Link } from 'react-router'
 import { Navbar } from 'react-bootstrap'
 import TestsList from './components/quiz/TestsList'
 import Landing from './components/quiz/Landing'
-import DepartmentCRUD from './components/quiz/DepartmentCRUD'
 
 const App = React.createClass({
   render () {
     return (
       <BrowserRouter>
         {/* Change to HashRouter if not using webpack dev server */}
-        <div className='app'>
+        <div className='container'>
           <Navbar inverse collapseOnSelect>
             <Navbar.Header>
               <Navbar.Brand>
@@ -24,7 +23,6 @@ const App = React.createClass({
           </Navbar>
           <Match exactly pattern='/' component={Landing} />
           <Match exactly pattern='/tests' component={TestsList} />
-          <Match exactly pattern='/add' component={DepartmentCRUD} />
         </div>
       </BrowserRouter>
     )
