@@ -1,9 +1,16 @@
 import React from 'react'
+import { Match, Link } from 'react-router'
+import BackAndForth from './BackAndForth'
 
 const QnA = React.createClass({
   render () {
     return (
-      <div>QnA component</div>
+      <div>
+        <Link to='/test/12'>Clikc</Link>
+        <div>Some text here</div>
+
+        <Match pattern='/test/12' component={BackAndForth} />
+      </div>
     )
   }
 })
