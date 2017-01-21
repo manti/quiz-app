@@ -1,18 +1,30 @@
 import React from 'react'
-import { Match, Link } from 'react-router'
-import BackAndForth from './BackAndForth'
+import { setTestStatus } from './actionCreators'
+import { connect } from 'react-redux'
+const { bool, func } = React.PropTypes
 
 const QnA = React.createClass({
+  propTypes: {
+    testStarted: bool.isRequired,
+    dispatch: func.isRequired
+  },
+  componentWillUnmount () {
+    console.log('Unmounted')
+    this.props.dispatch(setTestStatus(false))
+  },
   render () {
     return (
       <div>
-        <Link to='/test/12'>Clikc</Link>
         <div>Some text here</div>
-
-        <Match pattern='/test/12' component={BackAndForth} />
       </div>
     )
   }
 })
 
-export default QnA
+const mapStateToProps = (state) => {
+  return {
+    testStarted: state.testStarted
+  }
+}
+
+export default connect(mapStateToProps)(QnA)
