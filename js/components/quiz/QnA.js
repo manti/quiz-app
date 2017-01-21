@@ -1,6 +1,7 @@
 import React from 'react'
 import { setTestStatus } from './actionCreators'
 import { connect } from 'react-redux'
+import { Link } from 'react-router'
 const { bool, func } = React.PropTypes
 
 const QnA = React.createClass({
@@ -9,13 +10,14 @@ const QnA = React.createClass({
     dispatch: func.isRequired
   },
   componentWillUnmount () {
-    console.log('Unmounted')
     this.props.dispatch(setTestStatus(false))
   },
   render () {
     return (
       <div>
-        <div>Some text here</div>
+        <Link to='/tests'>
+          <h4>Back</h4>
+        </Link>
       </div>
     )
   }

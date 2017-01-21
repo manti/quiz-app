@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Button } from 'react-bootstrap'
+import { Button, Col, Row } from 'react-bootstrap'
 
 const { bool } = require('react').PropTypes
 
@@ -16,8 +16,14 @@ const BackAndForth = React.createClass({
     if (this.props.testStarted) {
       backAndForth = (
         <div>
-          <Button>Previous</Button>
-          <Button>Next</Button>
+          <Row className='show-grid'>
+            <Col xs={12} md={8}>
+              <Button className='pull-left' bsStyle='link'>Previous</Button>
+            </Col>
+            <Col xs={6} md={4}>
+              <Button className='pull-right' bsStyle='link'>Next</Button>
+            </Col>
+          </Row>
         </div>
       )
     }
