@@ -21,7 +21,7 @@ const QuestionHolder = React.createClass({
           <form>
             {q.options.map((val, i) => {
               // console.log(val)
-              return <FourChoices key={i} choices={val} />
+              return <FourChoices index={i} key={i} choices={val} />
             })}
           </form>
         </div>

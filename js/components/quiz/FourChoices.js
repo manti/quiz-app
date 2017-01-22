@@ -9,7 +9,8 @@ const FourChoices = React.createClass({
     console.log(this.props.choices)
     return (
       <div>
-        <input type='radio' /> {this.props.choices}
+        <input type='radio' name='group1' id={this.props.index} value={this.props.choices} /> &nbsp;
+        <label htmlFor={this.props.index}> {this.props.choices}</label>
       </div>
     )
   }
