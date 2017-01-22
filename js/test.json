@@ -9,12 +9,10 @@
         "question": "Chord MN makes an angle of 60o at the centre ‘O’ and the perimeter of triangle MNO is 18 units.",
         "imageUrl": "https://i.redd.it/5r88ygnf6v1y.jpg",
         "options": [
-          {
-            "A": "Quantity A is greater",
-            "B": "Quantity B is greater",
-            "C": "Two quantities are equal",
-            "D": "Relationship cannot be determined"
-          }
+            "Quantity A is greater",
+            "Quantity B is greater",
+            "Two quantities are equal",
+            "Relationship cannot be determined"
         ],
         "answer": "A"
       },
