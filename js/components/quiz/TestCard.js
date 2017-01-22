@@ -16,7 +16,6 @@ const TestCard = React.createClass({
     this.props.dispatch(setTestStatus(true))
   },
   render () {
-    console.log('testStarted as prop in TestCard', this.props.testStarted)
     return (
       <li className='list-group-item'>
         <span className='lead'>{this.props.title}</span>

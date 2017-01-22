@@ -19,6 +19,7 @@ module.exports = {
         changeOrigin: true
       }
     }
+    // hot: true
   },
   resolve: {
     extensions: ['.js', '.json']

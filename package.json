@@ -8,6 +8,7 @@
     "polish": "npm run lint -s -- --fix",
     "build": "webpack",
     "dev": "webpack-dev-server",
+    "hot": "npm run dev -- --hot",
     "watch": "npm run build -- --watch"
   },
   "keywords": [
