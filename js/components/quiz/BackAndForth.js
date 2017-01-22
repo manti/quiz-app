@@ -11,7 +11,7 @@ const BackAndForth = React.createClass({
 
   render () {
     let backAndForth = (
-      <div>Hello from the other side</div>
+      <br />
     )
     if (this.props.testStarted) {
       backAndForth = (
