@@ -1,9 +1,10 @@
 import React from 'react'
-const { string } = React.PropTypes
+const { string, number } = React.PropTypes
 
 const FourChoices = React.createClass({
   propTypes: {
-    choices: string.isRequired
+    choices: string.isRequired,
+    index: number.isRequired
   },
   render () {
     console.log(this.props.choices)

@@ -3,12 +3,8 @@ import test from '../../test.json'
 import { Image } from 'react-bootstrap'
 import FourChoices from './FourChoices'
 
-const { object } = React.PropTypes
-
 const QuestionHolder = React.createClass({
-  propTypes: {
-    params: object
-  },
+
   render () {
     console.log(test.section1.questions[this.props.params.qId])
     let q = test.section1.questions[this.props.params.qId]
