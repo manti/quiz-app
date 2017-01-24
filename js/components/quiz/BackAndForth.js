@@ -2,18 +2,21 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Button, Col, Row } from 'react-bootstrap'
 
-const { bool } = require('react').PropTypes
+const { bool, string } = require('react').PropTypes
 
 const BackAndForth = React.createClass({
   propTypes: {
-    testStarted: bool.isRequired
+    testStarted: bool.isRequired,
+    nextQ: string,
+    prevQ: string
   },
 
   render () {
     let backAndForth = (
       <br />
     )
-    if (this.props.testStarted) {
+    console.log(this.props, 'in bf')
+    if (this.props.testStarted || 1) {
       backAndForth = (
         <div>
           <Row className='show-grid'>
@@ -36,7 +39,9 @@ const BackAndForth = React.createClass({
 
 const mapStateToProps = (state) => {
   return {
-    testStarted: state.testStarted
+    testStarted: state.testStarted,
+    nextQ: state.nextQ,
+    prevQ: state.prevQ
   }
 }
 

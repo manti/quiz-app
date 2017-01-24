@@ -1,33 +1,43 @@
 import React from 'react'
 import test from '../../test.json'
-import { Image } from 'react-bootstrap'
-import FourChoices from './FourChoices'
+import Mcq from './Mcq'
+import { connect } from 'react-redux'
+import { setNextPrevQuestion } from './actionCreators'
 
-const { object } = React.PropTypes
+const { object, func } = React.PropTypes
 
 const QuestionHolder = React.createClass({
   propTypes: {
-    params: object
+    params: object,
+    dispatch: func
+  },
+  componentDidMount() {
+    this.props.dispatch(setNextPrevQuestion('2', '3'))
   },
   render () {
-    console.log(test.section1.questions[this.props.params.qId])
     let q = test.section1.questions[this.props.params.qId]
+    let questionComponent
+    switch (q.type) {
+      case 'mcq':
+        questionComponent = <Mcq question={q} />
+        break
+      default:
+        questionComponent = q.type
+    }
     return (
       <div>
         <p>Question holder</p>
-        <div>
-          <Image src={q.imageUrl} width='150px' thumbnail />
-          <p>{q.question}</p>
-          <form>
-            {q.options.map((val, i) => {
-              // console.log(val)
-              return <FourChoices index={i} key={i} choices={val} />
-            })}
-          </form>
-        </div>
+        {questionComponent}
       </div>
     )
   }
 })
 
-export default QuestionHolder
+const mapStateToProps = (state) => {
+  return {
+    nextQ: state.nextQ,
+    prevQ: state.prevQ
+  }
+}
+
+export default connect(mapStateToProps)(QuestionHolder)
