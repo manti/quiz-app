@@ -1,5 +1,5 @@
 import React from 'react'
-// import { setTestStatus } from './actionCreators'
+import { setTestStatus } from './actionCreators'
 import { connect } from 'react-redux'
 import { Link } from 'react-router'
 import { Button } from 'react-bootstrap'
@@ -13,7 +13,7 @@ const QnA = React.createClass({
     params: object
   },
   componentWillUnmount () {
-    // this.props.dispatch(setTestStatus(false))
+    this.props.dispatch(setTestStatus(false))
   },
   render () {
     return (
