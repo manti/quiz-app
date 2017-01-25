@@ -11,7 +11,7 @@ const QuestionHolder = React.createClass({
     params: object,
     dispatch: func
   },
-  componentDidMount() {
+  componentDidMount () {
     this.props.dispatch(setNextPrevQuestion('2', '3'))
   },
   render () {

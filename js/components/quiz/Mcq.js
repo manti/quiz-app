@@ -13,12 +13,11 @@ const Mcq = React.createClass({
     let q = this.props.question
     return (
       <div>
-        <div>{q.type}</div> 
+        <div>{q.type}</div>
         <Image src={q.imageUrl} thumbnail />
         <p>{q.question}</p>
         <form>
           {q.options.map((val, i) => {
-            // console.log(val)
             return <FourChoices index={i} key={i} choices={val} />
           })}
         </form>

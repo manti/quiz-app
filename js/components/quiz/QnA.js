@@ -16,11 +16,10 @@ const QnA = React.createClass({
     // this.props.dispatch(setTestStatus(false))
   },
   render () {
-    console.log(this.props.params)
     return (
       <div>
         <h3>Disclaimer</h3>
-        <Link to={`${this.props.params.id}/1`}>
+        <Link to={`/tests/${this.props.params.id}/1`}>
           <Button>Start test</Button>
         </Link>
         <Link to='/tests'>
