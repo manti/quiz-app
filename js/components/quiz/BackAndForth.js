@@ -10,7 +10,7 @@ const BackAndForth = React.createClass({
     testStarted: bool.isRequired,
     nextQ: string,
     prevQ: string,
-    arg: object
+    arg: object.isRequired
   },
 
   getQuestionLink (testId, qId) {

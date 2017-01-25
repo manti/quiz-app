@@ -6,11 +6,12 @@ const { object } = React.PropTypes
 
 const Mcq = React.createClass({
   propTypes: {
-    question: object
+    question: object.isRequired
   },
 
   render () {
     let q = this.props.question
+    console.log(this.props.question)
     return (
       <div>
         <div>{q.type}</div>

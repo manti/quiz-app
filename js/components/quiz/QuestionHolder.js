@@ -1,6 +1,7 @@
 import React from 'react'
 import test from '../../test.json'
 import Mcq from './Mcq'
+import Passage from './Passage'
 import { connect } from 'react-redux'
 import { setNextPrevQuestion } from './actionCreators'
 
@@ -12,6 +13,7 @@ const QuestionHolder = React.createClass({
     dispatch: func
   },
   componentDidMount () {
+    console.log(this.props.params)
     this.props.dispatch(setNextPrevQuestion('2', '3'))
   },
   render () {
@@ -20,6 +22,9 @@ const QuestionHolder = React.createClass({
     switch (q.type) {
       case 'mcq':
         questionComponent = <Mcq question={q} />
+        break
+      case 'passage':
+        questionComponent = <Passage question={q} />
         break
       default:
         questionComponent = q.type
