@@ -2,8 +2,21 @@
 
 We'll be using react stack, [standard for linting](https://github.com/feross/standard#the-rules), webpack for managing assets, transpiling etc.
 
-1. `npm install -g standard webpack http-server nodemon`
-2. `cd fe && npm install`
-3. `npm run watch` for dev and `npm run build` for prod - checkout npm scripts
-4. Inside `fe` run `nodemon app.js`
+## Installation (Project setup WIP)
 
+```
+npm install --global yarn
+
+yarn
+
+yarn global add webpack@v2.2.0-rc.2
+yarn global add standard@v8.4.0
+```
+
+## Usage
+
+```
+npm run lint
+npm run watch // for dev
+npm run build // for build
+```
