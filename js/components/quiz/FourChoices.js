@@ -7,7 +7,6 @@ const FourChoices = React.createClass({
     index: number.isRequired
   },
   render () {
-    console.log(this.props.choices)
     return (
       <div>
         <input type='radio' name='group1' id={this.props.index} value={this.props.choices} /> &nbsp;

@@ -13,11 +13,16 @@ const QuestionHolder = React.createClass({
     dispatch: func
   },
   componentDidMount () {
+    let {id, qId} = this.props.params
+    this.props.dispatch(setNextPrevQuestion(id, 1, qId))
+  },
+  componentWillReceiveProps () {
     console.log(this.props.params)
-    this.props.dispatch(setNextPrevQuestion('2', '3'))
+    let {id, qId} = this.props.params
+    this.props.dispatch(setNextPrevQuestion(id, 1, qId))
   },
   render () {
-    let q = test.section1.questions[this.props.params.qId]
+    let q = test[1].questions[this.props.params.qId]
     let questionComponent
     switch (q.type) {
       case 'mcq':
@@ -40,8 +45,9 @@ const QuestionHolder = React.createClass({
 
 const mapStateToProps = (state) => {
   return {
-    nextQ: state.nextQ,
-    prevQ: state.prevQ
+    testId: state.testId,
+    sectionId: state.sectionId,
+    qId: state.qId
   }
 }
 

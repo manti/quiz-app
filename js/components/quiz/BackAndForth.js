@@ -21,7 +21,7 @@ const BackAndForth = React.createClass({
     let backAndForth = (
       <br />
     )
-    console.log(this.props)
+    // console.log(this.props)
     if (this.props.arg.id) {
       backAndForth = (
         <div>

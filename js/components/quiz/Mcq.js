@@ -11,7 +11,6 @@ const Mcq = React.createClass({
 
   render () {
     let q = this.props.question
-    console.log(this.props.question)
     return (
       <div>
         <div>{q.type}</div>
