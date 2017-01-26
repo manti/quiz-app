@@ -18,7 +18,7 @@ const Passage = React.createClass({
             <div dangerouslySetInnerHTML={this.createMarkup(this.props.question.passage)} />
           </Col>
           <Col xs={9} md={6}>
-            <Mcq question={this.props.question.questions[1]} />
+            <Mcq question={this.props.question} />
           </Col>
         </Row>
       </div>
