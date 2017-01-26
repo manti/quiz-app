@@ -1,0 +1,26 @@
+table {
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+  
+  thead {
+    background-color: #efefef;
+  }
+
+  th {
+    background: #cbd8e9;
+    padding: 5px;
+  }
+
+  tr {
+    text-align: left;
+
+    &:hover {
+      background-color: #ededed;
+    }
+  }
+
+  td {
+    border:none;
+    padding: 5px;
+  }
+}
