@@ -43,7 +43,7 @@
         "answer": "A"
       },
       "4": {
-        "type": "blank",
+        "type": "onlyInput",
         "question": "A code of six digit number have to be generated. The code should be divisible by both 4 and as well 10. Then the possible number of codes is:",
         "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
         "answer": "300"
@@ -76,7 +76,7 @@
       },
       "7": {
         "type": "1-blank",
-        "question": "What fraction of internet users in 2012 from country C are the internet users in 2000 from country A",
+        "question": "Even a cursory glance at history proves that all war represents a --------- of diplomacy.",
         "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
         "options": [
           {

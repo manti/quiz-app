@@ -2,6 +2,8 @@ import React from 'react'
 import test from '../../test.json'
 import Mcq from './Mcq'
 import Passage from './Passage'
+import Blank from './Blank'
+import OnlyInput from './OnlyInput'
 import { connect } from 'react-redux'
 import { setNextPrevQuestion } from './actionCreators'
 
@@ -31,12 +33,19 @@ const QuestionHolder = React.createClass({
       case 'passage':
         questionComponent = <Passage question={q} />
         break
+      case '1-blank':
+        questionComponent = <Blank question={q} blanks={1} />
+        break
+      case 'onlyInput':
+        questionComponent = <OnlyInput question={q} />
+        break
       default:
         questionComponent = q.type
     }
     return (
       <div>
-        <p>Question holder</p>
+        <br />
+        <br />
         {questionComponent}
       </div>
     )

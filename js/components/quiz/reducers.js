@@ -40,7 +40,6 @@ const rootReducer = (state = DEFAULT_STATE, action) => {
     case SET_TEST_STATUS:
       return setTestStatus(state, action)
     case SET_NEXT_PREV_QUESTION:
-      console.log(arguments, 'reducer params')
       return setNextPrevQuestion(state, action)
     default:
       return state

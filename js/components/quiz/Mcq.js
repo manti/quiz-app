@@ -13,7 +13,6 @@ const Mcq = React.createClass({
     let q = this.props.question
     return (
       <div>
-        <div>{q.type}</div>
         <Image src={q.imageUrl} thumbnail />
         <p>{q.question}</p>
         <form>
