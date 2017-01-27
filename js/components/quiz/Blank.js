@@ -1,24 +1,21 @@
 import React from 'react'
-import { ListGroup, ListGroupItem } from 'react-bootstrap'
-const { object, number } = React.PropTypes
+import BlankOptions from './BlankOptions'
+const { object } = React.PropTypes
 
 const Blank = React.createClass({
   propTypes: {
-    question: object.isRequired,
-    blanks: number.isRequired
-  },
-  handleClick (e) {
-    e.preventDefault()
+    question: object.isRequired
   },
   render () {
+    let q = this.props.question
+    let options = this.props.question.options
+    let blankOptions = Object.keys(this.props.question.options)
     return (
       <div className='Blank'>
-        <p>{this.props.question.question}</p>
-        <ListGroup>
-          <ListGroupItem href='#' onClick={this.handleClick}>Link 1</ListGroupItem>
-          <ListGroupItem href='#' onClick={this.handleClick}>Link 2</ListGroupItem>
-          <ListGroupItem href='#' onClick={this.handleClick}>Link 3</ListGroupItem>
-        </ListGroup>
+        <p>{q.question}</p>
+        {blankOptions.map((val, key) => {
+          return <BlankOptions key={key} options={options[val]} />
+        })}
       </div>
     )
   }

@@ -19,7 +19,6 @@ const QuestionHolder = React.createClass({
     this.props.dispatch(setNextPrevQuestion(id, 1, qId))
   },
   componentWillReceiveProps () {
-    console.log(this.props.params)
     let {id, qId} = this.props.params
     this.props.dispatch(setNextPrevQuestion(id, 1, qId))
   },
@@ -34,7 +33,13 @@ const QuestionHolder = React.createClass({
         questionComponent = <Passage question={q} />
         break
       case '1-blank':
-        questionComponent = <Blank question={q} blanks={1} />
+        questionComponent = <Blank question={q} />
+        break
+      case '2-blank':
+        questionComponent = <Blank question={q} />
+        break
+      case '3-blank':
+        questionComponent = <Blank question={q} />
         break
       case 'onlyInput':
         questionComponent = <OnlyInput question={q} />
