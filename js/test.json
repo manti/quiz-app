@@ -52,16 +52,7 @@
         "type": "multi-answer",
         "question": "(x, y) = (2, 1) satisfies the equation 2x+by+c=0. Given 0≤b≤3, then what values can ‘c’ take? Indicate all such apply:",
         "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
-        "options": [
-          {
-            "1": "-7",
-            "2": "-6",
-            "3": "-4",
-            "4": "0",
-            "5": "4",
-            "6": "7"
-          }
-        ],
+        "options": ["-7","-6","-4","0","4","7"],
         "answer": [
           2,
           5,

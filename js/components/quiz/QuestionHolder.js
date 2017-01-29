@@ -5,6 +5,7 @@ import Passage from './Passage'
 import Blank from './Blank'
 import OnlyInput from './OnlyInput'
 import Fraction from './Fraction'
+import MultiAnswer from './MultiAnswer'
 import { connect } from 'react-redux'
 import { setNextPrevQuestion } from './actionCreators'
 
@@ -47,6 +48,9 @@ const QuestionHolder = React.createClass({
         break
       case 'fraction':
         questionComponent = <Fraction question={q} />
+        break
+      case 'multi-answer':
+        questionComponent = <MultiAnswer question={q} />
         break
       default:
         questionComponent = q.type
