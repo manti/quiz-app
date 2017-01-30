@@ -130,19 +130,6 @@
           ]
         },
         "answer": "[3,1,2]"
-      },
-      "10": {
-        "type": "multi-blank",
-        "question": "What fraction of internet users in 2012 from country C are the internet users in 2000 from country A",
-        "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
-        "options": [
-            "unpalatable",
-            "Productive",
-            "Destructive",
-            "Fervid",
-            "Creative"
-        ],
-        "answer": "[3,2,4]"
       }
     }
   }
