@@ -1,4 +1,4 @@
-import { SET_TEST_STATUS, SET_NEXT_PREV_QUESTION } from './actions'
+import { SET_TEST_STATUS, SET_NEXT_PREV_QUESTION, FETCH_TESTS } from './actions'
 import test from '../../test.json'
 
 const DEFAULT_STATE = {
@@ -7,7 +7,9 @@ const DEFAULT_STATE = {
   prevQ: '',
   testId: '',
   sectionId: '',
-  qId: ''
+  qId: '',
+  tests: '',
+  fetchingTests: 'true'
 }
 
 const setTestStatus = (state, action) => {
@@ -35,12 +37,20 @@ const setNextPrevQuestion = (state, action) => {
   return newState
 }
 
+const fetchedTestsFromDB = (state, action) => {
+  const newState = {}
+  Object.assign(newState, state, {tests: action.payload, fetchingTests: false})
+  return newState
+}
+
 const rootReducer = (state = DEFAULT_STATE, action) => {
   switch (action.type) {
     case SET_TEST_STATUS:
       return setTestStatus(state, action)
     case SET_NEXT_PREV_QUESTION:
       return setNextPrevQuestion(state, action)
+    case FETCH_TESTS:
+      return fetchedTestsFromDB(state, action)
     default:
       return state
   }
