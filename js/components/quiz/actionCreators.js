@@ -1,5 +1,5 @@
 import { firebaseDB } from './firebaseSetup'
-import { SET_TEST_STATUS, SET_NEXT_PREV_QUESTION, FETCH_TESTS } from './actions'
+import { SET_TEST_STATUS, SET_NEXT_PREV_QUESTION, FETCH_TESTS, UPDATE_ANSWER } from './actions'
 
 export function setTestStatus (testStarted) {
   return { type: SET_TEST_STATUS, testStarted: testStarted }
@@ -8,15 +8,28 @@ export function setNextPrevQuestion (testId, sectionId, qId) {
   return { type: SET_NEXT_PREV_QUESTION, testId, sectionId, qId }
 }
 
-const Tests = firebaseDB.ref('/1')
+export function updateAnswer (questionId, answer) {
+  return { type: UPDATE_ANSWER, questionId, answer }
+}
+
+const tests = firebaseDB.ref('/1')
 
 export function fetchTests () {
   return dispatch => {
-    Tests.on('value', snapshot => {
+    tests.on('value', snapshot => {
       dispatch({
         type: FETCH_TESTS,
         payload: snapshot.val()
       })
+    })
+  }
+}
+
+export function updateFirebaseWithAnswer (questionId, answer) {
+  const question = firebaseDB.ref(`/1/questions/${questionId}`)
+  return dispatch => {
+    question.update({
+      answer: answer
     })
   }
 }
