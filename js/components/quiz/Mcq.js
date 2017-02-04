@@ -17,9 +17,6 @@ const Mcq = React.createClass({
     this.props.dispatch(updateAnswer(this.props.question.id, e.target.id))
     this.props.dispatch(updateFirebaseWithAnswer(this.props.question.id, e.target.id))
   },
-  componentWillReceiveProps () {
-    console.log(arguments)
-  },
   render () {
     let q = this.props.question
     return (

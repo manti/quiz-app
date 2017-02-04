@@ -1,20 +1,36 @@
 import React from 'react'
 import { Col, Row } from 'react-bootstrap'
-const { object } = React.PropTypes
+import { connect } from 'react-redux'
+import { updateAnswer, updateFirebaseWithAnswer } from './actionCreators'
+const { object, func } = React.PropTypes
 
 const Fraction = React.createClass({
   propTypes: {
-    question: object.isRequired
+    question: object.isRequired,
+    dispatch: func.isRequired
+  },
+  handleNumerator (e) {
+    let denominatorValue = this.props.question.answer[1]
+    let answerObj = [e.target.value, denominatorValue]
+    this.props.dispatch(updateAnswer(this.props.question.id, answerObj))
+    this.props.dispatch(updateFirebaseWithAnswer(this.props.question.id, answerObj))
+  },
+  handleDenominator (e) {
+    let numeratorValue = this.props.question.answer[0]
+    let answerObj = [numeratorValue, e.target.value]
+    this.props.dispatch(updateAnswer(this.props.question.id, answerObj))
+    this.props.dispatch(updateFirebaseWithAnswer(this.props.question.id, answerObj))
   },
   render () {
+    let q = this.props.question
     return (
       <div>
-        {this.props.question.question}
+        {q.question}
         <br />
         <br />
         <Row>
           <Col xs={2}>
-            <input type='text' className='form-control' />
+            <input type='text' className='form-control' onChange={this.handleNumerator} value={q.answer[0]} />
           </Col>
         </Row>
         <Row>
@@ -22,7 +38,7 @@ const Fraction = React.createClass({
         </Row>
         <Row>
           <Col xs={2}>
-            <input type='text' className='form-control' />
+            <input type='text' className='form-control' onChange={this.handleDenominator} value={q.answer[1]} />
           </Col>
         </Row>
       </div>
@@ -30,4 +46,13 @@ const Fraction = React.createClass({
   }
 })
 
-export default Fraction
+const mapStateToProps = (state) => {
+  return {
+    testId: state.testId,
+    sectionId: state.sectionId,
+    qId: state.qId,
+    tests: state.tests
+  }
+}
+
+export default connect(mapStateToProps)(Fraction)
