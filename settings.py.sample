@@ -1,0 +1,21 @@
+
+DEBUG = True
+GOOGLE_CLIENT_ID = 'google client key'
+GOOGLE_CLIENT_SECRET = 'google secrete key'
+REDIRECT_URI = '/authorized'  # one of the Redirect URIs from Google APIs console
+USERINFO_URL = 'https://www.googleapis.com/oauth2/v1/userinfo'
+ALLOWED_HD = 'http://127.0.0.1'   # your domain here
+FIREBASE_CONFIG = {
+      "apiKey": "API key",
+      "authDomain": "",
+      "databaseURL": "",
+      "storageBucket": "",
+      "serviceAccount": ""
+    }
+SECRET_KEY = 'development key'
+
+# database config
+DB_HOST = 'localhost'
+DB_USER = 'root'
+DB_PASS = 'root'
+DB_NAME = 'quiz'
