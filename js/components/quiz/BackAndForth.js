@@ -18,6 +18,7 @@ const BackAndForth = React.createClass({
   },
 
   render () {
+    console.log(this.props, 'BackAndForth')
     let backAndForth = (
       <br />
     )
