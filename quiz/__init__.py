@@ -142,7 +142,7 @@ def authorized(resp):
 
 @app.route('/report')
 @check_login
-def index():
+def report():
   user = Users()
   user.generate_report(session.get('user_id'))
   return jsonify(user.get_users_data_by_id(session.get('user_id')))

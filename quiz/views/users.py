@@ -82,7 +82,8 @@ class Users():
                         report['test'+t]['section'+s]['correct_answer'] = count
                         report['test'+t]['section'+s]['total_question'] = master_question
                         report['test'+t]['section'+s]['section_title'] = test_result[_id]['tests']['test'+t]['section'+s]['title']
-        app.db.child("users").child(_id).update(test_result);
+        test_result[_id]['report'] = report
+        app.db.child("users").child(_id).set(test_result[_id])
         return report
     def get_solution():
         
