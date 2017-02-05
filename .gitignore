@@ -1,3 +1,16 @@
 npm-debug.log
 public/*
 node_modules
+
+
+# Byte-compiled / optimized / DLL files
+*.py[cod]
+
+# Virtual environment
+venv
+
+# App settings
+quiz/settings.py
+
+# Question resources and Firebase resource
+quiz/resources/*
