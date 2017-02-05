@@ -46,7 +46,8 @@ var CountdownTimer = React.createClass({
   },
 
   componentWillUnmount: function () {
-    clearTimeout(this.state.timeoutId)
+    // clearTimeout(this.state.timeoutId)
+    console.log(this.state, 'timer')
   },
 
   tick: function () {
@@ -56,7 +57,8 @@ var CountdownTimer = React.createClass({
 
     // correct for small variations in actual timeout time
     var timeRemainingInInterval = (interval - (dt % interval))
-    var timeout = timeRemainingInInterval
+    // var timeout = timeRemainingInInterval
+    var timeout = interval
 
     if (timeRemainingInInterval < (interval / 2.0)) {
       timeout += interval
@@ -64,7 +66,6 @@ var CountdownTimer = React.createClass({
 
     var timeRemaining = Math.max(this.state.timeRemaining - dt, 0)
     var countdownComplete = (this.state.prevTime && timeRemaining <= 0)
-
     if (this.isMounted()) {
       if (this.state.timeoutId) { clearTimeout(this.state.timeoutId) }
       this.setState({

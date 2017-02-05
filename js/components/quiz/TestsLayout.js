@@ -11,7 +11,6 @@ const TestsLayout = React.createClass({
     children: object.isRequired
   },
   render () {
-    console.log(this.props)
     return (
       <div>
         <Navbar inverse collapseOnSelect>
