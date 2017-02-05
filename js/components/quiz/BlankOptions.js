@@ -3,27 +3,27 @@ import { updateAnswer, updateFirebaseWithAnswer } from './actionCreators'
 import { connect } from 'react-redux'
 import { ListGroup, ListGroupItem } from 'react-bootstrap'
 
-const { array, object, func } = React.PropTypes
+const { array, object, func, number } = React.PropTypes
 
 const BlankOptions = React.createClass({
   propTypes: {
     options: array.isRequired,
     question: object.isRequired,
-    dispatch: func.isRequired
+    dispatch: func.isRequired,
+    blank: number
   },
   handleClick (e, value) {
     e.preventDefault()
-    console.log(e)
-    this.props.dispatch(updateAnswer(this.props.question.id, e.target.innerHTML))
-    this.props.dispatch(updateFirebaseWithAnswer(this.props.question.id, e.target.innerHTML))
+    let answerObj = this.props.question.answer
+    answerObj[this.props.blank] = e.target.innerHTML
+    this.props.dispatch(updateAnswer(this.props.question.id, answerObj))
+    this.props.dispatch(updateFirebaseWithAnswer(this.props.question.id, answerObj))
   },
   render () {
-    console.log()
     return (
       <ListGroup>
         {this.props.options.map((val, i) => {
-          if (this.props.question.answer.indexOf(val) > -1) {
-            console.log(val)
+          if (this.props.question.answer[this.props.blank] === val) {
             return <ListGroupItem href='#' key={i} bsStyle='warning' onClick={(e) => this.handleClick(e, i)}>{val}</ListGroupItem>
           } else {
             return <ListGroupItem href='#' key={i} onClick={this.handleClick}>{val}</ListGroupItem>
