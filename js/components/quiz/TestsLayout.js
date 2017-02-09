@@ -2,6 +2,7 @@ import React from 'react'
 import { Navbar } from 'react-bootstrap'
 import BackAndForth from './BackAndForth'
 import SectionTimer from './SectionTimer'
+import CalculatorHelp from './CalculatorHelp'
 import { Link } from 'react-router'
 const { object } = React.PropTypes
 
@@ -24,7 +25,8 @@ const TestsLayout = React.createClass({
           </Navbar.Header>
         </Navbar>
         <BackAndForth arg={this.props.params} />
-        <SectionTimer arg={this.props.params} />
+        {/* <SectionTimer arg={this.props.params} /> */}
+        <CalculatorHelp />
         {this.props.children}
       </div>
     )
