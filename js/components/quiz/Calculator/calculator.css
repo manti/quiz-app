@@ -28,6 +28,7 @@ button:active {
   width: 320px;
   height: 520px;
   position: relative;
+  margin: auto;
 }
 
 .calculator {

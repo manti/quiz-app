@@ -25,8 +25,8 @@ const TestsLayout = React.createClass({
           </Navbar.Header>
         </Navbar>
         <BackAndForth arg={this.props.params} />
-        {/* <SectionTimer arg={this.props.params} /> */}
-        <CalculatorHelp />
+        <SectionTimer arg={this.props.params} />
+        <CalculatorHelp arg={this.props.params} />
         {this.props.children}
       </div>
     )
