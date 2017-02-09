@@ -18,12 +18,12 @@ const QnA = React.createClass({
   render () {
     return (
       <div>
-        <h3>Disclaimer</h3>
-        <Link to={`/tests/${this.props.params.id}/1`}>
-          <Button>Start test</Button>
-        </Link>
         <Link to='/tests'>
           <h4>Back</h4>
+        </Link>
+        <h3 className='i-am-center'>Disclaimer</h3>
+        <Link className='i-am-center' to={`/tests/${this.props.params.id}/1`}>
+          <Button>Start test</Button>
         </Link>
       </div>
     )

@@ -8,6 +8,7 @@ import TestsLayout from './components/quiz/TestsLayout'
 import store from './components/quiz/store'
 import QnA from './components/quiz/QnA'
 import { Provider } from 'react-redux'
+require ('./site.css')
 
 const App = React.createClass({
   render () {
