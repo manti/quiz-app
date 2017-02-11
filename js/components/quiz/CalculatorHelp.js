@@ -2,9 +2,15 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Modal, Button } from 'react-bootstrap'
 import Calculator from './Calculator/Calculator'
+const { object, bool } = require('react').PropTypes
 // import Calculator from 'react-calculator'
 
 const CalculatorHelp = React.createClass({
+  propTypes: {
+    tests: object.isRequired,
+    arg: object.isRequired,
+    fetchingTests: bool
+  },
   getInitialState () {
     return {show: false}
   },
@@ -33,7 +39,8 @@ const CalculatorHelp = React.createClass({
         </div>
       )
     }
-    else {
+    else 
+    {
       return <br />
     }
   }
