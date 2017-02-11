@@ -14,8 +14,9 @@ const Mcq = React.createClass({
   },
   changeRadio (e) {
     this.props.question.answer = e.target.id
-    this.props.dispatch(updateAnswer(this.props.question.id, e.target.id))
-    this.props.dispatch(updateFirebaseWithAnswer(this.props.question.id, e.target.id))
+    this.props.dispatch(updateAnswer(e.target.id))
+    // this.props.dispatch(updateFirebaseWithAnswer(this.props.question.id, e.target.id))
+    this.forceUpdate()
   },
   render () {
     let q = this.props.question

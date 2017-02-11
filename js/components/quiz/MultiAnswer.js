@@ -20,8 +20,9 @@ const MultiAnswer = React.createClass({
     if (this.props.question.answer.length === 0) {
       this.props.question.answer.push(' ')
     }
-    this.props.dispatch(updateAnswer(this.props.question.id, this.props.question.answer))
-    this.props.dispatch(updateFirebaseWithAnswer(this.props.question.id, this.props.question.answer))
+    this.props.dispatch(updateAnswer(this.props.question.answer))
+    // this.props.dispatch(updateFirebaseWithAnswer(this.props.question.id, this.props.question.answer))
+    this.forceUpdate()
   },
   render () {
     this.props.question.answer = this.props.question.answer.map(String)

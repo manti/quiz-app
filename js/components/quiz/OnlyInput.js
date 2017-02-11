@@ -10,8 +10,9 @@ const OnlyInput = React.createClass({
     dispatch: func
   },
   handleInputChange (e) {
-    this.props.dispatch(updateAnswer(this.props.question.id, e.target.value))
-    this.props.dispatch(updateFirebaseWithAnswer(this.props.question.id, e.target.value))
+    this.props.dispatch(updateAnswer(e.target.value))
+    // this.props.dispatch(updateFirebaseWithAnswer(this.props.question.id, e.target.value))
+    this.forceUpdate()
   },
   render () {
     return (
