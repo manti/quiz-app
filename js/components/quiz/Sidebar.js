@@ -10,9 +10,9 @@ const Sidebar = React.createClass({
     arg: object.isRequired
   },
   render () {
-    return(
+    return (
       <div>
-        {/*<SectionTimer arg={this.props.arg} />*/}
+        {/* <SectionTimer arg={this.props.arg} /> */}
         <CalculatorHelp arg={this.props.arg} />
         <Review />
       </div>

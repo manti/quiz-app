@@ -11,7 +11,7 @@ const TestsList = React.createClass({
     testStarted: bool
   },
   componentDidMount () {
-    if(!this.props.tests.length) {
+    if (!this.props.tests.length) {
       this.props.dispatch(fetchTests())
     }
     this.props.dispatch(setTestStatus(false))
@@ -22,7 +22,7 @@ const TestsList = React.createClass({
     return (
       <div>
         <div className='TestsList'>
-          {this.props.tests.map((test, i)=>{
+          {this.props.tests.map((test, i) => {
             return <TestCard title={test.name} testId={test.id} key={i} />
           })}
         </div>

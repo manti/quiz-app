@@ -39,7 +39,7 @@ const CalculatorHelp = React.createClass({
         </div>
       )
     }
-    else 
+    else
     {
       return <br />
     }

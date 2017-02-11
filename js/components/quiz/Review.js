@@ -19,15 +19,15 @@ const Review = React.createClass({
   hideModal () {
     this.setState({show: false})
   },
-  render() {
+  render () {
     return (
       <div>
         <Button onClick={this.showModal}>Review</Button>
         <Modal
           show={this.state.show}
           onHide={this.hideModal}
-          bsSize="large" 
-          aria-labelledby="contained-modal-title-lg"
+          bsSize='large'
+          aria-labelledby='contained-modal-title-lg'
         >
           <Modal.Header closeButton>
             <Modal.Title>Review</Modal.Title>
