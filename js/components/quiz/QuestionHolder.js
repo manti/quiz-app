@@ -6,6 +6,7 @@ import OnlyInput from './OnlyInput'
 import Fraction from './Fraction'
 import MultiAnswer from './MultiAnswer'
 import { connect } from 'react-redux'
+import { Checkbox } from 'react-bootstrap'
 import { setNextPrevQuestion, fetchTests, setQuizParams } from './actionCreators'
 
 const { object, func, bool, array } = React.PropTypes
@@ -16,6 +17,10 @@ const QuestionHolder = React.createClass({
     dispatch: func,
     tests: array.isRequired,
     fetchingTests: bool
+  },
+  handleMarkQuestion (e, question) {
+    e.target.checked = !e.target.checked
+    console.log(question)
   },
   componentDidMount () {
     if (!this.props.tests.length) {
@@ -72,6 +77,7 @@ const QuestionHolder = React.createClass({
       }
       return (
         <div>
+          <Checkbox className='i-am-center' onChange={(e) => { this.handleMarkQuestion(e, q) }} checked={q.marked} >Mark</Checkbox>
           <br />
           {questionComponent}
         </div>
