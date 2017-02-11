@@ -2,12 +2,12 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Modal, Button } from 'react-bootstrap'
 import Calculator from './Calculator/Calculator'
-const { object, bool } = require('react').PropTypes
+const { object, bool, array } = require('react').PropTypes
 // import Calculator from 'react-calculator'
 
 const CalculatorHelp = React.createClass({
   propTypes: {
-    tests: object.isRequired,
+    tests: array.isRequired,
     arg: object.isRequired,
     fetchingTests: bool
   },

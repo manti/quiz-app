@@ -1,11 +1,11 @@
 import React from 'react'
 import { Modal, Button, Table } from 'react-bootstrap'
 import { connect } from 'react-redux'
-const { object, bool } = require('react').PropTypes
+const { array, bool } = require('react').PropTypes
 
 const Review = React.createClass({
   propTypes: {
-    tests: object.isRequired,
+    tests: array.isRequired,
     fetchingTests: bool
   },
   getInitialState () {

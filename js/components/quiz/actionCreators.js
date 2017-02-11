@@ -16,9 +16,10 @@ export function updateTimeRemaining (timeRemaining) {
   return {type: UPDATE_TIME_REMAINING, timeRemaining }
 }
 
-const tests = firebaseDB.ref('/1')
+const tests = firebaseDB.ref('/')
 
 export function fetchTests () {
+  console.log('called')
   return dispatch => {
     tests.on('value', snapshot => {
       dispatch({

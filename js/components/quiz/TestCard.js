@@ -3,12 +3,12 @@ import { ButtonGroup, Button } from 'react-bootstrap'
 import { Link } from 'react-router'
 import { connect } from 'react-redux'
 import { setTestStatus } from './actionCreators'
-const { string, func, bool } = React.PropTypes
+const { string, func, bool, number } = React.PropTypes
 
 const TestCard = React.createClass({
   propTypes: {
     title: string.isRequired,
-    testId: string.isRequired,
+    testId: number.isRequired,
     dispatch: func.isRequired,
     testStarted: bool
   },
