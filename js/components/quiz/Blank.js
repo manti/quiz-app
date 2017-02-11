@@ -15,7 +15,7 @@ const Blank = React.createClass({
         <p>{q.question}</p>
         {blankOptions.map((val, key) => {
           <div>Blank {key}</div>
-          return <BlankOptions key={key} blank={key} question={q} options={options[val]} />
+          return <BlankOptions key={key} blank={key} pathParams={this.props.pathParams} question={q} options={options[val]} />
         })}
       </div>
     )

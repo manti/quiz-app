@@ -6,7 +6,7 @@ import OnlyInput from './OnlyInput'
 import Fraction from './Fraction'
 import MultiAnswer from './MultiAnswer'
 import { connect } from 'react-redux'
-import { setNextPrevQuestion, fetchTests } from './actionCreators'
+import { setNextPrevQuestion, fetchTests, setQuizParams } from './actionCreators'
 
 const { object, func, bool, array } = React.PropTypes
 
@@ -23,10 +23,13 @@ const QuestionHolder = React.createClass({
     }
     let {id, sectionId, qId} = this.props.params
     this.props.dispatch(setNextPrevQuestion(id, sectionId, qId))
+    this.props.dispatch(setQuizParams(id, sectionId, qId))
   },
   componentWillReceiveProps () {
     let {id, sectionId, qId} = this.props.params
     this.props.dispatch(setNextPrevQuestion(id, sectionId, qId))
+    this.props.dispatch(setQuizParams(id, sectionId, qId))
+    // this.forceUpdate()
   },
   render () {
     if (this.props.fetchingTests) {
@@ -34,7 +37,7 @@ const QuestionHolder = React.createClass({
         <div>Fetching tests</div>
       )
     } else {
-      let {id, sectionId, qId} = this.props.params
+      let {id, sectionId} = this.props.params
       let questionComponent
       let test = this.props.tests[id]
       let section = test.sections[sectionId]

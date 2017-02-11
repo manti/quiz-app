@@ -3,21 +3,24 @@ import { updateAnswer, updateFirebaseWithAnswer } from './actionCreators'
 import { connect } from 'react-redux'
 import { ListGroup, ListGroupItem } from 'react-bootstrap'
 
-const { array, object, func, number } = React.PropTypes
+const { array, object, func, number, string } = React.PropTypes
 
 const BlankOptions = React.createClass({
   propTypes: {
     options: array.isRequired,
     question: object.isRequired,
     dispatch: func.isRequired,
-    blank: number
+    blank: number,
+    params: object
   },
   handleClick (e, value) {
     e.preventDefault()
     let answerObj = this.props.question.answer
     answerObj[this.props.blank] = e.target.innerHTML
-    this.props.dispatch(updateAnswer(this.props.question.id, answerObj))
-    this.props.dispatch(updateFirebaseWithAnswer(this.props.question.id, answerObj))
+    let {testId, sectionId} = this.props
+    this.props.dispatch(updateAnswer(answerObj))
+    this.forceUpdate()
+    // this.props.dispatch(updateFirebaseWithAnswer(answerObj))
   },
   render () {
     return (
