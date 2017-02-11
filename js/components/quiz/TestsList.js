@@ -18,16 +18,20 @@ const TestsList = React.createClass({
   },
   render () {
     let tests = this.props.tests
-    console.log(this.props.tests)
-    return (
-      <div>
-        <div className='TestsList'>
-          {this.props.tests.map((test, i) => {
-            return <TestCard title={test.name} testId={test.id} key={i} />
-          })}
+    if (this.props.tests.length) {
+      return (
+        <div>
+          <div className='TestsList'>
+            {this.props.tests.map((test, i) => {
+              return <TestCard title={test.name} testId={test.id} key={i} />
+            })}
+          </div>
         </div>
-      </div>
-    )
+      )
+    }
+    else {
+      return <h3 className='i-am-center'>Loading</h3>
+    }
   }
 })
 
