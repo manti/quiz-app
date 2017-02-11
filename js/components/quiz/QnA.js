@@ -22,7 +22,7 @@ const QnA = React.createClass({
           <h4>Back</h4>
         </Link>
         <h3 className='i-am-center'>Disclaimer</h3>
-        <Link className='i-am-center' to={`/tests/${this.props.params.id}/1`}>
+        <Link className='i-am-center' to={`/tests/${this.props.params.id}/1/1`}>
           <Button>Start test</Button>
         </Link>
       </div>

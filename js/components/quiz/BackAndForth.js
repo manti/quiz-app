@@ -13,8 +13,8 @@ const BackAndForth = React.createClass({
     arg: object.isRequired
   },
 
-  getQuestionLink (testId, qId) {
-    return `/tests/${testId}/${qId}`
+  getQuestionLink (testId, sectionId, qId) {
+    return `/tests/${testId}/${sectionId}/${qId}`
   },
 
   render () {
@@ -27,12 +27,12 @@ const BackAndForth = React.createClass({
         <div>
           <Row className='show-grid'>
             <Col xs={12} md={8}>
-              <Link to={this.getQuestionLink(this.props.arg.id, this.props.prevQ)}>
+              <Link to={this.getQuestionLink(this.props.arg.id, this.props.arg.sectionId, this.props.prevQ)}>
                 <Button className='pull-left' bsStyle='link'>Previous</Button>
               </Link>
             </Col>
             <Col xs={6} md={4}>
-              <Link to={this.getQuestionLink(this.props.arg.id, this.props.nextQ)}>
+              <Link to={this.getQuestionLink(this.props.arg.id, this.props.arg.sectionId, this.props.nextQ)}>
                 <Button className='pull-right' bsStyle='link'>Next</Button>
               </Link>
             </Col>

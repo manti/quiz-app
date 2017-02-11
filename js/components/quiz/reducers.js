@@ -21,15 +21,16 @@ const setTestStatus = (state, action) => {
 const setNextPrevQuestion = (state, action) => {
   if (!state.fetchingTests) {
     const newState = {}
-    let { qId } = action
-    let currentSection = state.tests.questions
+    let { qId, sectionId, testId } = action
+    let sectionNow = state.tests[testId].sections[sectionId]
+    let sectionQuestions = sectionNow.questions
     let nextQ, prevQ
-    if (currentSection[Number(qId) + 1]) {
+    if (sectionQuestions[Number(qId) + 1]) {
       nextQ = Number(qId) + 1
     } else {
       nextQ = qId
     }
-    if (currentSection[Number(qId) - 1]) {
+    if (sectionQuestions[Number(qId) - 1]) {
       prevQ = Number(qId) - 1
     } else {
       prevQ = qId

@@ -20,7 +20,7 @@ const App = React.createClass({
               <Route path='/' component={Landing} />
               <Route path='tests' component={TestsList} />
               <Route path='tests/:id' component={QnA} />
-              <Route path='tests/:id/:qId' component={QuestionHolder} />
+              <Route path='tests/:id/:sectionId/:qId' component={QuestionHolder} />
             </Route>
           </Router>
         </Provider>

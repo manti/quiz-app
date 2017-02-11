@@ -8,23 +8,25 @@ import MultiAnswer from './MultiAnswer'
 import { connect } from 'react-redux'
 import { setNextPrevQuestion, fetchTests } from './actionCreators'
 
-const { object, func, bool } = React.PropTypes
+const { object, func, bool, array } = React.PropTypes
 
 const QuestionHolder = React.createClass({
   propTypes: {
     params: object,
     dispatch: func,
-    tests: object,
+    tests: array.isRequired,
     fetchingTests: bool
   },
   componentDidMount () {
-    let {id, qId} = this.props.params
-    this.props.dispatch(fetchTests())
-    this.props.dispatch(setNextPrevQuestion(id, 1, qId))
+    if (!this.props.tests.length) {
+      this.props.dispatch(fetchTests())
+    }
+    let {id, sectionId, qId} = this.props.params
+    this.props.dispatch(setNextPrevQuestion(id, sectionId, qId))
   },
   componentWillReceiveProps () {
-    let {id, qId} = this.props.params
-    this.props.dispatch(setNextPrevQuestion(id, 1, qId))
+    let {id, sectionId, qId} = this.props.params
+    this.props.dispatch(setNextPrevQuestion(id, sectionId, qId))
   },
   render () {
     if (this.props.fetchingTests) {
@@ -32,9 +34,11 @@ const QuestionHolder = React.createClass({
         <div>Fetching tests</div>
       )
     } else {
+      let {id, sectionId, qId} = this.props.params
       let questionComponent
-      let test = this.props.tests
-      let q = test.questions[this.props.params.qId]
+      let test = this.props.tests[id]
+      let section = test.sections[sectionId]
+      let q = section.questions[this.props.params.qId]
       switch (q.type) {
         case 'mcq':
           questionComponent = <Mcq question={q} />
@@ -65,7 +69,6 @@ const QuestionHolder = React.createClass({
       }
       return (
         <div>
-          <br />
           <br />
           {questionComponent}
         </div>
