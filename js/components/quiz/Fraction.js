@@ -12,14 +12,16 @@ const Fraction = React.createClass({
   handleNumerator (e) {
     let denominatorValue = this.props.question.answer[1]
     let answerObj = [e.target.value, denominatorValue]
-    this.props.dispatch(updateAnswer(this.props.question.id, answerObj))
-    this.props.dispatch(updateFirebaseWithAnswer(this.props.question.id, answerObj))
+    this.props.dispatch(updateAnswer(answerObj))
+    this.forceUpdate()
+    // this.props.dispatch(updateFirebaseWithAnswer(answerObj))
   },
   handleDenominator (e) {
     let numeratorValue = this.props.question.answer[0]
     let answerObj = [numeratorValue, e.target.value]
-    this.props.dispatch(updateAnswer(this.props.question.id, answerObj))
-    this.props.dispatch(updateFirebaseWithAnswer(this.props.question.id, answerObj))
+    this.props.dispatch(updateAnswer(answerObj))
+    this.forceUpdate()
+    
   },
   render () {
     let q = this.props.question
