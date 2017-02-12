@@ -1,4 +1,4 @@
-from flask import Flask, redirect, url_for, session, render_template, g, flash
+from flask import Flask, redirect, url_for, send_from_directory, session, render_template, g, flash
 import pyrebase
 from flask_oauth import OAuth
 import requests
@@ -13,9 +13,26 @@ import os
 
 from firebase_token_generator import create_token
 
+template_dir = os.path.abspath('./')
+static_dir = os.path.abspath('./public/')
 
-app = Flask('quiz')
+print static_dir
+# app = Flask(__name__,
+#                static_folder='',
+#                template_folder='./')
+app = Flask('quiz', template_folder = template_dir, static_folder='')
 app.config.from_object('quiz.settings')
+@app.route('/public/<path:path>', methods=['GET'])
+def static_proxy(path):
+    return send_from_directory(static_dir, path)
+
+@app.route('/node_modules/<path:path>', methods=['GET'])
+def css_proxy(path):
+    return send_from_directory(os.path.abspath('./node_modules/'), path)
+
+# @app.route('/', methods=['GET'])
+# def redirect_to_index():
+#     return send_from_directory(root, 'index.html')
 
 firebase = pyrebase.initialize_app(app.config['FIREBASE_CONFIG'])
 
@@ -82,7 +99,7 @@ def login():
     if not session.get('access_token'):
         return render_template('login.html')
     else:
-        return "Hello Boss!  <a href='/logout'>Logout</a>"
+        return render_template('index.html')
 
 @app.route('/app_login')
 def app_login():
