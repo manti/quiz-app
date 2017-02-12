@@ -2,6 +2,7 @@ import React from 'react'
 import { Modal, Button, Table } from 'react-bootstrap'
 import { connect } from 'react-redux'
 const { array, bool, object, string } = require('react').PropTypes
+import { hashHistory } from 'react-router'
 
 const Review = React.createClass({
   propTypes: {
@@ -22,7 +23,8 @@ const Review = React.createClass({
     this.setState({show: false})
   },
   gotoThisQ (e, q) {
-    console.log(q)
+    hashHistory.push(`/tests/${this.props.testId}/${this.props.sectionId}/${q}`)
+    this.hideModal()
   },
   render () {
     let sectionQuestions = []
@@ -57,7 +59,7 @@ const Review = React.createClass({
                   <tbody>
                     {sectionQuestions.map((q, i) => {
                       return (
-                        <tr key={i} onClick={(e) => { this.gotoThisQ(e, q.id)}}>
+                        <tr style={{cursor:'pointer'}} key={i} onClick={(e) => { this.gotoThisQ(e, q.id)}}>
                           <td>{q.id}</td>
                           <td>{q.answer.length ? 'Answered':'Not answered'}</td>
                           <td>{q.marked}</td>
