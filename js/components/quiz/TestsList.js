@@ -17,7 +17,7 @@ const TestsList = React.createClass({
     this.props.dispatch(setTestStatus(false))
   },
   render () {
-    let tests = Object.keys(this.props.tests).filter((w)=>{
+    let tests = Object.keys(this.props.tests).filter((w) => {
       return !isNaN(Number(w))
     })
     if (!this.props.fetchingTests) {
