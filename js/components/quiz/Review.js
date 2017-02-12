@@ -1,18 +1,19 @@
 import React from 'react'
 import { Modal, Button, Table } from 'react-bootstrap'
 import { connect } from 'react-redux'
-const { array, bool, object } = require('react').PropTypes
+const { array, bool, object, string } = require('react').PropTypes
 
 const Review = React.createClass({
   propTypes: {
     tests: array.isRequired,
     fetchingTests: bool,
+    sectionId: string,
+    testId: string,
     arg: object.isRequired
   },
   getInitialState () {
     return {show: false}
   },
-
   showModal () {
     this.setState({show: true})
   },
@@ -20,7 +21,16 @@ const Review = React.createClass({
   hideModal () {
     this.setState({show: false})
   },
+  gotoThisQ (e, q) {
+    console.log(q)
+  },
   render () {
+    let sectionQuestions = []
+    if (this.props.tests.length) {
+      let {testId, sectionId} = this.props
+      sectionQuestions = this.props.tests[testId].sections[sectionId].questions
+      console.log(sectionQuestions)
+    }
     if(this.props.arg.qId && !this.props.fetchingTests) {
       return (
         <div>
@@ -45,21 +55,15 @@ const Review = React.createClass({
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>1</td>
-                      <td>Answered</td>
-                      <td>Otto</td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>Not Answered</td>
-                      <td>Thornton</td>
-                    </tr>
-                    <tr>
-                      <td>3</td>
-                      <td>Incomplete</td>
-                      <td>@twitter</td>
-                    </tr>
+                    {sectionQuestions.map((q, i) => {
+                      return (
+                        <tr key={i} onClick={(e) => { this.gotoThisQ(e, q.id)}}>
+                          <td>{q.id}</td>
+                          <td>{q.answer.length ? 'Answered':'Not answered'}</td>
+                          <td>{q.marked}</td>
+                        </tr>
+                      )
+                    })}
                   </tbody>
               </Table>
             </Modal.Body>
@@ -75,7 +79,9 @@ const Review = React.createClass({
 const mapStateToProps = (state) => {
   return {
     tests: state.tests,
-    fetchingTests: state.fetchingTests
+    fetchingTests: state.fetchingTests,
+    testId: state.testId,
+    sectionId: state.sectionId
   }
 }
 
