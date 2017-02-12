@@ -79,7 +79,13 @@ def index():
 
 @app.route('/login')
 def login():
+    if not session.get('access_token'):
+        return render_template('login.html')
+    else:
+        return "Hello Boss!  <a href='/logout'>Logout</a>"
 
+@app.route('/app_login')
+def app_login():
   callback=url_for('authorized', _external=True)
   return google.authorize(callback=callback)
 
@@ -137,7 +143,7 @@ def authorized(resp):
       user_data = user.get_users_data_by_id(userinfo['id'])
       user.initialise_test(user_data.items()[0][0])
       
-      return redirect(url_for('index'))
+      return redirect(url_for('login'))
 
 
 @app.route('/report')

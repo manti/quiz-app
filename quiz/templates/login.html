@@ -1,0 +1,13 @@
+{% block body %}
+{% if session['access_token'] %}
+<p>You're logged in already!</p>
+{% else %}
+  
+
+<div >
+	<a href = '/app_login' > Login</a>
+</div>
+
+ 
+{% endif %}
+{% endblock %}
