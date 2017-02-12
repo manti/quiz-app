@@ -7,7 +7,7 @@ import Fraction from './Fraction'
 import MultiAnswer from './MultiAnswer'
 import { connect } from 'react-redux'
 import { Checkbox } from 'react-bootstrap'
-import { setNextPrevQuestion, fetchTests, setQuizParams } from './actionCreators'
+import { setNextPrevQuestion, fetchTests, setQuizParams, markQuestion } from './actionCreators'
 
 const { object, func, bool, array } = React.PropTypes
 
@@ -19,8 +19,8 @@ const QuestionHolder = React.createClass({
     fetchingTests: bool
   },
   handleMarkQuestion (e, question) {
-    e.target.checked = !e.target.checked
-    console.log(question)
+    this.props.dispatch(markQuestion(e.target.checked))
+    this.forceUpdate()
   },
   componentDidMount () {
     if (!this.props.tests.length) {
@@ -34,7 +34,6 @@ const QuestionHolder = React.createClass({
     let {id, sectionId, qId} = this.props.params
     this.props.dispatch(setNextPrevQuestion(id, sectionId, qId))
     this.props.dispatch(setQuizParams(id, sectionId, qId))
-    // this.forceUpdate()
   },
   render () {
     if (this.props.fetchingTests) {

@@ -1,5 +1,5 @@
 import { firebaseDB } from './firebaseSetup'
-import { SET_TEST_STATUS, SET_NEXT_PREV_QUESTION, FETCH_TESTS, UPDATE_ANSWER, UPDATE_TIME_REMAINING, UPDATE_FIREBASE_WITH_ANSWER, SET_QUIZ_PARAMS } from './actions'
+import { SET_TEST_STATUS, SET_NEXT_PREV_QUESTION, FETCH_TESTS, UPDATE_ANSWER, UPDATE_TIME_REMAINING, UPDATE_FIREBASE_WITH_ANSWER, SET_QUIZ_PARAMS, MARK_QUESTION } from './actions'
 
 export function setTestStatus (testStarted) {
   return { type: SET_TEST_STATUS, testStarted: testStarted }
@@ -22,6 +22,10 @@ export function updateFirebaseWithAnswer (answer) {
 
 export function setQuizParams (testId, sectionId, qId) {
   return {type: SET_QUIZ_PARAMS, testId, sectionId, qId}
+}
+
+export function markQuestion (isMarked) {
+  return {type: MARK_QUESTION, isMarked}
 }
 
 const tests = firebaseDB.ref('/')

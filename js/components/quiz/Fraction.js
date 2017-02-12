@@ -21,7 +21,6 @@ const Fraction = React.createClass({
     let answerObj = [numeratorValue, e.target.value]
     this.props.dispatch(updateAnswer(answerObj))
     this.forceUpdate()
-    
   },
   render () {
     let q = this.props.question

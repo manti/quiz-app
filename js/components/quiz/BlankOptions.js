@@ -3,7 +3,7 @@ import { updateAnswer, updateFirebaseWithAnswer } from './actionCreators'
 import { connect } from 'react-redux'
 import { ListGroup, ListGroupItem } from 'react-bootstrap'
 
-const { array, object, func, number, string } = React.PropTypes
+const { array, object, func, number } = React.PropTypes
 
 const BlankOptions = React.createClass({
   propTypes: {
@@ -17,7 +17,6 @@ const BlankOptions = React.createClass({
     e.preventDefault()
     let answerObj = this.props.question.answer
     answerObj[this.props.blank] = e.target.innerHTML
-    let {testId, sectionId} = this.props
     this.props.dispatch(updateAnswer(answerObj))
     this.forceUpdate()
     // this.props.dispatch(updateFirebaseWithAnswer(answerObj))

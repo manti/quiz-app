@@ -1,4 +1,4 @@
-import { SET_TEST_STATUS, SET_NEXT_PREV_QUESTION, FETCH_TESTS, UPDATE_ANSWER, UPDATE_TIME_REMAINING, UPDATE_FIREBASE_WITH_ANSWER, SET_QUIZ_PARAMS } from './actions'
+import { SET_TEST_STATUS, SET_NEXT_PREV_QUESTION, FETCH_TESTS, UPDATE_ANSWER, UPDATE_TIME_REMAINING, UPDATE_FIREBASE_WITH_ANSWER, SET_QUIZ_PARAMS, MARK_QUESTION } from './actions'
 import { firebaseDB } from './firebaseSetup'
 
 const DEFAULT_STATE = {
@@ -107,6 +107,25 @@ const setQuizParamsInState = (state, action) => {
   return newState
 }
 
+const markInFirebase = (state, action) => {
+  let { qId, sectionId, testId } = state
+  const question = firebaseDB.ref(`/${testId}/sections/${sectionId}/questions/${qId}`)
+  question.update({
+    marked: action.isMarked
+  })
+}
+
+const toggleMarkThis = (state, action) => {
+  const newState = {}
+  let { sectionId, testId, qId } = state
+  let currentSetOfTests = state.tests
+  let currentQuestion = currentSetOfTests[testId].sections[sectionId].questions[qId]
+  currentQuestion.marked = action.isMarked
+  Object.assign(newState, state, {tests: currentSetOfTests})
+  markInFirebase(state, action)
+  return newState
+}
+
 const rootReducer = (state = DEFAULT_STATE, action) => {
   switch (action.type) {
     case SET_TEST_STATUS:
@@ -123,6 +142,8 @@ const rootReducer = (state = DEFAULT_STATE, action) => {
       return updateFirebaseAnswer(state, action)
     case SET_QUIZ_PARAMS:
       return setQuizParamsInState(state, action)
+    case MARK_QUESTION:
+      return toggleMarkThis(state, action)
     default:
       return state
   }
