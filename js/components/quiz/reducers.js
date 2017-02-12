@@ -8,7 +8,7 @@ const DEFAULT_STATE = {
   testId: '',
   sectionId: '',
   qId: '',
-  tests: [],
+  tests: {},
   fetchingTests: true
 }
 

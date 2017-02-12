@@ -17,8 +17,7 @@ const SectionTimer = React.createClass({
   render () {
     if (this.props.arg.qId && !this.props.fetchingTests) {
       return <CountdownTimer tickCallback={this.customCallback} initialTimeRemaining={this.props.tests.timeRemaining} />
-    }
-    else {
+    } else {
       return <br />
     }
   }

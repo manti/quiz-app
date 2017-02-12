@@ -2,34 +2,35 @@ import React from 'react'
 import TestCard from './TestCard'
 import { connect } from 'react-redux'
 import { setTestStatus, fetchTests } from './actionCreators'
-const { func, bool, array } = React.PropTypes
+const { func, bool, object } = React.PropTypes
 
 const TestsList = React.createClass({
   propTypes: {
     dispatch: func.isRequired,
-    tests: array,
-    testStarted: bool
+    tests: object.isRequired,
+    fetchingTests: bool
   },
   componentDidMount () {
-    if (!this.props.tests.length) {
+    if (!this.props.tests[1]) {
       this.props.dispatch(fetchTests())
     }
     this.props.dispatch(setTestStatus(false))
   },
   render () {
-    let tests = this.props.tests
-    if (this.props.tests.length) {
+    let tests = Object.keys(this.props.tests).filter((w)=>{
+      return !isNaN(Number(w))
+    })
+    if (!this.props.fetchingTests) {
       return (
         <div>
           <div className='TestsList'>
-            {this.props.tests.map((test, i) => {
-              return <TestCard title={test.name} testId={test.id} key={i} />
+            {tests.map((test, i) => {
+              return <TestCard title={`Test-${test}`} testId={test} key={i} />
             })}
           </div>
         </div>
       )
-    }
-    else {
+    } else {
       return <h3 className='i-am-center'>Loading</h3>
     }
   }
@@ -37,8 +38,8 @@ const TestsList = React.createClass({
 
 const mapStateToProps = (state) => {
   return {
-    testStarted: state.testStarted,
-    tests: state.tests
+    tests: state.tests,
+    fetchingTests: state.fetchingTests
   }
 }
 

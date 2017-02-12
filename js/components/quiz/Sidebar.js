@@ -1,5 +1,5 @@
 import React from 'react'
-import SectionTimer from './SectionTimer'
+// import SectionTimer from './SectionTimer'
 import CalculatorHelp from './CalculatorHelp'
 import Review from './Review'
 const { object } = React.PropTypes

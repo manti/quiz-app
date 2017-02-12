@@ -9,13 +9,13 @@ import { connect } from 'react-redux'
 import { Checkbox } from 'react-bootstrap'
 import { setNextPrevQuestion, fetchTests, setQuizParams, markQuestion } from './actionCreators'
 
-const { object, func, bool, array } = React.PropTypes
+const { object, func, bool } = React.PropTypes
 
 const QuestionHolder = React.createClass({
   propTypes: {
     params: object,
     dispatch: func,
-    tests: array.isRequired,
+    tests: object.isRequired,
     fetchingTests: bool
   },
   handleMarkQuestion (e, question) {

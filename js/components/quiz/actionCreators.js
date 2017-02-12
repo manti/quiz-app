@@ -13,7 +13,7 @@ export function updateAnswer (answer) {
 }
 
 export function updateTimeRemaining (timeRemaining) {
-  return {type: UPDATE_TIME_REMAINING, timeRemaining }
+  return { type: UPDATE_TIME_REMAINING, timeRemaining }
 }
 
 export function updateFirebaseWithAnswer (answer) {

@@ -1,7 +1,7 @@
 import React from 'react'
 import { FormGroup, FormControl } from 'react-bootstrap'
 import { connect } from 'react-redux'
-import { updateAnswer, updateFirebaseWithAnswer } from './actionCreators'
+import { updateAnswer } from './actionCreators'
 const { object, func } = React.PropTypes
 
 const OnlyInput = React.createClass({

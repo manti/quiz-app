@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react'
 import ReactPoint from 'react-point'
 require('./calculator.css')
@@ -21,8 +22,9 @@ const AutoScalingText = React.createClass({
     const actualWidth = node.offsetWidth
     const actualScale = availableWidth / actualWidth
 
-    if (scale === actualScale)
+    if (scale === actualScale){
       return
+    }
 
     if (actualScale < 1) {
       this.setState({ scale: actualScale })
@@ -279,3 +281,4 @@ const Calculator = React.createClass({
 })
 
 export default Calculator
+/* eslint-enable */

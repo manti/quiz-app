@@ -1,7 +1,7 @@
 import React from 'react'
 import FourChoices from './FourChoices'
 import { Image } from 'react-bootstrap'
-import { updateAnswer, updateFirebaseWithAnswer } from './actionCreators'
+import { updateAnswer } from './actionCreators'
 import { connect } from 'react-redux'
 
 const { object, func } = React.PropTypes

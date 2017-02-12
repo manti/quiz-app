@@ -7,6 +7,7 @@
     "lint": "eslint js/**/**/*.js webpack.config.js",
     "polish": "npm run lint -s -- --fix",
     "build": "webpack",
+    "prod": "NODE_ENV=production npm run build -- -p",
     "dev": "webpack-dev-server",
     "hot": "npm run dev -- --hot",
     "watch": "npm run build -- --watch"

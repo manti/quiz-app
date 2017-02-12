@@ -1,12 +1,12 @@
 import React from 'react'
 import { Modal, Button, Table } from 'react-bootstrap'
 import { connect } from 'react-redux'
-const { array, bool, object, string } = require('react').PropTypes
+const { bool, object, string } = require('react').PropTypes
 import { hashHistory } from 'react-router'
 
 const Review = React.createClass({
   propTypes: {
-    tests: array.isRequired,
+    tests: object.isRequired,
     fetchingTests: bool,
     sectionId: string,
     testId: string,
@@ -28,12 +28,10 @@ const Review = React.createClass({
   },
   render () {
     let sectionQuestions = []
-    if (this.props.tests.length) {
+    if (this.props.arg.qId && !this.props.fetchingTests) {
       let {testId, sectionId} = this.props
       sectionQuestions = this.props.tests[testId].sections[sectionId].questions
       console.log(sectionQuestions)
-    }
-    if(this.props.arg.qId && !this.props.fetchingTests) {
       return (
         <div>
           <Button onClick={this.showModal}>Review</Button>
@@ -49,24 +47,24 @@ const Review = React.createClass({
             <Modal.Body>
               <h4>Click on a question to go there</h4>
               <Table striped bordered condensed hover>
-                  <thead>
-                    <tr>
-                      <th>Question Number</th>
-                      <th>Status</th>
-                      <th>Marked</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {sectionQuestions.map((q, i) => {
-                      return (
-                        <tr style={{cursor:'pointer'}} key={i} onClick={(e) => { this.gotoThisQ(e, q.id)}}>
-                          <td>{q.id}</td>
-                          <td>{q.answer.length ? 'Answered':'Not answered'}</td>
-                          <td>{q.marked}</td>
-                        </tr>
-                      )
-                    })}
-                  </tbody>
+                <thead>
+                  <tr>
+                    <th>Question Number</th>
+                    <th>Status</th>
+                    <th>Marked</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {sectionQuestions.map((q, i) => {
+                    return (
+                      <tr style={{cursor: 'pointer'}} key={i} onClick={(e) => { this.gotoThisQ(e, q.id) }}>
+                        <td>{q.id}</td>
+                        <td>{q.answer.length ? 'Answered' : 'Not answered'}</td>
+                        <td>{q.marked}</td>
+                      </tr>
+                    )
+                  })}
+                </tbody>
               </Table>
             </Modal.Body>
           </Modal>
