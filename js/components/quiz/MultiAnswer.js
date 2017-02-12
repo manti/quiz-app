@@ -2,7 +2,7 @@ import React from 'react'
 import _ from 'lodash'
 import { Checkbox } from 'react-bootstrap'
 import { connect } from 'react-redux'
-import { updateAnswer, updateFirebaseWithAnswer } from './actionCreators'
+import { updateAnswer } from './actionCreators'
 const { object, func } = React.PropTypes
 
 const MultiAnswer = React.createClass({

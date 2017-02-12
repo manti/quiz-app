@@ -1,5 +1,5 @@
 import React from 'react'
-import { updateAnswer, updateFirebaseWithAnswer } from './actionCreators'
+import { updateAnswer } from './actionCreators'
 import { connect } from 'react-redux'
 import { ListGroup, ListGroupItem } from 'react-bootstrap'
 

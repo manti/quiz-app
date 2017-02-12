@@ -38,7 +38,7 @@ const QuestionHolder = React.createClass({
   render () {
     if (this.props.fetchingTests) {
       return (
-        <div>Fetching tests</div>
+        <h3 className='i-am-center'>Fetching tests</h3>
       )
     } else {
       let {id, sectionId} = this.props.params

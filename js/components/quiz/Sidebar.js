@@ -14,7 +14,7 @@ const Sidebar = React.createClass({
       <div>
         {/* <SectionTimer arg={this.props.arg} /> */}
         <CalculatorHelp arg={this.props.arg} />
-        <Review />
+        <Review arg={this.props.arg} />
       </div>
     )
   }
