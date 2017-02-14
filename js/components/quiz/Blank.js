@@ -1,6 +1,7 @@
 import React from 'react'
 import BlankOptions from './BlankOptions'
 const { object } = React.PropTypes
+import { Col } from 'react-bootstrap'
 
 const Blank = React.createClass({
   propTypes: {
@@ -15,7 +16,11 @@ const Blank = React.createClass({
         <p>{q.question}</p>
         {blankOptions.map((val, key) => {
           <div>Blank {key}</div>
-          return <BlankOptions key={key} blank={key} question={q} options={options[val]} />
+          return (
+            <Col xs={6} md={4}>
+              <BlankOptions key={key} blank={key} question={q} options={options[val]} />
+            </Col>
+          )
         })}
       </div>
     )
