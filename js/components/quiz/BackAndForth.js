@@ -17,16 +17,15 @@ const BackAndForth = React.createClass({
     showSectionPrompt: bool,
     dispatch: func
   },
+
   getQuestionLink (testId, sectionId, qId) {
     return `/tests/${testId}/${sectionId}/${qId}`
   },
 
-  gotoNextSection () {
-
-  },
   showGotoNextPrompt () {
     this.props.dispatch(toggleGotoPrompt())
   },
+
   render () {
     let backAndForth = (
       <br />

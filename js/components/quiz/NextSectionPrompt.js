@@ -2,12 +2,15 @@ import React from 'react'
 import { Modal, Button } from 'react-bootstrap'
 import {connect} from 'react-redux'
 import {toggleGotoPrompt} from './actionCreators'
-const { bool, func } = require('react').PropTypes
+import { hashHistory } from 'react-router'
+const { bool, func, string } = require('react').PropTypes
 
 const NextSectionPrompt = React.createClass({
   propTypes: {
     showSectionPrompt: bool,
-    dispatch: func
+    dispatch: func,
+    testId: string,
+    sectionId: string
   },
   getInitialState () {
     return {show: true}
@@ -19,6 +22,11 @@ const NextSectionPrompt = React.createClass({
 
   hideModal () {
     this.props.dispatch(toggleGotoPrompt())
+  },
+
+  gotoNextQuestion () {
+    hashHistory.push(`/tests/${this.props.testId}/${Number(this.props.sectionId) + 1}/1`)
+    this.hideModal()
   },
 
   render () {
@@ -34,7 +42,7 @@ const NextSectionPrompt = React.createClass({
         </Modal.Body>
         <Modal.Footer>
           <Button onClick={this.hideModal}>Close</Button>
-          <Button onClick={this.hideModal}>Yes go</Button>
+          <Button onClick={this.gotoNextQuestion}>Yes go</Button>
         </Modal.Footer>
       </Modal>
     )
@@ -43,7 +51,9 @@ const NextSectionPrompt = React.createClass({
 
 const mapStateToProps = (state) => {
   return {
-    showSectionPrompt: state.showSectionPrompt
+    showSectionPrompt: state.showSectionPrompt,
+    testId: state.testId,
+    sectionId: state.sectionId
   }
 }
 
