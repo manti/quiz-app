@@ -1,5 +1,5 @@
 import React from 'react'
-// import SectionTimer from './SectionTimer'
+import SectionTimer from './SectionTimer'
 import CalculatorHelp from './CalculatorHelp'
 import Review from './Review'
 const { object } = React.PropTypes
@@ -12,7 +12,7 @@ const Sidebar = React.createClass({
   render () {
     return (
       <div>
-        {/* <SectionTimer arg={this.props.arg} /> */}
+        <SectionTimer arg={this.props.arg} />
         <CalculatorHelp arg={this.props.arg} />
         <Review arg={this.props.arg} />
       </div>

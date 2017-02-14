@@ -41,21 +41,3 @@ export function fetchTests () {
     })
   }
 }
-
-// export function updateFirebaseWithAnswer (answer) {
-//   const question = firebaseDB.ref(`/${testId}/sections/${sectionId}/questions/${questionId}`)
-//   return dispatch => {
-//     question.update({
-//       answer: answer
-//     })
-//   }
-// }
-
-export function syncTimeRemaining (timeRemaining) {
-  console.log('Imm called in actioncreator')
-  return dispatch => {
-    tests.update({
-      timeRemaining: timeRemaining
-    })
-  }
-}

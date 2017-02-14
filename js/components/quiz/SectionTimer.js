@@ -2,11 +2,13 @@ import React from 'react'
 import { connect } from 'react-redux'
 import CountdownTimer from './CountdownTimer'
 import { updateTimeRemaining } from './actionCreators'
-const { object, bool, func } = require('react').PropTypes
+const { object, bool, func, string } = require('react').PropTypes
 
 const SectionTimer = React.createClass({
   propTypes: {
     tests: object.isRequired,
+    sectionId: string.isRequired,
+    testId: string.isRequired,
     arg: object.isRequired,
     fetchingTests: bool,
     dispatch: func
@@ -16,7 +18,8 @@ const SectionTimer = React.createClass({
   },
   render () {
     if (this.props.arg.qId && !this.props.fetchingTests) {
-      return <CountdownTimer tickCallback={this.customCallback} initialTimeRemaining={this.props.tests.timeRemaining} />
+      let currentSection = this.props.tests[this.props.testId].sections[this.props.sectionId]
+      return <CountdownTimer tickCallback={this.customCallback} initialTimeRemaining={currentSection.timeRemaining} />
     } else {
       return <br />
     }
@@ -26,7 +29,9 @@ const SectionTimer = React.createClass({
 const mapStateToProps = (state) => {
   return {
     tests: state.tests,
-    fetchingTests: state.fetchingTests
+    fetchingTests: state.fetchingTests,
+    sectionId: state.sectionId,
+    testId: state.testId
   }
 }
 
