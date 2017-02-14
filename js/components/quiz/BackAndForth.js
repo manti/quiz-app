@@ -2,8 +2,9 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Button, Col, Row } from 'react-bootstrap'
 import {Link} from 'react-router'
-
-const { bool, string, object } = require('react').PropTypes
+import {toggleGotoPrompt} from './actionCreators'
+import NextSectionPrompt from './NextSectionPrompt'
+const { bool, string, object, func } = require('react').PropTypes
 
 const BackAndForth = React.createClass({
   propTypes: {
@@ -12,18 +13,35 @@ const BackAndForth = React.createClass({
     prevQ: string,
     arg: object.isRequired,
     isSectionLastQ: bool,
-    fetchingTests: bool
+    fetchingTests: bool,
+    showSectionPrompt: bool,
+    dispatch: func
   },
-
   getQuestionLink (testId, sectionId, qId) {
     return `/tests/${testId}/${sectionId}/${qId}`
   },
 
+  gotoNextSection () {
+
+  },
+  showGotoNextPrompt () {
+    this.props.dispatch(toggleGotoPrompt())
+  },
   render () {
     let backAndForth = (
       <br />
     )
     if (this.props.arg.id && !this.props.fetchingTests) {
+      let nextQMarkup = (
+        <Link to={this.getQuestionLink(this.props.arg.id, this.props.arg.sectionId, this.props.nextQ)}>
+          <Button className='pull-right' bsStyle='link'>Next</Button>
+        </Link>
+      )
+      if (this.props.isSectionLastQ) {
+        nextQMarkup = (
+          <Button className='pull-right' bsStyle='link' onClick={this.showGotoNextPrompt}>Go next section</Button>
+        )
+      }
       backAndForth = (
         <div>
           <Row className='show-grid'>
@@ -33,9 +51,7 @@ const BackAndForth = React.createClass({
               </Link>
             </Col>
             <Col xs={6} md={4}>
-              <Link to={this.getQuestionLink(this.props.arg.id, this.props.arg.sectionId, this.props.nextQ)}>
-                <Button className='pull-right' bsStyle='link'>{ this.props.isSectionLastQ ? 'Go to next section' : 'Next'}</Button>
-              </Link>
+              {nextQMarkup}
             </Col>
           </Row>
         </div>
@@ -45,6 +61,7 @@ const BackAndForth = React.createClass({
     return (
       <div>
         <div>{backAndForth}</div>
+        <NextSectionPrompt />
       </div>
     )
   }
@@ -56,7 +73,8 @@ const mapStateToProps = (state) => {
     nextQ: state.nextQ,
     prevQ: state.prevQ,
     isSectionLastQ: state.isSectionLastQ,
-    fetchingTests: state.fetchingTests
+    fetchingTests: state.fetchingTests,
+    showSectionPrompt: state.showSectionPrompt
   }
 }
 

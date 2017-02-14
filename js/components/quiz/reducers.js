@@ -1,4 +1,4 @@
-import { SET_TEST_STATUS, SET_NEXT_PREV_QUESTION, FETCH_TESTS, UPDATE_ANSWER, UPDATE_TIME_REMAINING, UPDATE_FIREBASE_WITH_ANSWER, SET_QUIZ_PARAMS, MARK_QUESTION } from './actions'
+import { SET_TEST_STATUS, SET_NEXT_PREV_QUESTION, FETCH_TESTS, UPDATE_ANSWER, UPDATE_TIME_REMAINING, UPDATE_FIREBASE_WITH_ANSWER, SET_QUIZ_PARAMS, MARK_QUESTION, TOGGLE_GOTO_PROMPT } from './actions'
 import { firebaseDB } from './firebaseSetup'
 
 const DEFAULT_STATE = {
@@ -10,7 +10,8 @@ const DEFAULT_STATE = {
   qId: '',
   tests: {},
   fetchingTests: true,
-  isSectionLastQ: false
+  isSectionLastQ: false,
+  showSectionPrompt: false
 }
 
 const setTestStatus = (state, action) => {
@@ -130,6 +131,12 @@ const toggleMarkThis = (state, action) => {
   return newState
 }
 
+const toggleGotoPrompt = (state, action) => {
+  const newState = {}
+  Object.assign(newState, state, {showSectionPrompt: !state.showSectionPrompt})
+  return newState
+}
+
 const rootReducer = (state = DEFAULT_STATE, action) => {
   switch (action.type) {
     case SET_TEST_STATUS:
@@ -148,6 +155,8 @@ const rootReducer = (state = DEFAULT_STATE, action) => {
       return setQuizParamsInState(state, action)
     case MARK_QUESTION:
       return toggleMarkThis(state, action)
+    case TOGGLE_GOTO_PROMPT:
+      return toggleGotoPrompt(state, action)
     default:
       return state
   }

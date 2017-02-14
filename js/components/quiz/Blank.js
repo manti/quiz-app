@@ -17,7 +17,7 @@ const Blank = React.createClass({
         {blankOptions.map((val, key) => {
           <div>Blank {key}</div>
           return (
-            <Col xs={6} md={4}>
+            <Col xs={6} md={4} key={key}>
               <BlankOptions key={key} blank={key} question={q} options={options[val]} />
             </Col>
           )
