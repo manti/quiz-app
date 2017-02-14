@@ -10,7 +10,9 @@ const BackAndForth = React.createClass({
     testStarted: bool.isRequired,
     nextQ: string,
     prevQ: string,
-    arg: object.isRequired
+    arg: object.isRequired,
+    isSectionLastQ: bool,
+    fetchingTests: bool
   },
 
   getQuestionLink (testId, sectionId, qId) {
@@ -21,8 +23,7 @@ const BackAndForth = React.createClass({
     let backAndForth = (
       <br />
     )
-    // console.log(this.props)
-    if (this.props.arg.id) {
+    if (this.props.arg.id && !this.props.fetchingTests) {
       backAndForth = (
         <div>
           <Row className='show-grid'>
@@ -33,7 +34,7 @@ const BackAndForth = React.createClass({
             </Col>
             <Col xs={6} md={4}>
               <Link to={this.getQuestionLink(this.props.arg.id, this.props.arg.sectionId, this.props.nextQ)}>
-                <Button className='pull-right' bsStyle='link'>Next</Button>
+                <Button className='pull-right' bsStyle='link'>{ this.props.isSectionLastQ ? 'Go to next section' : 'Next'}</Button>
               </Link>
             </Col>
           </Row>
@@ -53,7 +54,9 @@ const mapStateToProps = (state) => {
   return {
     testStarted: state.testStarted,
     nextQ: state.nextQ,
-    prevQ: state.prevQ
+    prevQ: state.prevQ,
+    isSectionLastQ: state.isSectionLastQ,
+    fetchingTests: state.fetchingTests
   }
 }
 

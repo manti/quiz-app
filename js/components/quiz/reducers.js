@@ -9,7 +9,8 @@ const DEFAULT_STATE = {
   sectionId: '',
   qId: '',
   tests: {},
-  fetchingTests: true
+  fetchingTests: true,
+  isSectionLastQ: false
 }
 
 const setTestStatus = (state, action) => {
@@ -25,6 +26,8 @@ const setNextPrevQuestion = (state, action) => {
     let sectionNow = state.tests[testId].sections[sectionId]
     let sectionQuestions = sectionNow.questions
     let nextQ, prevQ
+    let isLastQ = false
+    let sectionQuestionsCount = Object.keys(sectionQuestions).length
     if (sectionQuestions[Number(qId) + 1]) {
       nextQ = Number(qId) + 1
     } else {
@@ -35,7 +38,10 @@ const setNextPrevQuestion = (state, action) => {
     } else {
       prevQ = qId
     }
-    Object.assign(newState, state, {nextQ: String(nextQ), prevQ: String(prevQ)})
+    if (Number(prevQ) === sectionQuestionsCount - 1 && Number(nextQ) === sectionQuestionsCount) {
+      isLastQ = true
+    }
+    Object.assign(newState, state, {nextQ: String(nextQ), prevQ: String(prevQ), isSectionLastQ: isLastQ})
     return newState
   } else {
     return state
