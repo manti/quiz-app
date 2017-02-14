@@ -43,7 +43,6 @@ const setNextPrevQuestion = (state, action) => {
 }
 
 const syncTimeRemaining = (testId, sectionId, timeRemaining) => {
-  console.log('Imm called in reducer')
   const section = firebaseDB.ref(`/${testId}/sections/${sectionId}`)
   section.update({
     timeRemaining: timeRemaining
@@ -59,9 +58,8 @@ const updateAnswerInTest = (state, action) => {
   const newState = {}
   let { sectionId, testId, qId } = state
   let myTests = state.tests
-  console.log('Update time remaining also')
   myTests[testId].sections[sectionId].questions[qId].answer = action.answer
-  // syncTimeRemaining(testId, sectionId, myTests[testId].sections[sectionId].timeRemaining)
+  syncTimeRemaining(testId, sectionId, myTests[testId].sections[sectionId].timeRemaining)
   const question = firebaseDB.ref(`/${testId}/sections/${sectionId}/questions/${qId}`)
   question.update({
     answer: action.answer

@@ -31,7 +31,6 @@ const Review = React.createClass({
     if (this.props.arg.qId && !this.props.fetchingTests) {
       let {testId, sectionId} = this.props
       sectionQuestions = this.props.tests[testId].sections[sectionId].questions
-      console.log(sectionQuestions)
       return (
         <div>
           <Button onClick={this.showModal}>Review</Button>

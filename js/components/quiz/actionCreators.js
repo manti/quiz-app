@@ -31,7 +31,6 @@ export function markQuestion (isMarked) {
 const tests = firebaseDB.ref('/')
 
 export function fetchTests () {
-  console.log('called')
   return dispatch => {
     tests.on('value', snapshot => {
       dispatch({
