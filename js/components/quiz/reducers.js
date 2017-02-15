@@ -1,4 +1,4 @@
-import { SET_TEST_STATUS, SET_NEXT_PREV_QUESTION, FETCH_TESTS, UPDATE_ANSWER, UPDATE_TIME_REMAINING, UPDATE_FIREBASE_WITH_ANSWER, SET_QUIZ_PARAMS, MARK_QUESTION, TOGGLE_GOTO_PROMPT } from './actions'
+import { SET_TEST_STATUS, SET_NEXT_PREV_QUESTION, FETCH_TESTS, UPDATE_ANSWER, UPDATE_TIME_REMAINING, UPDATE_FIREBASE_WITH_ANSWER, SET_QUIZ_PARAMS, MARK_QUESTION, TOGGLE_GOTO_PROMPT, ZERO_SECTION_TIME } from './actions'
 import { firebaseDB } from './firebaseSetup'
 
 const DEFAULT_STATE = {
@@ -86,7 +86,7 @@ const updateTimeRemaining = (state, action) => {
   let { sectionId, testId } = state
   let modifiedTests = state.tests
   if (action.timeRemaining % 10000 < 1000) {
-    syncTimeRemaining(testId, sectionId, modifiedTests[testId].sections[sectionId].timeRemaining)
+    syncTimeRemaining(testId, sectionId, action.timeRemaining)
   }
   modifiedTests[testId].sections[sectionId].timeRemaining = action.timeRemaining
   Object.assign(newState, state, {tests: modifiedTests})
@@ -137,6 +137,16 @@ const toggleGotoPrompt = (state, action) => {
   return newState
 }
 
+const zeroTheSectionTime = (state, action) => {
+  const newState = {}
+  let { sectionId, testId } = state
+  let modifiedTests = state.tests
+  modifiedTests[testId].sections[sectionId].timeRemaining = action.timeRemaining
+  Object.assign(newState, state, {tests: modifiedTests})
+  syncTimeRemaining(testId, sectionId, action.timeRemaining)
+  return newState
+}
+
 const rootReducer = (state = DEFAULT_STATE, action) => {
   switch (action.type) {
     case SET_TEST_STATUS:
@@ -157,6 +167,8 @@ const rootReducer = (state = DEFAULT_STATE, action) => {
       return toggleMarkThis(state, action)
     case TOGGLE_GOTO_PROMPT:
       return toggleGotoPrompt(state, action)
+    case ZERO_SECTION_TIME:
+      return zeroTheSectionTime(state, action)
     default:
       return state
   }
