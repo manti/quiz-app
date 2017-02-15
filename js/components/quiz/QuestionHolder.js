@@ -7,6 +7,7 @@ import Fraction from './Fraction'
 import MultiAnswer from './MultiAnswer'
 import { connect } from 'react-redux'
 import { Checkbox } from 'react-bootstrap'
+import { hashHistory } from 'react-router'
 import { setNextPrevQuestion, fetchTests, setQuizParams, markQuestion } from './actionCreators'
 
 const { object, func, bool } = React.PropTypes
@@ -41,11 +42,17 @@ const QuestionHolder = React.createClass({
         <h3 className='i-am-center'>Fetching tests</h3>
       )
     } else {
-      let {id, sectionId} = this.props.params
+      let {id, sectionId, qId} = this.props.params
       let questionComponent
       let test = this.props.tests[id]
       let section = test.sections[sectionId]
-      let q = section.questions[this.props.params.qId]
+      let q = section.questions[qId]
+      if (!this.props.fetchingTests) {
+        let timeRemaining = this.props.tests[id].sections[sectionId].timeRemaining
+        if (timeRemaining < 1001) {
+          hashHistory.push(`/tests/${id}/${Number(sectionId) + 1}/1`)
+        }
+      }
       switch (q.type) {
         case 'mcq':
           questionComponent = <Mcq question={q} />

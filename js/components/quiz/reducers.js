@@ -54,11 +54,6 @@ const syncTimeRemaining = (testId, sectionId, timeRemaining) => {
   section.update({
     timeRemaining: timeRemaining
   })
-  // return dispatch => {
-  //   tests.update({
-  //     timeRemaining: timeRemaining
-  //   })
-  // }
 }
 
 const updateAnswerInTest = (state, action) => {
@@ -99,11 +94,6 @@ const updateFirebaseAnswer = (state, action) => {
   question.update({
     answer: action.answer
   })
-  // return dispatch => {
-  //   question.update({
-  //     answer: answer
-  //   })
-  // }
 }
 
 const setQuizParamsInState = (state, action) => {
