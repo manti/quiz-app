@@ -98,8 +98,12 @@ def index():
 def login():
     if not session.get('access_token'):
         return render_template('login.html')
-    else:
+    elif session.get('access_token') and session.get('allowed') == True and session.get('role') == 'user':
         return render_template('index.html')
+    elif session.get('access_token') and session.get('role') == 'admin':
+        return render_template('admin.html')
+    else:
+        return render_template('deny.html')
 
 @app.route('/app_login')
 def app_login():
@@ -142,7 +146,6 @@ def authorized(resp):
       session['user_id'] = userinfo['id']
       session['name'] = userinfo['name']
       session['email'] = userinfo['email']
-
       if check_user is not None:
 
         g.db_cur.execute("update users set access_token = %(access_token)s where email = %(email)s;", { "access_token": access_token, "email": check_user['email'] })
@@ -156,10 +159,12 @@ def authorized(resp):
         g.db_con.commit()
 
       user = Users()
-
-      user_data = user.get_users_data_by_id(userinfo['id'])
-      user.initialise_test(user_data.items()[0][0])
-      
+      _id = userinfo['id']
+      user_data = user.get_users_data_by_id(_id)
+      if user_data[_id].get('tests') is None:
+        user.initialise_test(user_data.items()[0][0])
+      session['role'] = user_data[_id]['role']
+      session['allowed'] = user_data[_id]['allowed']
       return redirect(url_for('login'))
 
 
@@ -171,12 +176,16 @@ def report():
   return jsonify(user.get_users_data_by_id(session.get('user_id')))
 
 
-
+@app.route('/session')
 @google.tokengetter
-def get_access_token():
-    return session.get('access_token')
-
-
+def get_session():
+    _id = str(session.get('user_id'))
+    user = Users()
+    user_data = user.get_users_data_by_id(_id)
+    if user_data[_id].get('tests') is None:
+      user.initialise_test(user_data.items()[0][0])
+      user_data = user.get_users_data_by_id(_id)
+    return jsonify(session)
 
 def connect_db():
   return mdb.connect(DB_HOST, DB_USER, DB_PASS, DB_NAME)
