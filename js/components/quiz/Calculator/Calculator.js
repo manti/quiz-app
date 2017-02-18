@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React from 'react'
 import ReactPoint from 'react-point'
-require('./calculator.css')
+// require('./calculator.css')
 
 const PointTarget = ReactPoint.PointTarget
 
