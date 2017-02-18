@@ -4,14 +4,14 @@ import { Button, Col, Row } from 'react-bootstrap'
 import {Link} from 'react-router'
 import {toggleGotoPrompt} from './actionCreators'
 import NextSectionPrompt from './NextSectionPrompt'
-const { bool, string, object, func } = require('react').PropTypes
+const { bool, string, func } = require('react').PropTypes
 
 const BackAndForth = React.createClass({
   propTypes: {
-    testStarted: bool.isRequired,
     nextQ: string,
     prevQ: string,
-    arg: object.isRequired,
+    sectionId: string,
+    testId: string,
     isSectionLastQ: bool,
     fetchingTests: bool,
     showSectionPrompt: bool,
@@ -30,9 +30,9 @@ const BackAndForth = React.createClass({
     let backAndForth = (
       <br />
     )
-    if (this.props.arg.id && !this.props.fetchingTests) {
+    if (this.props.testId && !this.props.fetchingTests) {
       let nextQMarkup = (
-        <Link to={this.getQuestionLink(this.props.arg.id, this.props.arg.sectionId, this.props.nextQ)}>
+        <Link to={this.getQuestionLink(this.props.testId, this.props.sectionId, this.props.nextQ)}>
           <Button className='pull-right' bsStyle='link'>Next</Button>
         </Link>
       )
@@ -45,7 +45,7 @@ const BackAndForth = React.createClass({
         <div>
           <Row className='show-grid'>
             <Col xs={12} md={8}>
-              <Link to={this.getQuestionLink(this.props.arg.id, this.props.arg.sectionId, this.props.prevQ)}>
+              <Link to={this.getQuestionLink(this.props.testId, this.props.sectionId, this.props.prevQ)}>
                 <Button className='pull-left' bsStyle='link'>Previous</Button>
               </Link>
             </Col>
@@ -68,9 +68,10 @@ const BackAndForth = React.createClass({
 
 const mapStateToProps = (state) => {
   return {
-    testStarted: state.testStarted,
     nextQ: state.nextQ,
     prevQ: state.prevQ,
+    testId: state.testId,
+    sectionId: state.sectionId,
     isSectionLastQ: state.isSectionLastQ,
     fetchingTests: state.fetchingTests,
     showSectionPrompt: state.showSectionPrompt

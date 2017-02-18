@@ -1,6 +1,5 @@
 import React from 'react'
 import { Navbar, Grid, Col } from 'react-bootstrap'
-import BackAndForth from './BackAndForth'
 import Sidebar from './Sidebar'
 import { Link } from 'react-router'
 const { object } = React.PropTypes
@@ -24,7 +23,6 @@ const TestsLayout = React.createClass({
           </Navbar.Header>
         </Navbar>
         <Col xs={16} md={11}>
-          <BackAndForth arg={this.props.params} />
           {this.props.children}
         </Col>
         <Col xs={2} md={1}>

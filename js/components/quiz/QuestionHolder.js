@@ -7,6 +7,7 @@ import Fraction from './Fraction'
 import MultiAnswer from './MultiAnswer'
 import { connect } from 'react-redux'
 import { Checkbox } from 'react-bootstrap'
+import BackAndForth from './BackAndForth'
 import { hashHistory } from 'react-router'
 import { setNextPrevQuestion, fetchTests, setQuizParams, markQuestion, completeTest } from './actionCreators'
 
@@ -88,6 +89,7 @@ const QuestionHolder = React.createClass({
       }
       return (
         <div>
+          <BackAndForth />
           <Checkbox className='i-am-center' onChange={(e) => { this.handleMarkQuestion(e, q) }} checked={q.marked} >Mark</Checkbox>
           <br />
           {questionComponent}
