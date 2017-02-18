@@ -19,7 +19,12 @@ const SectionTimer = React.createClass({
   },
   sectionTimeUp () {
     let {testId, sectionId} = this.props
-    hashHistory.push(`/tests/${testId}/${Number(sectionId) + 1}/1`)
+    if (this.props.tests[testId].sections[Number(sectionId) + 1]) {
+      hashHistory.push(`/tests/${testId}/${Number(sectionId) + 1}/1`)
+    } else {
+      hashHistory.push(`/tests/${testId}/over`)
+      console.log('No more sections')
+    }
   },
   render () {
     if (this.props.arg.qId && !this.props.fetchingTests) {

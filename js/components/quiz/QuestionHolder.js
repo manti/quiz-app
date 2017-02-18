@@ -8,7 +8,7 @@ import MultiAnswer from './MultiAnswer'
 import { connect } from 'react-redux'
 import { Checkbox } from 'react-bootstrap'
 import { hashHistory } from 'react-router'
-import { setNextPrevQuestion, fetchTests, setQuizParams, markQuestion } from './actionCreators'
+import { setNextPrevQuestion, fetchTests, setQuizParams, markQuestion, completeTest } from './actionCreators'
 
 const { object, func, bool } = React.PropTypes
 
@@ -50,7 +50,12 @@ const QuestionHolder = React.createClass({
       if (!this.props.fetchingTests) {
         let timeRemaining = this.props.tests[id].sections[sectionId].timeRemaining
         if (timeRemaining < 1001) {
-          hashHistory.push(`/tests/${id}/${Number(sectionId) + 1}/1`)
+          if (test.sections[Number(sectionId) + 1]) {
+            hashHistory.push(`/tests/${id}/${Number(sectionId) + 1}/1`)
+          } else {
+            this.props.dispatch(completeTest(this.props.params.id))
+            hashHistory.push(`/tests/${id}/over`)
+          }
         }
       }
       switch (q.type) {

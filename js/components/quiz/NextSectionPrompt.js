@@ -1,7 +1,7 @@
 import React from 'react'
 import { Modal, Button } from 'react-bootstrap'
 import {connect} from 'react-redux'
-import {toggleGotoPrompt, zeroSectionTime} from './actionCreators'
+import {toggleGotoPrompt, zeroSectionTime, completeTest} from './actionCreators'
 import { hashHistory } from 'react-router'
 const { bool, func, string, object } = require('react').PropTypes
 
@@ -29,8 +29,9 @@ const NextSectionPrompt = React.createClass({
     let testSections = this.props.tests[this.props.testId].sections
     let numberOfSections = Object.keys(testSections)
     if (Number(this.props.sectionId) === numberOfSections.length) {
-      //  TODO: this.props.dispatch(endTest())
-      console.log('This is the last question')
+      this.props.dispatch(completeTest(this.props.testId))
+      hashHistory.push(`/tests/${this.props.testId}/over`)
+      this.hideModal()
     } else {
       hashHistory.push(`/tests/${this.props.testId}/${Number(this.props.sectionId) + 1}/1`)
       this.props.dispatch(zeroSectionTime(0))

@@ -7,6 +7,7 @@ import QuestionHolder from './components/quiz/QuestionHolder'
 import TestsLayout from './components/quiz/TestsLayout'
 import store from './components/quiz/store'
 import QnA from './components/quiz/QnA'
+import TestOver from './components/quiz/TestOver'
 import { Provider } from 'react-redux'
 require('./site.css')
 
@@ -20,6 +21,7 @@ const App = React.createClass({
               <Route path='/' component={Landing} />
               <Route path='tests' component={TestsList} />
               <Route path='tests/:id' component={QnA} />
+              <Route path='tests/:id/over' component={TestOver} />
               <Route path='tests/:id/:sectionId/:qId' component={QuestionHolder} />
             </Route>
           </Router>

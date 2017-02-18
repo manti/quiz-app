@@ -1,4 +1,4 @@
-import { SET_TEST_STATUS, SET_NEXT_PREV_QUESTION, FETCH_TESTS, UPDATE_ANSWER, UPDATE_TIME_REMAINING, UPDATE_FIREBASE_WITH_ANSWER, SET_QUIZ_PARAMS, MARK_QUESTION, TOGGLE_GOTO_PROMPT, ZERO_SECTION_TIME } from './actions'
+import { SET_TEST_STATUS, SET_NEXT_PREV_QUESTION, FETCH_TESTS, UPDATE_ANSWER, UPDATE_TIME_REMAINING, UPDATE_FIREBASE_WITH_ANSWER, SET_QUIZ_PARAMS, MARK_QUESTION, TOGGLE_GOTO_PROMPT, ZERO_SECTION_TIME, TEST_OVER } from './actions'
 import { firebaseDB } from './firebaseSetup'
 
 const DEFAULT_STATE = {
@@ -137,6 +137,18 @@ const zeroTheSectionTime = (state, action) => {
   return newState
 }
 
+const testIsOver = (state, action) => {
+  const test = firebaseDB.ref(`/${action.testId}`)
+  test.update({
+    completed: true
+  })
+  // const newState = {}
+  // let {tests} = state.tests
+  // tests[action.testId].completed = true
+  // Object.assign(newState, state, {tests: tests})
+  // return newState
+}
+
 const rootReducer = (state = DEFAULT_STATE, action) => {
   switch (action.type) {
     case SET_TEST_STATUS:
@@ -159,6 +171,8 @@ const rootReducer = (state = DEFAULT_STATE, action) => {
       return toggleGotoPrompt(state, action)
     case ZERO_SECTION_TIME:
       return zeroTheSectionTime(state, action)
+    case TEST_OVER:
+      return testIsOver(state, action)
     default:
       return state
   }
