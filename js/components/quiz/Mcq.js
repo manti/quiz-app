@@ -29,7 +29,7 @@ const Mcq = React.createClass({
         <p>{q.question}</p>
         <form>
           {q.options.map((val, i) => {
-            return <FourChoices isReview={this.props.isReview} index={i} key={i} checked={String(q.answer) === String(i)} changeHandler={this.changeRadio} choices={val} />
+            return <FourChoices isReview={this.props.isReview} index={i} key={i} checked={String(q.answer) === String(i)} isSolution={String(q.solution) === String(i)} changeHandler={this.changeRadio} choices={val} />
           })}
         </form>
       </div>
