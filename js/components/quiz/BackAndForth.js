@@ -15,11 +15,13 @@ const BackAndForth = React.createClass({
     isSectionLastQ: bool,
     fetchingTests: bool,
     showSectionPrompt: bool,
-    dispatch: func
+    dispatch: func,
+    isReview: string
   },
 
   getQuestionLink (testId, sectionId, qId) {
-    return `/tests/${testId}/${sectionId}/${qId}`
+    let prefix = this.props.isReview ? 'review/' : ''
+    return `/tests/${prefix}${testId}/${sectionId}/${qId}`
   },
 
   showGotoNextPrompt () {

@@ -29,7 +29,6 @@ const QnA = React.createClass({
   },
   render () {
     if (!this.props.fetchingTests && !this.props.tests[this.props.params.id].completed) {
-      console.log(this.props)
       return (
         <div>
           <Link to='/tests'>

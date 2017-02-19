@@ -3,6 +3,7 @@ import { render } from 'react-dom'
 import { Router, Route, hashHistory, IndexRedirect } from 'react-router'
 import TestsList from './components/quiz/TestsList'
 import QuestionHolder from './components/quiz/QuestionHolder'
+import ReviewQuestionHolder from './components/quiz/ReviewQuestionHolder'
 import TestsLayout from './components/quiz/TestsLayout'
 import store from './components/quiz/store'
 import QnA from './components/quiz/QnA'
@@ -24,6 +25,7 @@ const App = React.createClass({
               <Route path='tests/review/:id' component={ReviewTest} />
               <Route path='tests/:id/over' component={TestOver} />
               <Route path='tests/:id/:sectionId/:qId' component={QuestionHolder} />
+              <Route path='tests/review/:id/:sectionId/:qId' component={ReviewQuestionHolder} />
               <IndexRedirect to='/tests' />
               <Route path='*' component={NoMatch} />
             </Route>

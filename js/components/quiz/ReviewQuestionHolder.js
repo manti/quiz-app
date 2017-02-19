@@ -1,5 +1,4 @@
 import React from 'react'
-import Sidebar from './Sidebar'
 import Mcq from './Mcq'
 import Passage from './Passage'
 import Blank from './Blank'
@@ -7,23 +6,17 @@ import OnlyInput from './OnlyInput'
 import Fraction from './Fraction'
 import MultiAnswer from './MultiAnswer'
 import { connect } from 'react-redux'
-import { Checkbox, Col } from 'react-bootstrap'
 import BackAndForth from './BackAndForth'
-import { hashHistory } from 'react-router'
-import { setNextPrevQuestion, fetchTests, setQuizParams, markQuestion, completeTest } from './actionCreators'
+import { setNextPrevQuestion, fetchTests, setQuizParams } from './actionCreators'
 
 const { object, func, bool } = React.PropTypes
 
-const QuestionHolder = React.createClass({
+const ReviewQuestionHolder = React.createClass({
   propTypes: {
     params: object,
     dispatch: func,
-    tests: object.isRequired,
+    tests: object,
     fetchingTests: bool
-  },
-  handleMarkQuestion (e, question) {
-    this.props.dispatch(markQuestion(e.target.checked))
-    this.forceUpdate()
   },
   componentDidMount () {
     if (!this.props.tests.length) {
@@ -39,7 +32,7 @@ const QuestionHolder = React.createClass({
     this.props.dispatch(setQuizParams(id, sectionId, qId))
   },
   render () {
-    if (this.props.fetchingTests) {
+    if (this.props.fetchingTests && this.props.tests) {
       return (
         <h3 className='i-am-center'>Fetching tests</h3>
       )
@@ -49,17 +42,6 @@ const QuestionHolder = React.createClass({
       let test = this.props.tests[id]
       let section = test.sections[sectionId]
       let q = section.questions[qId]
-      if (!this.props.fetchingTests) {
-        let timeRemaining = this.props.tests[id].sections[sectionId].timeRemaining
-        if (timeRemaining < 1001) {
-          if (test.sections[Number(sectionId) + 1]) {
-            hashHistory.push(`/tests/${id}/${Number(sectionId) + 1}/1`)
-          } else {
-            this.props.dispatch(completeTest(this.props.params.id))
-            hashHistory.push(`/tests/${id}/over`)
-          }
-        }
-      }
       switch (q.type) {
         case 'mcq':
           questionComponent = <Mcq question={q} />
@@ -90,19 +72,18 @@ const QuestionHolder = React.createClass({
       }
       return (
         <div>
-          <Col xs={16} md={11}>
-            <BackAndForth />
-            <Checkbox className='i-am-center' onChange={(e) => { this.handleMarkQuestion(e, q) }} checked={q.marked} >Mark</Checkbox>
-            <br />
-            {questionComponent}
-          </Col>
-          <Col xs={2} md={1}>
-            <Sidebar arg={this.props.params} />
-          </Col>
+          <BackAndForth isReview='true' />
+          <br />
+          {questionComponent}
         </div>
       )
     }
   }
+  // render () {
+  //   return (
+  //     <div>Reviewing question {this.props.params.sectionId}</div>
+  //   )
+  // }
 })
 
 const mapStateToProps = (state) => {
@@ -115,4 +96,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(QuestionHolder)
+export default connect(mapStateToProps)(ReviewQuestionHolder)
