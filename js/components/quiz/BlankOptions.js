@@ -16,6 +16,9 @@ const BlankOptions = React.createClass({
   },
   handleClick (e, value) {
     e.preventDefault()
+    if (this.props.isReview) {
+      return false
+    }
     let answerObj = this.props.question.answer
     answerObj[this.props.blank] = e.target.innerHTML
     this.props.dispatch(updateAnswer(answerObj))
@@ -27,9 +30,9 @@ const BlankOptions = React.createClass({
       <ListGroup>
         {this.props.options.map((val, i) => {
           if (this.props.question.answer[this.props.blank] === val) {
-            return <ListGroupItem isReview={this.props.isReview} href='#' key={i} bsStyle='warning' onClick={(e) => this.handleClick(e, i)}>{val}</ListGroupItem>
+            return <ListGroupItem href='#' key={i} bsStyle='warning' onClick={(e) => this.handleClick(e, i)}>{val}</ListGroupItem>
           } else {
-            return <ListGroupItem isReview={this.props.isReview} href='#' key={i} onClick={this.handleClick}>{val}</ListGroupItem>
+            return <ListGroupItem href='#' key={i} onClick={this.handleClick}>{val}</ListGroupItem>
           }
         })}
       </ListGroup>

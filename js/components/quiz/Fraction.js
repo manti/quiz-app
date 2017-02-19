@@ -2,12 +2,13 @@ import React from 'react'
 import { Col, Row } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import { updateAnswer } from './actionCreators'
-const { object, func } = React.PropTypes
+const { object, string, func } = React.PropTypes
 
 const Fraction = React.createClass({
   propTypes: {
     question: object.isRequired,
-    dispatch: func.isRequired
+    dispatch: func.isRequired,
+    isReview: string
   },
   handleNumerator (e) {
     let denominatorValue = this.props.question.answer[1]
@@ -31,7 +32,7 @@ const Fraction = React.createClass({
         <br />
         <Row>
           <Col xs={2}>
-            <input type='text' className='form-control' onChange={this.handleNumerator} value={q.answer[0]} />
+            <input type='text' disabled={this.props.isReview} className='form-control' onChange={this.handleNumerator} value={q.answer[0]} />
           </Col>
         </Row>
         <Row>
@@ -39,7 +40,7 @@ const Fraction = React.createClass({
         </Row>
         <Row>
           <Col xs={2}>
-            <input type='text' className='form-control' onChange={this.handleDenominator} value={q.answer[1]} />
+            <input type='text' disabled={this.props.isReview} className='form-control' onChange={this.handleDenominator} value={q.answer[1]} />
           </Col>
         </Row>
       </div>
