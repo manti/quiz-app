@@ -1,5 +1,5 @@
 import React from 'react'
-import { FormGroup, FormControl } from 'react-bootstrap'
+import { FormGroup, FormControl, Alert } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import { updateAnswer } from './actionCreators'
 const { object, func, string } = React.PropTypes
@@ -16,12 +16,19 @@ const OnlyInput = React.createClass({
     this.forceUpdate()
   },
   render () {
+    let solText
+    if (this.props.isReview) {
+      solText = (
+        <Alert bsStyle='success'>{this.props.question.solution}</Alert>
+      )
+    }
     return (
       <div className='OnlyInput'>
         <p>{this.props.question.question}</p>
         <FormGroup>
           <FormControl disabled={this.props.isReview} onChange={this.handleInputChange} type='text' placeholder='Answer' value={this.props.question.answer} />
         </FormGroup>
+        {solText}
       </div>
     )
   }

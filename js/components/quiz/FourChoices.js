@@ -16,7 +16,7 @@ const FourChoices = React.createClass({
     if (this.props.checked) {
       labelStyle = 'danger'
     }
-    if (Boolean(this.props.isSolution)) {
+    if (this.props.isSolution) {
       labelStyle = 'success'
     }
     return (
