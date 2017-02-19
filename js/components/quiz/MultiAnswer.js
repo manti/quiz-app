@@ -3,12 +3,13 @@ import _ from 'lodash'
 import { Checkbox } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import { updateAnswer } from './actionCreators'
-const { object, func } = React.PropTypes
+const { object, func, string } = React.PropTypes
 
 const MultiAnswer = React.createClass({
   propTypes: {
     question: object.isRequired,
-    dispatch: func.isRequired
+    dispatch: func.isRequired,
+    isReview: string
   },
   handleCheckBoxChange (e, val) {
     _.remove(this.props.question.answer, function (n) {
@@ -31,7 +32,7 @@ const MultiAnswer = React.createClass({
         {this.props.question.question}
         <form>
           {this.props.question.options.map((val, key) => {
-            return <Checkbox key={key} checked={this.props.question.answer.indexOf(val) > -1} onChange={(e) => { this.handleCheckBoxChange(e, val) }}> {val} </Checkbox>
+            return <Checkbox disabled={Boolean(this.props.isReview)} key={key} checked={this.props.question.answer.indexOf(val) > -1} onChange={(e) => { this.handleCheckBoxChange(e, val) }}> {val} </Checkbox>
           })}
         </form>
       </div>

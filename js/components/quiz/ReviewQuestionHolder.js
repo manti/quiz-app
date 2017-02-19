@@ -44,28 +44,28 @@ const ReviewQuestionHolder = React.createClass({
       let q = section.questions[qId]
       switch (q.type) {
         case 'mcq':
-          questionComponent = <Mcq question={q} />
+          questionComponent = <Mcq isReview='true' question={q} />
           break
         case 'passage':
-          questionComponent = <Passage question={q} />
+          questionComponent = <Passage isReview='true' question={q} />
           break
         case '1-blank':
-          questionComponent = <Blank question={q} />
+          questionComponent = <Blank isReview='true' question={q} />
           break
         case '2-blank':
-          questionComponent = <Blank question={q} />
+          questionComponent = <Blank isReview='true' question={q} />
           break
         case '3-blank':
-          questionComponent = <Blank question={q} />
+          questionComponent = <Blank isReview='true' question={q} />
           break
         case 'onlyInput':
-          questionComponent = <OnlyInput question={q} />
+          questionComponent = <OnlyInput isReview='true' question={q} />
           break
         case 'fraction':
-          questionComponent = <Fraction question={q} />
+          questionComponent = <Fraction isReview='true' question={q} />
           break
         case 'multi-answer':
-          questionComponent = <MultiAnswer question={q} />
+          questionComponent = <MultiAnswer isReview='true' question={q} />
           break
         default:
           questionComponent = q.type

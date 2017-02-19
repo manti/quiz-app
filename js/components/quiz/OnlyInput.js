@@ -2,12 +2,13 @@ import React from 'react'
 import { FormGroup, FormControl } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import { updateAnswer } from './actionCreators'
-const { object, func } = React.PropTypes
+const { object, func, string } = React.PropTypes
 
 const OnlyInput = React.createClass({
   propTypes: {
     question: object.isRequired,
-    dispatch: func
+    dispatch: func,
+    isReview: string
   },
   handleInputChange (e) {
     this.props.dispatch(updateAnswer(e.target.value))
@@ -19,7 +20,7 @@ const OnlyInput = React.createClass({
       <div className='OnlyInput'>
         <p>{this.props.question.question}</p>
         <FormGroup>
-          <FormControl onChange={this.handleInputChange} type='text' placeholder='Answer' value={this.props.question.answer} />
+          <FormControl disabled={this.props.isReview} onChange={this.handleInputChange} type='text' placeholder='Answer' value={this.props.question.answer} />
         </FormGroup>
       </div>
     )

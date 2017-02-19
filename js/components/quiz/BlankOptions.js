@@ -3,7 +3,7 @@ import { updateAnswer } from './actionCreators'
 import { connect } from 'react-redux'
 import { ListGroup, ListGroupItem } from 'react-bootstrap'
 
-const { array, object, func, number } = React.PropTypes
+const { array, object, func, number, string } = React.PropTypes
 
 const BlankOptions = React.createClass({
   propTypes: {
@@ -11,7 +11,8 @@ const BlankOptions = React.createClass({
     question: object.isRequired,
     dispatch: func.isRequired,
     blank: number,
-    params: object
+    params: object,
+    isReview: string
   },
   handleClick (e, value) {
     e.preventDefault()
@@ -26,9 +27,9 @@ const BlankOptions = React.createClass({
       <ListGroup>
         {this.props.options.map((val, i) => {
           if (this.props.question.answer[this.props.blank] === val) {
-            return <ListGroupItem href='#' key={i} bsStyle='warning' onClick={(e) => this.handleClick(e, i)}>{val}</ListGroupItem>
+            return <ListGroupItem isReview={this.props.isReview} href='#' key={i} bsStyle='warning' onClick={(e) => this.handleClick(e, i)}>{val}</ListGroupItem>
           } else {
-            return <ListGroupItem href='#' key={i} onClick={this.handleClick}>{val}</ListGroupItem>
+            return <ListGroupItem isReview={this.props.isReview} href='#' key={i} onClick={this.handleClick}>{val}</ListGroupItem>
           }
         })}
       </ListGroup>

@@ -4,17 +4,20 @@ import { Image } from 'react-bootstrap'
 import { updateAnswer } from './actionCreators'
 import { connect } from 'react-redux'
 
-const { object, func } = React.PropTypes
+const { object, func, string } = React.PropTypes
 
 const Mcq = React.createClass({
   propTypes: {
     question: object.isRequired,
     dispatch: func.isRequired,
-    params: object
+    params: object,
+    isReview: string
   },
   changeRadio (e) {
     this.props.question.answer = e.target.id
-    this.props.dispatch(updateAnswer(e.target.id))
+    if (!this.props.isReview) {
+      this.props.dispatch(updateAnswer(e.target.id))
+    }
     // this.props.dispatch(updateFirebaseWithAnswer(this.props.question.id, e.target.id))
     this.forceUpdate()
   },
@@ -26,7 +29,7 @@ const Mcq = React.createClass({
         <p>{q.question}</p>
         <form>
           {q.options.map((val, i) => {
-            return <FourChoices index={i} key={i} checked={String(q.answer) === String(i)} changeHandler={this.changeRadio} choices={val} />
+            return <FourChoices isReview={this.props.isReview} index={i} key={i} checked={String(q.answer) === String(i)} changeHandler={this.changeRadio} choices={val} />
           })}
         </form>
       </div>
