@@ -79,11 +79,6 @@ const ReviewQuestionHolder = React.createClass({
       )
     }
   }
-  // render () {
-  //   return (
-  //     <div>Reviewing question {this.props.params.sectionId}</div>
-  //   )
-  // }
 })
 
 const mapStateToProps = (state) => {
