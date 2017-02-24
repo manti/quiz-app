@@ -1,6 +1,6 @@
 import React from 'react'
 import _ from 'lodash'
-import { Checkbox } from 'react-bootstrap'
+import { Checkbox, Alert } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import { updateAnswer } from './actionCreators'
 const { object, func, string } = React.PropTypes
@@ -26,6 +26,12 @@ const MultiAnswer = React.createClass({
     this.forceUpdate()
   },
   render () {
+    let solText
+    if (this.props.isReview) {
+      solText = (
+        <Alert bsStyle='success'>{this.props.question.solution}</Alert>
+      )
+    }
     this.props.question.answer = this.props.question.answer.map(String)
     return (
       <div>
@@ -35,6 +41,7 @@ const MultiAnswer = React.createClass({
             return <Checkbox disabled={Boolean(this.props.isReview)} key={key} checked={this.props.question.answer.indexOf(val) > -1} onChange={(e) => { this.handleCheckBoxChange(e, val) }}> {val} </Checkbox>
           })}
         </form>
+        {solText}
       </div>
     )
   }
