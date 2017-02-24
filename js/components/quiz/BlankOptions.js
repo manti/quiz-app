@@ -26,11 +26,24 @@ const BlankOptions = React.createClass({
     // this.props.dispatch(updateFirebaseWithAnswer(answerObj))
   },
   render () {
+    let labelStyle = ''
+    if (this.props.checked) {
+      labelStyle = 'danger'
+    }
+    if (this.props.isSolution) {
+      labelStyle = 'success'
+    }
     return (
       <ListGroup>
         {this.props.options.map((val, i) => {
-          if (this.props.question.answer[this.props.blank] === val) {
+          if (!this.props.isReview && this.props.question.answer[this.props.blank] === val) {
             return <ListGroupItem href='#' key={i} bsStyle='warning' onClick={(e) => this.handleClick(e, i)}>{val}</ListGroupItem>
+          }
+          if (this.props.isReview && this.props.question.solution[this.props.blank] === val) {
+            return <ListGroupItem href='#' bsStyle='success' key={i}>{val}</ListGroupItem>
+          }
+          if (this.props.isReview && this.props.question.solution[this.props.blank] !== val && this.props.question.answer[this.props.blank] === val) {
+            return <ListGroupItem href='#' bsStyle='danger' key={i}>{val}</ListGroupItem>
           } else {
             return <ListGroupItem href='#' key={i} onClick={this.handleClick}>{val}</ListGroupItem>
           }
