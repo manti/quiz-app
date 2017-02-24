@@ -1,5 +1,5 @@
 import React from 'react'
-import { Col, Row } from 'react-bootstrap'
+import { Col, Row, Alert } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import { updateAnswer } from './actionCreators'
 const { object, string, func } = React.PropTypes
@@ -25,6 +25,12 @@ const Fraction = React.createClass({
   },
   render () {
     let q = this.props.question
+    let solText
+    if (this.props.isReview) {
+      solText = (
+        <Alert bsStyle='success'>{this.props.question.solution}</Alert>
+      )
+    }
     return (
       <div>
         {q.question}
@@ -42,6 +48,9 @@ const Fraction = React.createClass({
           <Col xs={2}>
             <input type='text' disabled={this.props.isReview} className='form-control' onChange={this.handleDenominator} value={q.answer[1]} />
           </Col>
+        </Row>
+        <Row>
+          {solText}
         </Row>
       </div>
     )
