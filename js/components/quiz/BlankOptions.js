@@ -26,13 +26,6 @@ const BlankOptions = React.createClass({
     // this.props.dispatch(updateFirebaseWithAnswer(answerObj))
   },
   render () {
-    let labelStyle = ''
-    if (this.props.checked) {
-      labelStyle = 'danger'
-    }
-    if (this.props.isSolution) {
-      labelStyle = 'success'
-    }
     return (
       <ListGroup>
         {this.props.options.map((val, i) => {
