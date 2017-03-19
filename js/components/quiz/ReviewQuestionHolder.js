@@ -41,34 +41,36 @@ const ReviewQuestionHolder = React.createClass({
       let questionComponent
       let test = this.props.tests[id]
       let section = test.sections[sectionId]
-      let q = section.questions[qId]
-      switch (q.type) {
-        case 'mcq':
-          questionComponent = <Mcq isReview='true' question={q} />
-          break
-        case 'passage':
-          questionComponent = <Passage isReview='true' question={q} />
-          break
-        case '1-blank':
-          questionComponent = <Blank isReview='true' question={q} />
-          break
-        case '2-blank':
-          questionComponent = <Blank isReview='true' question={q} />
-          break
-        case '3-blank':
-          questionComponent = <Blank isReview='true' question={q} />
-          break
-        case 'onlyInput':
-          questionComponent = <OnlyInput isReview='true' question={q} />
-          break
-        case 'fraction':
-          questionComponent = <Fraction isReview='true' question={q} />
-          break
-        case 'multi-answer':
-          questionComponent = <MultiAnswer isReview='true' question={q} />
-          break
-        default:
-          questionComponent = q.type
+      if (test && section) {
+        let q = section.questions[qId]
+        switch (q.type) {
+          case 'mcq':
+            questionComponent = <Mcq isReview='true' question={q} />
+            break
+          case 'passage':
+            questionComponent = <Passage isReview='true' question={q} />
+            break
+          case '1-blank':
+            questionComponent = <Blank isReview='true' question={q} />
+            break
+          case '2-blank':
+            questionComponent = <Blank isReview='true' question={q} />
+            break
+          case '3-blank':
+            questionComponent = <Blank isReview='true' question={q} />
+            break
+          case 'onlyInput':
+            questionComponent = <OnlyInput isReview='true' question={q} />
+            break
+          case 'fraction':
+            questionComponent = <Fraction isReview='true' question={q} />
+            break
+          case 'multi-answer':
+            questionComponent = <MultiAnswer isReview='true' question={q} />
+            break
+          default:
+            questionComponent = q.type
+      }
       }
       return (
         <div>

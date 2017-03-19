@@ -1,6 +1,6 @@
 import { SET_TEST_STATUS, SET_NEXT_PREV_QUESTION, FETCH_TESTS, UPDATE_ANSWER, UPDATE_TIME_REMAINING, UPDATE_FIREBASE_WITH_ANSWER, SET_QUIZ_PARAMS, MARK_QUESTION, TOGGLE_GOTO_PROMPT, ZERO_SECTION_TIME, TEST_OVER } from './actions'
 import { firebaseDB } from './firebaseSetup'
-
+import {hashHistory} from 'react-router'
 const DEFAULT_STATE = {
   testStarted: false,
   nextQ: '',
@@ -25,6 +25,11 @@ const setNextPrevQuestion = (state, action) => {
     const newState = {}
     let { qId, sectionId, testId } = action
     let sectionNow = state.tests[testId].sections[sectionId]
+    if (!sectionNow) {
+      console.log('Nope')
+      hashHistory.push(`/tests/${testId}/over`)
+      return false
+    }
     let sectionQuestions = sectionNow.questions
     let nextQ, prevQ
     let isLastQ = false
