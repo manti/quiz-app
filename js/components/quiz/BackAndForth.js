@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { Button, Col, Row } from 'react-bootstrap'
-import {Link} from 'react-router'
+import {Link, hashHistory} from 'react-router'
 import {toggleGotoPrompt} from './actionCreators'
 import NextSectionPrompt from './NextSectionPrompt'
 const { bool, string, func } = require('react').PropTypes
@@ -25,7 +25,12 @@ const BackAndForth = React.createClass({
   },
 
   showGotoNextPrompt () {
-    this.props.dispatch(toggleGotoPrompt())
+    if (this.props.isReview) {
+      console.log('go to next section')
+      hashHistory.push(`/tests/review/${this.props.testId}/${Number(this.props.sectionId) + 1}/1`)
+    } else {
+      this.props.dispatch(toggleGotoPrompt())
+    }
   },
 
   render () {
