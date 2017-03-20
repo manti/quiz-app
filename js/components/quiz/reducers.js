@@ -26,7 +26,6 @@ const setNextPrevQuestion = (state, action) => {
     let { qId, sectionId, testId } = action
     let sectionNow = state.tests[testId].sections[sectionId]
     if (!sectionNow) {
-      console.log('Nope')
       hashHistory.push(`/tests/${testId}/over`)
       return false
     }

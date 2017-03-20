@@ -70,7 +70,7 @@ const ReviewQuestionHolder = React.createClass({
             break
           default:
             questionComponent = q.type
-      }
+        }
       }
       return (
         <div>
