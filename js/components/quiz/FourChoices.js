@@ -13,11 +13,13 @@ const FourChoices = React.createClass({
   },
   render () {
     let labelStyle = 'default'
-    if (this.props.checked) {
-      labelStyle = 'danger'
-    }
-    if (this.props.isSolution) {
-      labelStyle = 'success'
+    if (this.props.isReview) {
+      if (this.props.checked) {
+        labelStyle = 'danger'
+      }
+      if (this.props.isSolution) {
+        labelStyle = 'success'
+      }
     }
     return (
       <div>
