@@ -7,6 +7,7 @@ import OnlyInput from './OnlyInput'
 import Fraction from './Fraction'
 import MultiAnswer from './MultiAnswer'
 import TextSelection from './TextSelection'
+import PassageOnTop from './PassageOnTop'
 import { connect } from 'react-redux'
 import { Checkbox, Col } from 'react-bootstrap'
 import BackAndForth from './BackAndForth'
@@ -88,6 +89,9 @@ const QuestionHolder = React.createClass({
           break
         case 'text-selection':
           questionComponent = <TextSelection question={q} />
+          break
+        case 'passageOnTop':
+          questionComponent = <PassageOnTop question={q} />
           break
         default:
           questionComponent = q.type
