@@ -11,6 +11,7 @@ import PassageOnTop from './PassageOnTop'
 import { connect } from 'react-redux'
 import { Checkbox, Col } from 'react-bootstrap'
 import BackAndForth from './BackAndForth'
+import QuestionInstructions from './QuestionInstructions'
 import { hashHistory } from 'react-router'
 import { setNextPrevQuestion, fetchTests, setQuizParams, markQuestion, completeTest } from './actionCreators'
 
@@ -102,6 +103,7 @@ const QuestionHolder = React.createClass({
             <BackAndForth />
             <Checkbox className='i-am-center' onChange={(e) => { this.handleMarkQuestion(e, q) }} checked={q.marked} >Mark</Checkbox>
             <br />
+            <QuestionInstructions instructions={q.instructions} />
             {questionComponent}
           </Col>
           <Col xs={2} md={1}>

@@ -1,10 +1,10 @@
 import React from 'react'
 const { object, string } = React.PropTypes
-import { Col, Row } from 'react-bootstrap'
+import { Row } from 'react-bootstrap'
 import Mcq from './Mcq'
 
 const PassageOnTop = React.createClass({
- propTypes: {
+  propTypes: {
     question: object,
     isReview: string
   },
