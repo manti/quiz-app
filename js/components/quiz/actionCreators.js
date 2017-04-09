@@ -44,14 +44,16 @@ export function completeTest (testId) {
   return {type: TEST_OVER, testId}
 }
 
-const tests = firebaseDB.ref('/')
+
+const user = firebaseDB.ref(`/users/${window.session.user_id}`)
 
 export function fetchTests () {
+  console.log('in fetch test')
   return dispatch => {
-    tests.on('value', snapshot => {
+    user.on('value', snapshot => {
       dispatch({
         type: FETCH_TESTS,
-        payload: snapshot.val()
+        payload: snapshot.val().tests
       })
     })
   }
