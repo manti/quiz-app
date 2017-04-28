@@ -13,6 +13,9 @@ const Mcq = React.createClass({
     params: object,
     isReview: string
   },
+  createMarkup (htm) {
+    return {__html: htm}
+  },
   changeRadio (e) {
     this.props.question.answer = e.target.id
     if (!this.props.isReview) {
@@ -26,7 +29,7 @@ const Mcq = React.createClass({
     return (
       <div>
         <Image src={q.imageUrl} thumbnail />
-        <p>{q.question}</p>
+        <p dangerouslySetInnerHTML={this.createMarkup(q.question)} />
         <form>
           {q.options.map((val, i) => {
             return <FourChoices isReview={this.props.isReview} index={i} key={i} checked={String(q.answer) === String(i)} isSolution={String(q.solution) === String(i)} changeHandler={this.changeRadio} choices={val} />

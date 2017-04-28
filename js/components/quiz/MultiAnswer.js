@@ -18,7 +18,7 @@ const MultiAnswer = React.createClass({
     if (e.target.checked) {
       this.props.question.answer.push(val)
     }
-    if (this.props.question.answer.length === 0) {
+    if (!this.props.question.answer || this.props.question.answer.length === 0) {
       this.props.question.answer.push(' ')
     }
     this.props.dispatch(updateAnswer(this.props.question.answer))
@@ -32,7 +32,7 @@ const MultiAnswer = React.createClass({
         <Alert bsStyle='success'>{this.props.question.solution}</Alert>
       )
     }
-    this.props.question.answer = this.props.question.answer.map(String)
+    this.props.question.answer = typeof this.props.question.answer !== 'undefined' ? this.props.question.answer.map(String) : []
     return (
       <div>
         {this.props.question.question}
