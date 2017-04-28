@@ -6,16 +6,18 @@ import OnlyInput from './OnlyInput'
 import Fraction from './Fraction'
 import MultiAnswer from './MultiAnswer'
 import { connect } from 'react-redux'
+import TextSelection from './TextSelection'
+import PassageOnTop from './PassageOnTop'
 import BackAndForth from './BackAndForth'
 import { setNextPrevQuestion, fetchTests, setQuizParams } from './actionCreators'
 
-const { object, func, bool } = React.PropTypes
+const { object, func, bool, array } = React.PropTypes
 
 const ReviewQuestionHolder = React.createClass({
   propTypes: {
     params: object,
     dispatch: func,
-    tests: object,
+    tests: array,
     fetchingTests: bool
   },
   componentDidMount () {
@@ -67,6 +69,12 @@ const ReviewQuestionHolder = React.createClass({
             break
           case 'multi-answer':
             questionComponent = <MultiAnswer isReview='true' question={q} />
+            break
+          case 'text-selection':
+            questionComponent = <TextSelection isReview='true' question={q} />
+            break
+          case 'passageOnTop':
+            questionComponent = <PassageOnTop isReview='true' question={q} />
             break
           default:
             questionComponent = q.type

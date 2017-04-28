@@ -4,14 +4,14 @@ import { Button } from 'react-bootstrap'
 import {fetchTests} from './actionCreators'
 import { hashHistory, Link } from 'react-router'
 
-const { bool, func, object } = React.PropTypes
+const { bool, func, object, array } = React.PropTypes
 
 const QnA = React.createClass({
   propTypes: {
     testStarted: bool.isRequired,
     dispatch: func.isRequired,
     params: object,
-    tests: object,
+    tests: array,
     fetchingTests: bool
   },
   componentDidMount () {

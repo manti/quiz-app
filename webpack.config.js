@@ -12,13 +12,6 @@ module.exports = {
     publicPath: '/public/', // Where your static assets are
     historyApiFallback: true,
     port: '5050',
-    proxy: {
-      '/instahms/**': {
-        target: 'https://private-469d8-instaspringapis.apiary-mock.com',
-        secure: false,
-        changeOrigin: true
-      }
-    }
     // hot: true
   },
   resolve: {

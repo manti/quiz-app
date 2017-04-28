@@ -3,7 +3,7 @@ import { Modal, Button } from 'react-bootstrap'
 import {connect} from 'react-redux'
 import {toggleGotoPrompt, zeroSectionTime, completeTest} from './actionCreators'
 import { hashHistory } from 'react-router'
-const { bool, func, string, object } = require('react').PropTypes
+const { bool, func, string, array } = require('react').PropTypes
 
 const NextSectionPrompt = React.createClass({
   propTypes: {
@@ -11,7 +11,7 @@ const NextSectionPrompt = React.createClass({
     dispatch: func,
     testId: string,
     sectionId: string,
-    tests: object
+    tests: array
   },
   getInitialState () {
     return {show: true}

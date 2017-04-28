@@ -3,11 +3,11 @@ import { connect } from 'react-redux'
 import CountdownTimer from './CountdownTimer'
 import { updateTimeRemaining } from './actionCreators'
 import { hashHistory } from 'react-router'
-const { object, bool, func, string } = require('react').PropTypes
+const { object, bool, func, string, array } = require('react').PropTypes
 
 const SectionTimer = React.createClass({
   propTypes: {
-    tests: object.isRequired,
+    tests: array.isRequired,
     sectionId: string.isRequired,
     testId: string.isRequired,
     arg: object.isRequired,

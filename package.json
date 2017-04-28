@@ -8,7 +8,7 @@
     "polish": "npm run lint -s -- --fix",
     "build": "webpack",
     "prod": "NODE_ENV=production npm run build -- -p",
-    "dev": "webpack-dev-server",
+    "dev": "webpack-dev-server --compress",
     "hot": "npm run dev -- --hot",
     "watch": "npm run build -- --watch"
   },

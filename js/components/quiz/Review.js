@@ -1,12 +1,12 @@
 import React from 'react'
 import { Modal, Button, Table } from 'react-bootstrap'
 import { connect } from 'react-redux'
-const { bool, object, string } = require('react').PropTypes
+const { bool, object, string, array } = require('react').PropTypes
 import { hashHistory } from 'react-router'
 
 const Review = React.createClass({
   propTypes: {
-    tests: object.isRequired,
+    tests: array.isRequired,
     fetchingTests: bool,
     sectionId: string,
     testId: string,
