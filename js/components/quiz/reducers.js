@@ -54,7 +54,7 @@ const setNextPrevQuestion = (state, action) => {
 }
 
 const syncTimeRemaining = (testId, sectionId, timeRemaining) => {
-  const section = firebaseDB.ref(`/${testId}/sections/${sectionId}`)
+  const section = firebaseDB.ref(`/users/${window.session.user_id}/tests/${testId}/sections/${sectionId}`)
   section.update({
     timeRemaining: timeRemaining
   })
@@ -66,7 +66,7 @@ const updateAnswerInTest = (state, action) => {
   let myTests = state.tests
   myTests[testId].sections[sectionId].questions[qId].answer = action.answer
   syncTimeRemaining(testId, sectionId, myTests[testId].sections[sectionId].timeRemaining)
-  const question = firebaseDB.ref(`/${testId}/sections/${sectionId}/questions/${qId}`)
+  const question = firebaseDB.ref(`/users/${window.session.user_id}/tests/${testId}/sections/${sectionId}/questions/${qId}`)
   question.update({
     answer: action.answer
   })
@@ -94,7 +94,7 @@ const updateTimeRemaining = (state, action) => {
 
 const updateFirebaseAnswer = (state, action) => {
   let { qId, sectionId, testId } = state
-  const question = firebaseDB.ref(`/${testId}/sections/${sectionId}/questions/${qId}`)
+  const question = firebaseDB.ref(`/users/${window.session.user_id}/tests/${testId}/sections/${sectionId}/questions/${qId}`)
   question.update({
     answer: action.answer
   })
@@ -108,7 +108,7 @@ const setQuizParamsInState = (state, action) => {
 
 const markInFirebase = (state, action) => {
   let { qId, sectionId, testId } = state
-  const question = firebaseDB.ref(`/${testId}/sections/${sectionId}/questions/${qId}`)
+  const question = firebaseDB.ref(`/users/${window.session.user_id}/tests/${testId}/sections/${sectionId}/questions/${qId}`)
   question.update({
     marked: action.isMarked
   })
@@ -142,7 +142,7 @@ const zeroTheSectionTime = (state, action) => {
 }
 
 const testIsOver = (state, action) => {
-  const test = firebaseDB.ref(`/${action.testId}`)
+  const test = firebaseDB.ref(`/users/${window.session.user_id}/tests/${action.testId}`)
   test.update({
     completed: true
   })
