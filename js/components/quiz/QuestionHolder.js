@@ -5,6 +5,7 @@ import Passage from './Passage'
 import Blank from './Blank'
 import OnlyInput from './OnlyInput'
 import Fraction from './Fraction'
+import TestTools from './TestTools'
 import MultiAnswer from './MultiAnswer'
 import TextSelection from './TextSelection'
 import PassageOnTop from './PassageOnTop'
@@ -24,10 +25,6 @@ const QuestionHolder = React.createClass({
     dispatch: func,
     tests: object.isRequired,
     fetchingTests: bool
-  },
-  handleMarkQuestion (e, question) {
-    this.props.dispatch(markQuestion(e.target.checked))
-    this.forceUpdate()
   },
   componentDidMount () {
     if (!this.props.tests.length) {
@@ -101,8 +98,8 @@ const QuestionHolder = React.createClass({
       return (
         <div>
           <Col xs={16} md={11}>
+            <TestTools q={q} />
             <BackAndForth />
-            <Checkbox className='i-am-center' onChange={(e) => { this.handleMarkQuestion(e, q) }} checked={q.marked} >Mark</Checkbox>
             <br />
             <QuestionInstructions instructions={q.instructions} />
             <CurrentTestStatus arg={this.props.params} />
