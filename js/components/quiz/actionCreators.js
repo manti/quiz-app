@@ -47,7 +47,6 @@ export function completeTest (testId) {
 const user = firebaseDB.ref(`/users/${window.session.user_id}`)
 
 export function fetchTests () {
-  console.log('in fetch test')
   return dispatch => {
     user.on('value', snapshot => {
       dispatch({

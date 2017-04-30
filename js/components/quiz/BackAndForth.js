@@ -50,7 +50,7 @@ const BackAndForth = React.createClass({
       }
       backAndForth = (
         <div>
-          <Row className='show-grid'>
+          <Row>
             <Col xs={12} md={8}>
               <Link to={this.getQuestionLink(this.props.testId, this.props.sectionId, this.props.prevQ)}>
                 <Button className='pull-left' bsStyle='link'>Previous</Button>

@@ -12,6 +12,7 @@ import { connect } from 'react-redux'
 import { Checkbox, Col } from 'react-bootstrap'
 import BackAndForth from './BackAndForth'
 import QuestionInstructions from './QuestionInstructions'
+import CurrentTestStatus from './CurrentTestStatus'
 import { hashHistory } from 'react-router'
 import { setNextPrevQuestion, fetchTests, setQuizParams, markQuestion, completeTest } from './actionCreators'
 
@@ -104,6 +105,9 @@ const QuestionHolder = React.createClass({
             <Checkbox className='i-am-center' onChange={(e) => { this.handleMarkQuestion(e, q) }} checked={q.marked} >Mark</Checkbox>
             <br />
             <QuestionInstructions instructions={q.instructions} />
+            <CurrentTestStatus arg={this.props.params} />
+            <br />
+            <br />
             {questionComponent}
           </Col>
           <Col xs={2} md={1}>

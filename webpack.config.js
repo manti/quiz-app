@@ -11,7 +11,7 @@ module.exports = {
   devServer: {
     publicPath: '/public/', // Where your static assets are
     historyApiFallback: true,
-    port: '5050',
+    port: '5050'
     // hot: true
   },
   resolve: {
