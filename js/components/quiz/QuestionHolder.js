@@ -10,7 +10,7 @@ import TextSelection from './TextSelection'
 import PassageOnTop from './PassageOnTop'
 import { connect } from 'react-redux'
 import { Col } from 'react-bootstrap'
-import QuestionInstructions from './QuestionInstructions'
+// import QuestionInstructions from './QuestionInstructions'
 import CurrentTestStatus from './CurrentTestStatus'
 import { hashHistory } from 'react-router'
 import { setNextPrevQuestion, fetchTests, setQuizParams, completeTest } from './actionCreators'
@@ -97,11 +97,10 @@ const QuestionHolder = React.createClass({
         <div>
           <Col xs={18} md={12}>
             <TestTools q={q} />
-            <QuestionInstructions instructions={q.instructions} />
             <CurrentTestStatus arg={this.props.params} />
             <br />
             <br />
-            <p style={{clear:'left'}}>
+            <p style={{clear: 'left'}}>
               {questionComponent}
             </p>
           </Col>
