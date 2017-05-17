@@ -1,11 +1,12 @@
 import React from 'react'
 import { Col, Checkbox, Glyphicon } from 'react-bootstrap'
-import { markQuestion } from './actionCreators'
+import {Link, hashHistory} from 'react-router'
+import { markQuestion, toggleGotoPrompt } from './actionCreators'
 import {connect} from 'react-redux'
 import CalculatorHelp from './CalculatorHelp'
 import Review from './Review'
 
-const {object, func, string} = React.PropTypes
+const {object, func, string, bool} = React.PropTypes
 
 class TestTools extends React.Component {
   constructor (props) {
@@ -16,8 +17,48 @@ class TestTools extends React.Component {
     this.props.dispatch(markQuestion(e.target.checked))
     this.forceUpdate()
   }
+  getQuestionLink (testId, sectionId, qId) {
+    let prefix = this.props.isReview ? 'review/' : ''
+    return `/tests/${prefix}${testId}/${sectionId}/${qId}`
+  }
+  showGotoNextPrompt () {
+    if (this.props.isReview) {
+      console.log('go to next section')
+      hashHistory.push(`/tests/review/${this.props.testId}/${Number(this.props.sectionId) + 1}/1`)
+    } else {
+      this.props.dispatch(toggleGotoPrompt())
+    }
+  }
   render () {
     const {qId} = this.props
+    let backButton = (
+      <br />
+    )
+    let nextButton = (
+      <br />
+    )
+    if (this.props.testId && !this.props.fetchingTests) {
+      if (this.props.isSectionLastQ) {
+        // show some prompt
+      }
+      backButton = (
+        <Col xs={2} md={1}>
+          <Link to={this.getQuestionLink(this.props.testId, this.props.sectionId, this.props.prevQ)}>
+            <div>Back</div>
+          </Link>
+          <Glyphicon className='center-the-icon' glyph='arrow-left' />
+        </Col>
+      )
+      nextButton = (
+        <Col xs={2} md={1}>
+          <Link to={this.getQuestionLink(this.props.testId, this.props.sectionId, this.props.nextQ)}>
+            <div>Next</div>
+          </Link>
+          <Glyphicon className='center-the-icon' glyph='arrow-right' />
+        </Col>
+      )
+    }
+
     return (
       <div>
         <Col xs={2} md={1}>
@@ -34,15 +75,8 @@ class TestTools extends React.Component {
           <div>Help</div>
           <Glyphicon className='center-the-icon' glyph='question-sign' />
         </Col>
-        <Col xs={2} md={1}>
-          <div>Back</div>
-          <Glyphicon className='center-the-icon' glyph='arrow-left' />
-        </Col>
-        <Col xs={2} md={1}>
-          <div>Next</div>
-          <Glyphicon className='center-the-icon' glyph='arrow-right' />
-
-        </Col>
+        {backButton}
+        {nextButton}
       </div>
     )
   }
@@ -50,12 +84,27 @@ class TestTools extends React.Component {
 TestTools.propTypes = {
   q: object.isRequired,
   dispatch: func,
-  qId: string
+  qId: string,
+  nextQ: string,
+  prevQ: string,
+  sectionId: string,
+  testId: string,
+  isSectionLastQ: bool,
+  fetchingTests: bool,
+  showSectionPrompt: bool,
+  isReview: string
 }
 
 const mapStateToProps = (state) => {
   return {
-    qId: state.qId
+    qId: state.qId,
+    nextQ: state.nextQ,
+    prevQ: state.prevQ,
+    testId: state.testId,
+    sectionId: state.sectionId,
+    isSectionLastQ: state.isSectionLastQ,
+    fetchingTests: state.fetchingTests,
+    showSectionPrompt: state.showSectionPrompt
   }
 }
 

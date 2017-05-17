@@ -10,7 +10,6 @@ import TextSelection from './TextSelection'
 import PassageOnTop from './PassageOnTop'
 import { connect } from 'react-redux'
 import { Col } from 'react-bootstrap'
-import BackAndForth from './BackAndForth'
 import QuestionInstructions from './QuestionInstructions'
 import CurrentTestStatus from './CurrentTestStatus'
 import { hashHistory } from 'react-router'
@@ -98,8 +97,6 @@ const QuestionHolder = React.createClass({
         <div>
           <Col xs={18} md={12}>
             <TestTools q={q} />
-            <BackAndForth />
-            <br />
             <QuestionInstructions instructions={q.instructions} />
             <CurrentTestStatus arg={this.props.params} />
             <br />

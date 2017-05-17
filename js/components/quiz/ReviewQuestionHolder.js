@@ -8,7 +8,6 @@ import MultiAnswer from './MultiAnswer'
 import { connect } from 'react-redux'
 import TextSelection from './TextSelection'
 import PassageOnTop from './PassageOnTop'
-import BackAndForth from './BackAndForth'
 import { setNextPrevQuestion, fetchTests, setQuizParams } from './actionCreators'
 
 const { object, func, bool, array } = React.PropTypes
@@ -80,9 +79,9 @@ const ReviewQuestionHolder = React.createClass({
             questionComponent = q.type
         }
       }
+      // Add back and forth for review section
       return (
         <div>
-          <BackAndForth isReview='true' />
           <br />
           {questionComponent}
         </div>
