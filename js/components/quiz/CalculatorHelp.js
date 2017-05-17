@@ -1,9 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Modal } from 'react-bootstrap'
+import { Modal, Glyphicon } from 'react-bootstrap'
 import Calculator from './Calculator/Calculator'
 const { object, bool } = require('react').PropTypes
-// import Calculator from 'react-calculator'
 
 const CalculatorHelp = React.createClass({
   propTypes: {
@@ -25,7 +24,10 @@ const CalculatorHelp = React.createClass({
     if (this.props.arg.qId && !this.props.fetchingTests) {
       return (
         <div>
-          <div onClick={this.showModal}>Calc</div>
+          <div onClick={this.showModal}>
+            <span>Calc</span>
+            <Glyphicon className='center-the-icon' glyph='calendar' />
+          </div>
           <Modal
             show={this.state.show}
             onHide={this.hideModal}

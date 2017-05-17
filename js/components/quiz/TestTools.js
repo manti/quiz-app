@@ -29,7 +29,6 @@ class TestTools extends React.Component {
         </Col>
         <Col xs={2} md={1}>
           <CalculatorHelp arg={{qId}} />
-          <Glyphicon className='center-the-icon' glyph='calendar' />
         </Col>
         <Col xs={2} md={1}>
           <div>Help</div>
