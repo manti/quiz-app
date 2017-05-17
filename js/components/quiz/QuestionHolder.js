@@ -1,5 +1,4 @@
 import React from 'react'
-import Sidebar from './Sidebar'
 import Mcq from './Mcq'
 import Passage from './Passage'
 import Blank from './Blank'
@@ -97,7 +96,7 @@ const QuestionHolder = React.createClass({
       }
       return (
         <div>
-          <Col xs={16} md={11}>
+          <Col xs={18} md={12}>
             <TestTools q={q} />
             <BackAndForth />
             <br />
@@ -106,9 +105,6 @@ const QuestionHolder = React.createClass({
             <br />
             <br />
             {questionComponent}
-          </Col>
-          <Col xs={2} md={1}>
-            <Sidebar arg={this.props.params} />
           </Col>
         </div>
       )

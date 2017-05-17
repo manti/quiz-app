@@ -3,6 +3,7 @@ import { Col, Checkbox, Glyphicon } from 'react-bootstrap'
 import { markQuestion } from './actionCreators'
 import {connect} from 'react-redux'
 import CalculatorHelp from './CalculatorHelp'
+import Review from './Review'
 
 const {object, func, string} = React.PropTypes
 
@@ -20,8 +21,7 @@ class TestTools extends React.Component {
     return (
       <div>
         <Col xs={2} md={1}>
-          <div>Review</div>
-          <Glyphicon className='center-the-icon' glyph='list-alt' />
+          <Review arg={{qId}} />
         </Col>
         <Col xs={2} md={1}>
           <div>Mark</div>

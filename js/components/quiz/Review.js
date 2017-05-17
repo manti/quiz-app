@@ -1,5 +1,5 @@
 import React from 'react'
-import { Modal, Button, Table } from 'react-bootstrap'
+import { Modal, Table, Glyphicon } from 'react-bootstrap'
 import { connect } from 'react-redux'
 const { bool, object, string, array } = require('react').PropTypes
 import { hashHistory } from 'react-router'
@@ -33,7 +33,10 @@ const Review = React.createClass({
       sectionQuestions = this.props.tests[testId].sections[sectionId].questions
       return (
         <div>
-          <Button onClick={this.showModal}>Review</Button>
+          <div onClick={this.showModal}>
+            <span>Review</span>
+            <Glyphicon className='center-the-icon' glyph='list-alt' />
+          </div>
           <Modal
             show={this.state.show}
             onHide={this.hideModal}
