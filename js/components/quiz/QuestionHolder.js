@@ -101,7 +101,9 @@ const QuestionHolder = React.createClass({
             <CurrentTestStatus arg={this.props.params} />
             <br />
             <br />
-            {questionComponent}
+            <p style={{clear:'left'}}>
+              {questionComponent}
+            </p>
           </Col>
         </div>
       )
