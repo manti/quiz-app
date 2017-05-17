@@ -10,12 +10,12 @@ import MultiAnswer from './MultiAnswer'
 import TextSelection from './TextSelection'
 import PassageOnTop from './PassageOnTop'
 import { connect } from 'react-redux'
-import { Checkbox, Col } from 'react-bootstrap'
+import { Col } from 'react-bootstrap'
 import BackAndForth from './BackAndForth'
 import QuestionInstructions from './QuestionInstructions'
 import CurrentTestStatus from './CurrentTestStatus'
 import { hashHistory } from 'react-router'
-import { setNextPrevQuestion, fetchTests, setQuizParams, markQuestion, completeTest } from './actionCreators'
+import { setNextPrevQuestion, fetchTests, setQuizParams, completeTest } from './actionCreators'
 
 const { object, func, bool } = React.PropTypes
 

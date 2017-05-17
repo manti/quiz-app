@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Modal, Button } from 'react-bootstrap'
+import { Modal } from 'react-bootstrap'
 import Calculator from './Calculator/Calculator'
 const { object, bool } = require('react').PropTypes
 // import Calculator from 'react-calculator'
@@ -25,7 +25,7 @@ const CalculatorHelp = React.createClass({
     if (this.props.arg.qId && !this.props.fetchingTests) {
       return (
         <div>
-          <Button onClick={this.showModal}>Calculator</Button>
+          <div onClick={this.showModal}>Calc</div>
           <Modal
             show={this.state.show}
             onHide={this.hideModal}

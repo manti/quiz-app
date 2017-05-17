@@ -15,7 +15,7 @@ const TestsLayout = React.createClass({
           <Navbar.Header>
             <Navbar.Brand>
               <Link to='/' className='brand-link'>
-                GREOnline.in
+                My App
               </Link>
             </Navbar.Brand>
             <Navbar.Toggle />
