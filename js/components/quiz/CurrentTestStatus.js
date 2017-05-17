@@ -9,7 +9,7 @@ class CurrentTestStatus extends React.Component {
     return (
       <div>
         <Col xs={16} md={11}>
-          <div style={{'fontWeight': 'bold', 'fontSize': '16px'}} className='i-am-center'>Question {this.props.qId} of 20</div>
+          <div style={{'fontWeight': 'bold', 'fontSize': '16px'}} className='i-am-center'>Question {Number(this.props.qId) + 1} of 20</div>
         </Col>
         <Col xs={2} md={1}>
           <SectionTimer arg={this.props.arg} />
