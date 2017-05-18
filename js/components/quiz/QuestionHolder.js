@@ -95,8 +95,8 @@ const QuestionHolder = React.createClass({
       }
       return (
         <div>
+          <TestTools q={q} />
           <Col xs={18} md={12}>
-            <TestTools q={q} />
             <CurrentTestStatus arg={this.props.params} />
             <br />
             <br />

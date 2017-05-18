@@ -60,7 +60,7 @@ class TestTools extends React.Component {
     }
 
     return (
-      <div>
+      <div style={{'display': 'flex', 'justifyContent': 'flex-end'}} >
         <Col xs={2} md={1}>
           <Review arg={{qId}} />
         </Col>
