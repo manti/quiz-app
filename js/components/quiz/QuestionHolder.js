@@ -47,6 +47,7 @@ const QuestionHolder = React.createClass({
       let questionComponent
       let test = this.props.tests[id]
       let section = test.sections[sectionId]
+      const questionsCount = section.questions.length
       let q = section.questions[qId]
       if (!this.props.fetchingTests) {
         let timeRemaining = this.props.tests[id].sections[sectionId].timeRemaining
@@ -97,7 +98,7 @@ const QuestionHolder = React.createClass({
         <div>
           <TestTools q={q} />
           <Col xs={18} md={12}>
-            <CurrentTestStatus arg={this.props.params} />
+            <CurrentTestStatus arg={this.props.params} questionsCount={questionsCount} />
             <br />
             <br />
             <p style={{clear: 'left'}}>
