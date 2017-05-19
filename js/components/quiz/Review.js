@@ -62,7 +62,7 @@ const Review = React.createClass({
                       <tr style={{cursor: 'pointer'}} key={i} onClick={(e) => { this.gotoThisQ(e, q.id) }}>
                         <td>{q.id}</td>
                         <td>{q.answer && q.answer.length ? 'Answered' : 'Not answered'}</td>
-                        <td>{q.marked}</td>
+                        <td>{q.marked ? 'true':'false'}</td>
                       </tr>
                     )
                   })}
