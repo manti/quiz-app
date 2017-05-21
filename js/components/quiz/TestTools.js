@@ -38,8 +38,15 @@ class TestTools extends React.Component {
       <br />
     )
     if (this.props.testId && !this.props.fetchingTests) {
+      let nextButtonLink = (
+        <Link to={this.getQuestionLink(this.props.testId, this.props.sectionId, this.props.nextQ)}>
+          <div>Next</div>
+        </Link>
+      )
       if (this.props.isSectionLastQ) {
-        // show some prompt
+        nextButtonLink = (
+          <div>Last question</div>
+        )
       }
       backButton = (
         <Col xs={2} md={1}>

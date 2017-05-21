@@ -30,6 +30,7 @@ const setNextPrevQuestion = (state, action) => {
       return false
     }
     let sectionQuestions = sectionNow.questions
+    // sectionQuestions = sectionQuestions.filter(value => value!==undefined)
     let nextQ, prevQ
     let isLastQ = false
     let sectionQuestionsCount = Object.keys(sectionQuestions).length
@@ -38,7 +39,7 @@ const setNextPrevQuestion = (state, action) => {
     } else {
       nextQ = qId
     }
-    if (sectionQuestions[Number(qId) - 1]) {
+    if (sectionQuestions[Number(qId) - 1] && sectionQuestions[Number(qId) - 1].id ) {
       prevQ = Number(qId) - 1
     } else {
       prevQ = qId
