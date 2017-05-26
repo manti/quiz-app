@@ -7,7 +7,6 @@ const TestOver = React.createClass({
     params: object
   },
   render () {
-    console.log(this.props)
     return (
       <div>
         <h2 className='i-am-center'>{`Test-${this.props.params.id}`} is over</h2>

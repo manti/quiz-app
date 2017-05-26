@@ -1,7 +1,7 @@
 import React from 'react'
 import { Modal, Table, Glyphicon } from 'react-bootstrap'
 import { connect } from 'react-redux'
-const { bool, object, string, array } = require('react').PropTypes
+const { bool, string, array } = require('react').PropTypes
 import { hashHistory } from 'react-router'
 
 const Review = React.createClass({
@@ -9,8 +9,7 @@ const Review = React.createClass({
     tests: array.isRequired,
     fetchingTests: bool,
     sectionId: string,
-    testId: string,
-    arg: object.isRequired
+    testId: string
   },
   getInitialState () {
     return {show: false}
@@ -28,8 +27,8 @@ const Review = React.createClass({
   },
   render () {
     let sectionQuestions = []
-    if (this.props.arg.qId && !this.props.fetchingTests) {
-      let {testId, sectionId} = this.props
+    if (!this.props.fetchingTests) {
+      let {testId = 1, sectionId = 1} = this.props
       sectionQuestions = this.props.tests[testId].sections[sectionId].questions
       return (
         <div>
@@ -62,7 +61,7 @@ const Review = React.createClass({
                       <tr style={{cursor: 'pointer'}} key={i} onClick={(e) => { this.gotoThisQ(e, q.id) }}>
                         <td>{q.id}</td>
                         <td>{q.answer && q.answer.length ? 'Answered' : 'Not answered'}</td>
-                        <td>{q.marked ? 'true':'false'}</td>
+                        <td>{q.marked ? 'true' : 'false'}</td>
                       </tr>
                     )
                   })}

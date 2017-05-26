@@ -38,16 +38,6 @@ class TestTools extends React.Component {
       <br />
     )
     if (this.props.testId && !this.props.fetchingTests) {
-      let nextButtonLink = (
-        <Link to={this.getQuestionLink(this.props.testId, this.props.sectionId, this.props.nextQ)}>
-          <div>Next</div>
-        </Link>
-      )
-      if (this.props.isSectionLastQ) {
-        nextButtonLink = (
-          <div>Last question</div>
-        )
-      }
       backButton = (
         <Col xs={2} md={1}>
           <Link to={this.getQuestionLink(this.props.testId, this.props.sectionId, this.props.prevQ)}>
@@ -64,6 +54,16 @@ class TestTools extends React.Component {
           <Glyphicon className='center-the-icon' glyph='arrow-right' />
         </Col>
       )
+      if (this.props.isSectionLastQ) {
+        nextButton = (
+          <Col xs={2} md={1}>
+            <Link to={`/seenAllQs`}>
+              <div>Next</div>
+            </Link>
+            <Glyphicon className='center-the-icon' glyph='arrow-right' />
+          </Col>
+        )
+      }
     }
 
     return (

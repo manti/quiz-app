@@ -8,8 +8,11 @@ import TestsLayout from './components/quiz/TestsLayout'
 import store from './components/quiz/store'
 import QnA from './components/quiz/QnA'
 import TestOver from './components/quiz/TestOver'
+import SeenAllQuestions from './components/quiz/SeenAllQuestions'
 import NoMatch from './components/quiz/NoMatch'
 import ReviewTest from './components/quiz/ReviewTest'
+import SectionTimeEnded from './components/quiz/SectionTimeEnded'
+import PostSectionTimer from './components/quiz/PostSectionTimer'
 import { Provider } from 'react-redux'
 // require('./site.css')
 
@@ -26,6 +29,9 @@ const App = React.createClass({
               <Route path='tests/:id/over' component={TestOver} />
               <Route path='tests/:id/:sectionId/:qId' component={QuestionHolder} />
               <Route path='tests/review/:id/:sectionId/:qId' component={ReviewQuestionHolder} />
+              <Route path='seenAllQs' component={SeenAllQuestions} />
+              <Route path='sectionTimeEnded' component={SectionTimeEnded} />
+              <Route path='sectionBreak' component={PostSectionTimer} />
               <IndexRedirect to='/tests' />
               <Route path='*' component={NoMatch} />
             </Route>
