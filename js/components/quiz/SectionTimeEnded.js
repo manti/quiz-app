@@ -1,13 +1,21 @@
 import React from 'react'
-import { Col } from 'react-bootstrap'
+import { Col, Button } from 'react-bootstrap'
+import {hashHistory} from 'react-router'
 
 class SectionTimeEnded extends React.Component {
+  constructor (props) {
+    super(props)
+    this.onContinueClick = this.onContinueClick.bind(this)
+  }
+  onContinueClick (e) {
+    hashHistory.push(`/sectionBreak`)
+  }
   render () {
     return (
       <div>
         <div style={{'display': 'flex', 'justifyContent': 'flex-end'}} >
           <Col xs={2} md={1}>
-            <div>Continue</div>
+            <Button onClick={this.onContinueClick}>Continue</Button>
           </Col>
         </div>
         <br />

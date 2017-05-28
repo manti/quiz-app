@@ -12,7 +12,7 @@ import SeenAllQuestions from './components/quiz/SeenAllQuestions'
 import NoMatch from './components/quiz/NoMatch'
 import ReviewTest from './components/quiz/ReviewTest'
 import SectionTimeEnded from './components/quiz/SectionTimeEnded'
-import PostSectionTimer from './components/quiz/PostSectionTimer'
+import SectionBreak from './components/quiz/SectionBreak'
 import { Provider } from 'react-redux'
 // require('./site.css')
 
@@ -31,7 +31,7 @@ const App = React.createClass({
               <Route path='tests/review/:id/:sectionId/:qId' component={ReviewQuestionHolder} />
               <Route path='seenAllQs' component={SeenAllQuestions} />
               <Route path='sectionTimeEnded' component={SectionTimeEnded} />
-              <Route path='sectionBreak' component={PostSectionTimer} />
+              <Route path='sectionBreak' component={SectionBreak} />
               <IndexRedirect to='/tests' />
               <Route path='*' component={NoMatch} />
             </Route>

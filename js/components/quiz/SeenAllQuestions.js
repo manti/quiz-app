@@ -16,7 +16,8 @@ class SeenAllQuestions extends React.Component {
   onContinueClick () {
     // end the section time
     this.props.dispatch(zeroSectionTime(1000))
-    // hashHistory.push(`/sectionBreak`)
+    hashHistory.push(`/sectionBreak`)
+    // hashHistory.push(`/sectionTimeEnded`)
     // forward to post section timer
   }
 

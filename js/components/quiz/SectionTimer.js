@@ -18,7 +18,7 @@ const SectionTimer = React.createClass({
     this.props.dispatch(updateTimeRemaining(timeRemaining))
   },
   sectionTimeUp () {
-    let {testId, sectionId} = this.props
+    // let {testId, sectionId} = this.props
     hashHistory.push(`/sectionTimeEnded`)
     // if (this.props.tests[testId].sections[Number(sectionId) + 1]) {
     //   hashHistory.push(`/tests/${testId}/${Number(sectionId) + 1}/1`)
