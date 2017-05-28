@@ -6,6 +6,15 @@ import { Col } from 'react-bootstrap'
 const {string, object} = React.PropTypes
 class CurrentTestStatus extends React.Component {
   render () {
+    if (this.props.isReview) {
+      return (
+        <div>
+          <Col xs={16} md={11}>
+            <div style={{'fontWeight': 'bold', 'fontSize': '16px'}} className='i-am-center'>Question {Number(this.props.qId)} of {this.props.questionsCount}</div>
+          </Col>
+        </div>
+      )
+    }
     return (
       <div>
         <Col xs={16} md={11}>
@@ -21,7 +30,8 @@ class CurrentTestStatus extends React.Component {
 CurrentTestStatus.propTypes = {
   qId: string.isRequired,
   arg: object.isRequired,
-  questionsCount: string.isRequired
+  questionsCount: string.isRequired,
+  isReview: string
 }
 const mapStateToProps = (state) => {
   return {
