@@ -39,7 +39,7 @@ class TestTools extends React.Component {
     )
     if (this.props.testId && !this.props.fetchingTests) {
       backButton = (
-        <Col xs={2} md={1}>
+        <Col xs={2} md={1} className='button-bg-tools'>
           <Link to={this.getQuestionLink(this.props.testId, this.props.sectionId, this.props.prevQ)}>
             <div>Back</div>
           </Link>
@@ -47,7 +47,7 @@ class TestTools extends React.Component {
         </Col>
       )
       nextButton = (
-        <Col xs={2} md={1}>
+        <Col xs={2} md={1} className='button-bg-tools'>
           <Link to={this.getQuestionLink(this.props.testId, this.props.sectionId, this.props.nextQ)}>
             <div>Next</div>
           </Link>
@@ -56,7 +56,7 @@ class TestTools extends React.Component {
       )
       if (this.props.isSectionLastQ) {
         nextButton = (
-          <Col xs={2} md={1}>
+          <Col xs={2} md={1} className='button-bg-tools'>
             <Link to={`/seenAllQs`}>
               <div>Next</div>
             </Link>
@@ -74,7 +74,7 @@ class TestTools extends React.Component {
           console.log('No more sections')
         }
         nextButton = (
-          <Col xs={2} md={1}>
+          <Col xs={2} md={1} className='button-bg-tools'>
             <Link to={reviewQlink}>
               <div>Next</div>
             </Link>
@@ -85,18 +85,18 @@ class TestTools extends React.Component {
     }
 
     return (
-      <div style={{'display': 'flex', 'justifyContent': 'flex-end'}} >
-        <Col xs={2} md={1}>
+      <div className='util-box' style={{'display': 'flex', 'justifyContent': 'flex-end'}} >
+        <Col xs={2} md={1} className='button-bg-tools'>
           <Review arg={{qId}} />
         </Col>
-        <Col xs={2} md={1}>
+        <Col xs={2} md={1} className='button-bg-tools'>
           <div>Mark</div>
           <Checkbox style={{margin: '0 5px'}} onChange={(e) => { this.handleMarkQuestion(e, this.props.q) }} checked={this.props.q.marked} />
         </Col>
-        <Col xs={2} md={1}>
+        <Col xs={2} md={1} className='button-bg-tools'>
           <CalculatorHelp arg={{qId}} />
         </Col>
-        <Col xs={2} md={1}>
+        <Col xs={2} md={1} className='button-bg-tools'>
           <div>Help</div>
           <Glyphicon className='center-the-icon' glyph='question-sign' />
         </Col>
