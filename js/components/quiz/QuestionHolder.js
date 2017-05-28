@@ -53,7 +53,8 @@ const QuestionHolder = React.createClass({
         let timeRemaining = this.props.tests[id].sections[sectionId].timeRemaining
         if (timeRemaining < 1001) {
           if (test.sections[Number(sectionId) + 1]) {
-            hashHistory.push(`/tests/${id}/${Number(sectionId) + 1}/0`)
+            hashHistory.push(`/sectionTimeEnded`)
+            // hashHistory.push(`/tests/${id}/${Number(sectionId) + 1}/0`)
           } else {
             this.props.dispatch(completeTest(this.props.params.id))
             hashHistory.push(`/tests/${id}/over`)
