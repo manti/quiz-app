@@ -64,6 +64,24 @@ class TestTools extends React.Component {
           </Col>
         )
       }
+      if (this.props.isReview && this.props.isSectionLastQ) {
+        let reviewQlink
+        const {testId, sectionId, tests} = this.props
+        if (tests[testId].sections[Number(sectionId) + 1]) {
+          reviewQlink = `/tests/review/${testId}/${Number(sectionId) + 1}/1`
+        } else {
+          reviewQlink = `/tests/${testId}/over`
+          console.log('No more sections')
+        }
+        nextButton = (
+          <Col xs={2} md={1}>
+            <Link to={reviewQlink}>
+              <div>Next</div>
+            </Link>
+            <Glyphicon className='center-the-icon' glyph='arrow-right' />
+          </Col>
+        )
+      }
     }
 
     return (
@@ -90,6 +108,7 @@ class TestTools extends React.Component {
 }
 TestTools.propTypes = {
   q: object.isRequired,
+  tests: object,
   dispatch: func,
   qId: string,
   nextQ: string,
@@ -105,6 +124,7 @@ TestTools.propTypes = {
 const mapStateToProps = (state) => {
   return {
     qId: state.qId,
+    tests: state.tests,
     nextQ: state.nextQ,
     prevQ: state.prevQ,
     testId: state.testId,
