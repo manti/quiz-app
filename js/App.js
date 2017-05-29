@@ -13,6 +13,7 @@ import NoMatch from './components/quiz/NoMatch'
 import ReviewTest from './components/quiz/ReviewTest'
 import SectionTimeEnded from './components/quiz/SectionTimeEnded'
 import SectionBreak from './components/quiz/SectionBreak'
+import SectionInstructions from './components/quiz/SectionInstructions'
 import { Provider } from 'react-redux'
 // require('./site.css')
 
@@ -27,6 +28,7 @@ const App = React.createClass({
               <Route path='tests/:id' component={QnA} />
               <Route path='tests/review/:id' component={ReviewTest} />
               <Route path='tests/:id/over' component={TestOver} />
+              <Route path='tests/:id/:sectionId/sectionInstructions' component={SectionInstructions} />
               <Route path='tests/:id/:sectionId/:qId' component={QuestionHolder} />
               <Route path='tests/review/:id/:sectionId/:qId' component={ReviewQuestionHolder} />
               <Route path='seenAllQs' component={SeenAllQuestions} />
