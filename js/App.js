@@ -14,6 +14,9 @@ import ReviewTest from './components/quiz/ReviewTest'
 import SectionTimeEnded from './components/quiz/SectionTimeEnded'
 import SectionBreak from './components/quiz/SectionBreak'
 import SectionInstructions from './components/quiz/SectionInstructions'
+import TestRegulations from './components/quiz/TestRegulations'
+import TestTimingAndBreak from './components/quiz/TestTimingAndBreak'
+import TestInfo from './components/quiz/TestInfo'
 import { Provider } from 'react-redux'
 // require('./site.css')
 
@@ -25,10 +28,13 @@ const App = React.createClass({
           <Router history={hashHistory}>
             <Route component={TestsLayout}>
               <Route path='tests' component={TestsList} />
-              <Route path='tests/:id' component={QnA} />
+              <Route path='tests/instructions/' component={SectionInstructions} />
               <Route path='tests/review/:id' component={ReviewTest} />
+              <Route path='tests/:id' component={QnA} />
+              <Route path='tests/testTimingAndBreak' component={TestTimingAndBreak} />
+              <Route path='tests/regulations' component={TestRegulations} />
+              <Route path='tests/testInfo' component={TestInfo} />
               <Route path='tests/:id/over' component={TestOver} />
-              <Route path='tests/:id/:sectionId/sectionInstructions' component={SectionInstructions} />
               <Route path='tests/:id/:sectionId/:qId' component={QuestionHolder} />
               <Route path='tests/review/:id/:sectionId/:qId' component={ReviewQuestionHolder} />
               <Route path='seenAllQs' component={SeenAllQuestions} />

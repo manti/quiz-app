@@ -35,6 +35,7 @@ const QnA = React.createClass({
             <h4>Back</h4>
           </Link>
           <h3 className='i-am-center'>Disclaimer</h3>
+          <h6>These tests will help you in honing your skills and quantifies your expertise. The scores from GREOnline.in tests does not guarantee you will get the same range of scores in original GRE General Test</h6>
           <Link className='i-am-center' to={`/tests/${this.props.params.id}/1/1`}>
             <Button>Start test</Button>
           </Link>
