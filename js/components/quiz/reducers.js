@@ -16,7 +16,7 @@ const DEFAULT_STATE = {
 
 const setTestStatus = (state, action) => {
   const newState = {}
-  Object.assign(newState, state, {testStarted: action.testStarted})
+  Object.assign(newState, state, {testStarted: action.testStarted, testId: action.testId, sectionId: action.sectionId})
   return newState
 }
 

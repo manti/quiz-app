@@ -3,18 +3,12 @@ import { Col, Button } from 'react-bootstrap'
 import {hashHistory} from 'react-router'
 
 class TestRegulations extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.onContinueClick = this.onContinueClick.bind(this)
   }
   onContinueClick (e) {
-    let {testId, sectionId, tests} = this.props
-    if (tests[testId].sections[Number(sectionId) + 1]) {
-      hashHistory.push(`/tests/${testId}/${Number(sectionId) + 1}/1`)
-    } else {
-      hashHistory.push(`/tests/${testId}/over`)
-      console.log('No more sections')
-    }
+    hashHistory.push(`/testInfo`)
   }
   render () {
     return (
@@ -24,7 +18,7 @@ class TestRegulations extends React.Component {
             <Button onClick={this.onContinueClick}>Continue</Button>
           </Col>
         </div>
-        Test Center Regulations
+        <h2 className='i-am-center'>Test Center Regulations</h2>
       </div>
     )
   }

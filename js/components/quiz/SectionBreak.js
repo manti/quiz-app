@@ -1,6 +1,7 @@
 import React from 'react'
 import { Col, Button } from 'react-bootstrap'
 import {hashHistory} from 'react-router'
+import {setTestStatus} from './actionCreators'
 import {connect} from 'react-redux'
 const { string, array } = require('react').PropTypes
 
@@ -12,7 +13,8 @@ class SectionBreak extends React.Component {
   onContinueClick (e) {
     let {testId, sectionId, tests} = this.props
     if (tests[testId].sections[Number(sectionId) + 1]) {
-      hashHistory.push(`/tests/${testId}/${Number(sectionId) + 1}/1`)
+      this.props.dispatch(setTestStatus(true, testId, Number(sectionId) + 1))
+      hashHistory.push(`/instructions`)
     } else {
       hashHistory.push(`/tests/${testId}/over`)
       console.log('No more sections')

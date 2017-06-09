@@ -28,12 +28,12 @@ const App = React.createClass({
           <Router history={hashHistory}>
             <Route component={TestsLayout}>
               <Route path='tests' component={TestsList} />
-              <Route path='tests/instructions/' component={SectionInstructions} />
+              <Route path='testTimingAndBreak' component={TestTimingAndBreak} />
+              <Route path='regulations' component={TestRegulations} />
+              <Route path='testInfo' component={TestInfo} />
+              <Route path='instructions' component={SectionInstructions} />
               <Route path='tests/review/:id' component={ReviewTest} />
               <Route path='tests/:id' component={QnA} />
-              <Route path='tests/testTimingAndBreak' component={TestTimingAndBreak} />
-              <Route path='tests/regulations' component={TestRegulations} />
-              <Route path='tests/testInfo' component={TestInfo} />
               <Route path='tests/:id/over' component={TestOver} />
               <Route path='tests/:id/:sectionId/:qId' component={QuestionHolder} />
               <Route path='tests/review/:id/:sectionId/:qId' component={ReviewQuestionHolder} />

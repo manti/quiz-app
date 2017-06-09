@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { Button } from 'react-bootstrap'
-import {fetchTests} from './actionCreators'
+import {fetchTests, setTestStatus} from './actionCreators'
 import { hashHistory, Link } from 'react-router'
 
 const { bool, func, object, array } = React.PropTypes
@@ -20,9 +20,11 @@ const QnA = React.createClass({
     } else if (this.props.tests[this.props.params.id].completed) {
       hashHistory.push(`/tests/${this.props.params.id}/over`)
     }
+    // Set section id to default 1 of the test
+    this.props.dispatch(setTestStatus(true, this.props.params.id, '1'))
   },
   componentWillReceiveProps (props) {
-    if (props.tests[props.params.id].completed) {
+    if (props.tests[props.params.id] && props.tests[props.params.id].completed) {
       hashHistory.push(`/tests/${this.props.params.id}/over`)
     }
     // component.forceUpdate()
@@ -36,7 +38,7 @@ const QnA = React.createClass({
           </Link>
           <h3 className='i-am-center'>Disclaimer</h3>
           <h6>These tests will help you in honing your skills and quantifies your expertise. The scores from GREOnline.in tests does not guarantee you will get the same range of scores in original GRE General Test</h6>
-          <Link className='i-am-center' to={`/tests/${this.props.params.id}/1/1`}>
+          <Link className='i-am-center' to={`/testTimingAndBreak`}>
             <Button>Start test</Button>
           </Link>
         </div>

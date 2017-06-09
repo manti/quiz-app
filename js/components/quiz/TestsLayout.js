@@ -14,8 +14,8 @@ const TestsLayout = React.createClass({
         <Navbar inverse collapseOnSelect>
           <Navbar.Header>
             <Navbar.Brand>
-              <Link to='/' className='brand-link'>
-                My App
+              <Link to='/tests' className='brand-link'>
+                GRE Online
               </Link>
             </Navbar.Brand>
             <Navbar.Toggle />

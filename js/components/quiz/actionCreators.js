@@ -1,8 +1,8 @@
 import { firebaseDB } from './firebaseSetup'
 import { SET_TEST_STATUS, SET_NEXT_PREV_QUESTION, FETCH_TESTS, UPDATE_ANSWER, UPDATE_TIME_REMAINING, UPDATE_FIREBASE_WITH_ANSWER, SET_QUIZ_PARAMS, MARK_QUESTION, GOTO_NEXT_SECTION, TOGGLE_GOTO_PROMPT, ZERO_SECTION_TIME, TEST_OVER } from './actions'
 
-export function setTestStatus (testStarted) {
-  return { type: SET_TEST_STATUS, testStarted: testStarted }
+export function setTestStatus (testStarted, testId, sectionId) {
+  return { type: SET_TEST_STATUS, testStarted, testId, sectionId }
 }
 export function setNextPrevQuestion (testId, sectionId, qId) {
   return { type: SET_NEXT_PREV_QUESTION, testId, sectionId, qId }
