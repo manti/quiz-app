@@ -86,38 +86,44 @@ class TestTools extends React.Component {
 
     if (this.props.isReview) {
       return (
-        <div className='util-box' style={{'display': 'flex', 'justifyContent': 'flex-end'}} >
-          <Col xs={2} md={1} className='button-bg-tools'>
-            <CalculatorHelp arg={{qId}} />
-          </Col>
-          <Col xs={2} md={1} className='button-bg-tools'>
-            <div>Help</div>
-            <Glyphicon className='center-the-icon' glyph='question-sign' />
-          </Col>
-          {backButton}
-          {nextButton}
+        <div>
+          <h4 style={{ 'position': 'absolute', 'left': '100px'}}>Practice Test-{this.props.testId} Section {this.props.sectionId}</h4>
+          <div className='util-box' style={{'display': 'flex', 'justifyContent': 'flex-end'}} >
+            <Col xs={2} md={1} className='button-bg-tools'>
+              <CalculatorHelp arg={{qId}} />
+            </Col>
+            <Col xs={2} md={1} className='button-bg-tools'>
+              <div>Help</div>
+              <Glyphicon className='center-the-icon' glyph='question-sign' />
+            </Col>
+            {backButton}
+            {nextButton}
+          </div>
         </div>
       )
     }
     else {
       return (
-        <div className='util-box' style={{'display': 'flex', 'justifyContent': 'flex-end'}} >
-          <Col xs={2} md={1} className='button-bg-tools'>
-            <Review arg={{qId}} />
-          </Col>
-          <Col xs={2} md={1} className='button-bg-tools'>
-            <div>Mark</div>
-            <Checkbox style={{margin: '0 5px'}} onChange={(e) => { this.handleMarkQuestion(e, this.props.q) }} checked={this.props.q.marked} />
-          </Col>
-          <Col xs={2} md={1} className='button-bg-tools'>
-            <CalculatorHelp arg={{qId}} />
-          </Col>
-          <Col xs={2} md={1} className='button-bg-tools'>
-            <div>Help</div>
-            <Glyphicon className='center-the-icon' glyph='question-sign' />
-          </Col>
-          {backButton}
-          {nextButton}
+        <div>
+          <h4 style={{ 'position': 'absolute', 'left': '100px'}}>Practice Test-{this.props.testId} Section {this.props.sectionId}</h4>
+          <div className='util-box' style={{'display': 'flex', 'justifyContent': 'flex-end'}} >
+            <Col xs={2} md={1} className='button-bg-tools'>
+              <Review arg={{qId}} />
+            </Col>
+            <Col xs={2} md={1} className='button-bg-tools'>
+              <div>Mark</div>
+              <Checkbox style={{margin: '0 5px'}} onChange={(e) => { this.handleMarkQuestion(e, this.props.q) }} checked={this.props.q.marked} />
+            </Col>
+            <Col xs={2} md={1} className='button-bg-tools'>
+              <CalculatorHelp arg={{qId}} />
+            </Col>
+            <Col xs={2} md={1} className='button-bg-tools'>
+              <div>Help</div>
+              <Glyphicon className='center-the-icon' glyph='question-sign' />
+            </Col>
+            {backButton}
+            {nextButton}
+          </div>
         </div>
       )
     }
