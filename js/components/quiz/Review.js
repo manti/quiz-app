@@ -30,6 +30,8 @@ const Review = React.createClass({
     if (!this.props.fetchingTests) {
       let {testId = 1, sectionId = 1} = this.props
       sectionQuestions = this.props.tests[testId].sections[sectionId].questions
+      const marked = <Glyphicon glyph='ok' />
+      const notMarked = <Glyphicon glyph='remove' />
       return (
         <div>
           <div onClick={this.showModal}>
@@ -61,7 +63,7 @@ const Review = React.createClass({
                       <tr style={{cursor: 'pointer'}} key={i} onClick={(e) => { this.gotoThisQ(e, q.id) }}>
                         <td>{q.id}</td>
                         <td>{q.answer && q.answer.length ? 'Answered' : 'Not answered'}</td>
-                        <td>{q.marked ? 'true' : 'false'}</td>
+                        <td>{q.marked ? marked : notMarked}</td>
                       </tr>
                     )
                   })}
