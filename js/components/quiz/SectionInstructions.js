@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-const {object, func, string, bool} = React.PropTypes
+const {object, func, string} = React.PropTypes
 import { Col, Button } from 'react-bootstrap'
 import {hashHistory} from 'react-router'
 

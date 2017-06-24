@@ -3,7 +3,7 @@ import { Col, Button } from 'react-bootstrap'
 import {hashHistory} from 'react-router'
 import {setTestStatus} from './actionCreators'
 import {connect} from 'react-redux'
-const { string, array } = require('react').PropTypes
+const { string, array, func } = require('react').PropTypes
 
 class SectionBreak extends React.Component {
   constructor (props) {
@@ -21,6 +21,8 @@ class SectionBreak extends React.Component {
     }
   }
   render () {
+    const {testId, sectionId, tests} = this.props
+    console.log(tests[testId][sectionId].break)
     return (
       <div>
         <div style={{'display': 'flex', 'justifyContent': 'flex-end'}} >
@@ -39,6 +41,7 @@ class SectionBreak extends React.Component {
 
 SectionBreak.propTypes = {
   tests: array,
+  dispatch: func,
   sectionId: string.isRequired,
   testId: string.isRequired
 }

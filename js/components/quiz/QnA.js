@@ -33,10 +33,7 @@ const QnA = React.createClass({
     if (!this.props.fetchingTests && !this.props.tests[this.props.params.id].completed) {
       return (
         <div>
-          <Link to='/tests'>
-            <h4>Back</h4>
-          </Link>
-          <h3 className='i-am-center'>Disclaimer</h3>
+          <h3 className='i-am-center'>Disclaimweqwe</h3>
           <h6>These tests will help you in honing your skills and quantifies your expertise. The scores from GREOnline.in tests does not guarantee you will get the same range of scores in original GRE General Test</h6>
           <Link className='i-am-center' to={`/testTimingAndBreak`}>
             <Button>Start test</Button>

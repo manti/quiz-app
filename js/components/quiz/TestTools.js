@@ -87,7 +87,7 @@ class TestTools extends React.Component {
     if (this.props.isReview) {
       return (
         <div>
-          <h4 style={{ 'position': 'absolute', 'left': '100px'}}>Practice Test-{this.props.testId} Section {this.props.sectionId}</h4>
+          <h4 style={{'position': 'absolute', 'left': '100px'}}>Practice Test-{this.props.testId} Section {this.props.sectionId}</h4>
           <div className='util-box' style={{'display': 'flex', 'justifyContent': 'flex-end'}} >
             <Col xs={2} md={1} className='button-bg-tools'>
               <CalculatorHelp arg={{qId}} />
@@ -102,10 +102,11 @@ class TestTools extends React.Component {
         </div>
       )
     }
-    else {
+    else
+    {
       return (
         <div>
-          <h4 style={{ 'position': 'absolute', 'left': '100px'}}>Practice Test-{this.props.testId} Section {this.props.sectionId}</h4>
+          <h4 style={{'position': 'absolute', 'left': '100px'}}>Practice Test-{this.props.testId} Section {this.props.sectionId}</h4>
           <div className='util-box' style={{'display': 'flex', 'justifyContent': 'flex-end'}} >
             <Col xs={2} md={1} className='button-bg-tools'>
               <Review arg={{qId}} />
