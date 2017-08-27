@@ -18,6 +18,7 @@ import TestRegulations from './components/quiz/TestRegulations'
 import TestTimingAndBreak from './components/quiz/TestTimingAndBreak'
 import TestInfo from './components/quiz/TestInfo'
 import Disclaimer from './components/quiz/Disclaimer'
+import CopyRight from './components/quiz/CopyRight'
 import { Provider } from 'react-redux'
 // require('./site.css')
 
@@ -35,6 +36,7 @@ const App = React.createClass({
               <Route path='instructions' component={SectionInstructions} />
               <Route path='tests/review/:id' component={ReviewTest} />
               <Route path='tests/:id' component={QnA} />
+              <Route path='tests/:id/copyright' component={CopyRight} />
               <Route path='tests/:id/disclaimer' component={Disclaimer} />
               <Route path='tests/:id/over' component={TestOver} />
               <Route path='tests/:id/:sectionId/:qId' component={QuestionHolder} />

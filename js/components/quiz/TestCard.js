@@ -20,7 +20,7 @@ const TestCard = React.createClass({
       <li className='list-group-item'>
         <span className='lead'>{this.props.title}</span>
         <ButtonGroup bsClass='pull-right'>
-          <Link to={`/tests/${this.props.testId}`}>
+          <Link to={`/tests/${this.props.testId}/copyright`}>
             <Button bsStyle='link' onClick={this.startTest}>Take test</Button>
           </Link>
           <Button bsStyle='link'>View report card</Button>
