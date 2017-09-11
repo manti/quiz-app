@@ -21,7 +21,6 @@ class SectionBreak extends React.Component {
     }
   }
   render () {
-    const {testId, sectionId, tests} = this.props
     return (
       <div>
         <div style={{'display': 'flex', 'justifyContent': 'flex-end'}} >

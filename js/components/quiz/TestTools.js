@@ -1,12 +1,12 @@
 import React from 'react'
 import { Col, Checkbox, Glyphicon } from 'react-bootstrap'
-import {Link, hashHistory} from 'react-router'
+import { Link, hashHistory } from 'react-router'
 import { markQuestion, toggleGotoPrompt } from './actionCreators'
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
 import CalculatorHelp from './CalculatorHelp'
 import Review from './Review'
 
-const {object, func, string, bool} = React.PropTypes
+const { object, func, string, bool } = React.PropTypes
 
 class TestTools extends React.Component {
   constructor (props) {
@@ -24,23 +24,28 @@ class TestTools extends React.Component {
   showGotoNextPrompt () {
     if (this.props.isReview) {
       console.log('go to next section')
-      hashHistory.push(`/tests/review/${this.props.testId}/${Number(this.props.sectionId) + 1}/1`)
+      hashHistory.push(
+        `/tests/review/${this.props.testId}/${Number(this.props.sectionId) +
+          1}/1`
+      )
     } else {
       this.props.dispatch(toggleGotoPrompt())
     }
   }
   render () {
-    const {qId} = this.props
-    let backButton = (
-      <br />
-    )
-    let nextButton = (
-      <br />
-    )
+    const { qId } = this.props
+    let backButton = <br />
+    let nextButton = <br />
     if (this.props.testId && !this.props.fetchingTests) {
       backButton = (
         <Col xs={2} md={1} className='button-bg-tools'>
-          <Link to={this.getQuestionLink(this.props.testId, this.props.sectionId, this.props.prevQ)}>
+          <Link
+            to={this.getQuestionLink(
+              this.props.testId,
+              this.props.sectionId,
+              this.props.prevQ
+            )}
+          >
             <div>Back</div>
           </Link>
           <Glyphicon className='center-the-icon' glyph='arrow-left' />
@@ -48,7 +53,13 @@ class TestTools extends React.Component {
       )
       nextButton = (
         <Col xs={2} md={1} className='button-bg-tools'>
-          <Link to={this.getQuestionLink(this.props.testId, this.props.sectionId, this.props.nextQ)}>
+          <Link
+            to={this.getQuestionLink(
+              this.props.testId,
+              this.props.sectionId,
+              this.props.nextQ
+            )}
+          >
             <div>Next</div>
           </Link>
           <Glyphicon className='center-the-icon' glyph='arrow-right' />
@@ -66,7 +77,7 @@ class TestTools extends React.Component {
       }
       if (this.props.isReview && this.props.isSectionLastQ) {
         let reviewQlink
-        const {testId, sectionId, tests} = this.props
+        const { testId, sectionId, tests } = this.props
         if (tests[testId].sections[Number(sectionId) + 1]) {
           reviewQlink = `/tests/review/${testId}/${Number(sectionId) + 1}/1`
         } else {
@@ -87,10 +98,15 @@ class TestTools extends React.Component {
     if (this.props.isReview) {
       return (
         <div>
-          <h4 style={{'position': 'absolute', 'left': '100px'}}>Practice Test-{this.props.testId} Section {this.props.sectionId}</h4>
-          <div className='util-box' style={{'display': 'flex', 'justifyContent': 'flex-end'}} >
+          <h4 style={{ position: 'absolute', left: '100px' }}>
+            Practice Test-{this.props.testId} Section {this.props.sectionId}
+          </h4>
+          <div
+            className='util-box'
+            style={{ display: 'flex', justifyContent: 'flex-end' }}
+          >
             <Col xs={2} md={1} className='button-bg-tools'>
-              <CalculatorHelp arg={{qId}} />
+              <CalculatorHelp arg={{ qId }} />
             </Col>
             <Col xs={2} md={1} className='button-bg-tools'>
               <div>Help</div>
@@ -101,22 +117,31 @@ class TestTools extends React.Component {
           </div>
         </div>
       )
-    }
-    else
-    {
+    } else {
       return (
         <div>
-          <h4 style={{'position': 'absolute', 'left': '100px'}}>Practice Test-{this.props.testId} Section {this.props.sectionId}</h4>
-          <div className='util-box' style={{'display': 'flex', 'justifyContent': 'flex-end'}} >
+          <h4 style={{ position: 'absolute', left: '100px' }}>
+            Practice Test-{this.props.testId} Section {this.props.sectionId}
+          </h4>
+          <div
+            className='util-box'
+            style={{ display: 'flex', justifyContent: 'flex-end' }}
+          >
             <Col xs={2} md={1} className='button-bg-tools'>
-              <Review arg={{qId}} />
+              <Review arg={{ qId }} />
             </Col>
             <Col xs={2} md={1} className='button-bg-tools'>
               <div>Mark</div>
-              <Checkbox style={{margin: '0 5px'}} onChange={(e) => { this.handleMarkQuestion(e, this.props.q) }} checked={this.props.q.marked} />
+              <Checkbox
+                style={{ margin: '0 5px' }}
+                onChange={e => {
+                  this.handleMarkQuestion(e, this.props.q)
+                }}
+                checked={this.props.q.marked}
+              />
             </Col>
             <Col xs={2} md={1} className='button-bg-tools'>
-              <CalculatorHelp arg={{qId}} />
+              <CalculatorHelp arg={{ qId }} />
             </Col>
             <Col xs={2} md={1} className='button-bg-tools'>
               <div>Help</div>
@@ -145,7 +170,7 @@ TestTools.propTypes = {
   isReview: string
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     qId: state.qId,
     tests: state.tests,
