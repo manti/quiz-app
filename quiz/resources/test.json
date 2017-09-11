@@ -1,812 +1,851 @@
 {
-    "1":{
-        "completed": false, 
-        "sections": {
-            "1": {
-                "duration": 1200000, 
-                "timeRemaining": 12123580739, 
-                "section": "1", 
-                "questions": {
-                    "1": {
-                        "solution": "3", 
-                        "answer": "3", 
-                        "type": "mcq", 
-                        "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150", 
-                        "question": "Chord MN makes an angle of 60o at the centre \u2018O\u2019 and the perimeter of triangle MNO is 18 units.", 
-                        "id": "1", 
-                        "marked": true, 
-                        "options": {
-                            "1": "Quantity A is greater", 
-                            "2": "Quantity B is greater", 
-                            "3": "Two quantities are equal", 
-                            "4": "Relationship cannot be determined"
-                        }
-                    }, 
-                    "2": {
-                        "answer": "0", 
-                        "type": "text-selection", 
-                        "solution": "3", 
-                        "passage": "Scholars have hypothesized that the wide clearing at the center of the ruins of the <strike>Maya site might have been a market</strike>, not a ritual plaza, indicating commercial activity as long ago as 300 AD. <strike>Rock alignmentspeeking above</strike> the surface seemed to outline the posaibtionveotfhsetasllusrface seemed to outline the position of stalls and regular pathways.", 
-                        "question": "In the argument given, the two highlighted portions play which of the following roles?", 
-                        "id": "2", 
-                        "marked": true, 
-                        "options": {
-                            "1": "Quantity A is greater", 
-                            "2": "Quantity B is greater", 
-                            "3": "Two quantities are equal", 
-                            "4": "Relationship cannot be determined"
-                        }
-                    }, 
-                    "3": {
-                        "solution": "2", 
-                        "answer": "0", 
-                        "type": "passage", 
-                        "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150", 
-                        "passage": "<p>I do not know where I can find a better place than just here, to make mention of one or two other things, which to me seem important, as in printed form establishing in all respects the reasonableness of the whole story of the White Whale, more especially the catastrophe. For this is one of those disheartening instances where truth requires full as much bolstering as error. So ignorant are most landsmen of some of the plainest and most palpable wonders of the world, that without some hints touching the plain facts, historical and otherwise, of the fishery, they might scout at Moby Dick as a monstrous fable, or still worse and more detestable, a hideous and intolerable allegory.</p><p>First: Though most men have some vague flitting ideas of the general perils of the grand fishery, yet they have nothing like a fixed, vivid conception of those perils, and the frequency with which they recur. One reason perhaps is, that not one in fifty of the actual disasters and deaths by casualties in the fishery, ever finds a public record at home, however transient and immediately forgotten that record. Do you suppose that that poor fellow there, who this moment perhaps caught by the whale-line off the coast of New Guinea, is being carried down to the bottom of the sea by the sounding leviathan&mdash;do you suppose that that poor fellow's name will appear in the newspaper obituary you will read to-morrow at your breakfast? No: because the mails are very irregular between here and New Guinea. In fact, did you ever hear what might be called regular news direct or indirect from New Guinea? Yet I tell you that upon one particular voyage which I made to the Pacific, among many others we spoke thirty different ships, every one of which had had a death by a whale, some of them more than one, and three that had each lost a boat's crew. For God's sake, be economical with your lamps and candles! not a gallon you burn, but at least one drop of man's blood was spilled for it.</p><p>Secondly: People ashore have indeed some indefinite idea that a whale is an enormous creature of enormous power; but I have ever found that when narrating to them some specific example of this two-fold enormousness, they have significantly complimented me upon my facetiousness; when, I declare upon my soul, I had no more idea of being facetious than Moses, when he wrote the history of the plagues of Egypt.</p><p>But fortunately the special point I here seek can be established upon testimony entirely independent of my own. That point is this: The Sperm Whale is in some cases sufficiently powerful, knowing, and judiciously malicious, as with direct aforethought to stave in, utterly destroy, and sink a large ship; and what is more, the Sperm Whale HAS done it.</p>", 
-                        "question": "Chord MN makes an angle of 60o at the centre \u2018O\u2019 and the perimeter of triangle MNO is 18 units.", 
-                        "id": "3", 
-                        "marked": false, 
-                        "options": {
-                            "1": "Quantity A is greater", 
-                            "2": "Quantity B is greater", 
-                            "3": "Two quantities are equal", 
-                            "4": "Relationship cannot be determined"
-                        }
-                    }, 
-                    "4": {
-                        "solution": "2", 
-                        "answer": "1", 
-                        "type": "passage", 
-                        "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150", 
-                        "passage": "<p>I do not know where I can find a better place than just here, to make mention of one or two other things, which to me seem important, as in printed form establishing in all respects the reasonableness of the whole story of the White Whale, more especially the catastrophe. For this is one of those disheartening instances where truth requires full as much bolstering as error. So ignorant are most landsmen of some of the plainest and most palpable wonders of the world, that without some hints touching the plain facts, historical and otherwise, of the fishery, they might scout at Moby Dick as a monstrous fable, or still worse and more detestable, a hideous and intolerable allegory.</p><p>First: Though most men have some vague flitting ideas of the general perils of the grand fishery, yet they have nothing like a fixed, vivid conception of those perils, and the frequency with which they recur. One reason perhaps is, that not one in fifty of the actual disasters and deaths by casualties in the fishery, ever finds a public record at home, however transient and immediately forgotten that record. Do you suppose that that poor fellow there, who this moment perhaps caught by the whale-line off the coast of New Guinea, is being carried down to the bottom of the sea by the sounding leviathan&mdash;do you suppose that that poor fellow's name will appear in the newspaper obituary you will read to-morrow at your breakfast? No: because the mails are very irregular between here and New Guinea. In fact, did you ever hear what might be called regular news direct or indirect from New Guinea? Yet I tell you that upon one particular voyage which I made to the Pacific, among many others we spoke thirty different ships, every one of which had had a death by a whale, some of them more than one, and three that had each lost a boat's crew. For God's sake, be economical with your lamps and candles! not a gallon you burn, but at least one drop of man's blood was spilled for it.</p><p>Secondly: People ashore have indeed some indefinite idea that a whale is an enormous creature of enormous power; but I have ever found that when narrating to them some specific example of this two-fold enormousness, they have significantly complimented me upon my facetiousness; when, I declare upon my soul, I had no more idea of being facetious than Moses, when he wrote the history of the plagues of Egypt.</p><p>But fortunately the special point I here seek can be established upon testimony entirely independent of my own. That point is this: The Sperm Whale is in some cases sufficiently powerful, knowing, and judiciously malicious, as with direct aforethought to stave in, utterly destroy, and sink a large ship; and what is more, the Sperm Whale HAS done it.</p>", 
-                        "question": "Next question Chord MN makes an angle of 60o at the centre \u2018O\u2019 and the perimeter of triangle MNO is 18 units.", 
-                        "id": "4", 
-                        "marked": true, 
-                        "options": {
-                            "1": "Quantity A is greater", 
-                            "2": "Quantity B is greater", 
-                            "3": "Two quantities are equal", 
-                            "4": "Relationship cannot be determined"
-                        }
-                    }, 
-                    "5": {
-                        "answer": "1", 
-                        "type": "passageOnTop", 
-                        "solution": "2", 
-                        "passage": "<p>I do not know where I can find a better place than just here, to make mention of one or two other things, which to me seem important, as in printed form establishing in all respects the reasonableness of the whole story of the White Whale, more especially the catastrophe. For this is one of those disheartening instances where truth requires full as much bolstering as error. So ignorant are most landsmen of some of the plainest and most palpable wonders of the world, that without some hints touching the plain facts, historical and otherwise, of the fishery, they might scout at Moby Dick as a monstrous fable, or still worse and more detestable, a hideous and intolerable allegory.</p> <img src=\"https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=350%C3%97150&amp;w=350&amp;h=150\" class=\"img-thumbnail\">", 
-                        "question": "Next question Chord MN makes an angle of 60o at the centre \u2018O\u2019 and the perimeter of triangle MNO is 18 units.", 
-                        "id": "5", 
-                        "marked": false, 
-                        "options": {
-                            "1": "Quantity A is greater", 
-                            "2": "Quantity B is greater", 
-                            "3": "Two quantities are equal", 
-                            "4": "Relationship cannot be determined"
-                        }
-                    }, 
-                    "6": {
-                        "solution": "myadfa", 
-                        "answer": "awesome", 
-                        "type": "onlyInput", 
-                        "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150", 
-                        "question": "A code of six digit number have to be generated. The code should be divisible by both 4 and as well 10. Then the possible number of codes is:", 
-                        "id": "6", 
-                        "marked": true, 
-                        "instructions": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum tempore, non magni soluta possimus commodi ipsam quo delectus. Odit, similique, cumque. Itaque nihil asperiores delectus soluta dolor inventore eligendi earum"
-                    }, 
-                    "7": {
-                        "solution": "['-7', '0', '4']", 
-                        "answer": {
-                            "1": "5", 
-                            "2": "4", 
-                            "3": "-7"
-                        }, 
-                        "type": "multi-answer", 
-                        "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150", 
-                        "question": "(x, y) = (2, 1) satisfies the equation 2x+by+c=0. Given 0\u2264b\u22643, then what values can \u2018c\u2019 take? Indicate all such apply:", 
-                        "id": "7", 
-                        "marked": false, 
-                        "options": {
-                            "1": "-7", 
-                            "2": "-6", 
-                            "3": "-4", 
-                            "4": "0", 
-                            "5": "4", 
-                            "6": "7"
-                        }
-                    }, 
-                    "8": {
-                        "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150", 
-                        "question": "What fraction of internet users in 2012 from country C are the internet users in 2000 from country A", 
-                        "solution": "12/21", 
-                        "marked": "True", 
-                        "answer": {
-                            "1": "12", 
-                            "2": "21"
-                        }, 
-                        "type": "fraction", 
-                        "id": "8"
-                    }, 
-                    "9": {
-                        "solution": {
-                            "1": "Fervid"
-                        }, 
-                        "answer": {
-                            "1": "unpalatable"
-                        }, 
-                        "type": "1-blank", 
-                        "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150", 
-                        "question": "Even a cursory glance at history proves that all war represents a --------- of diplomacy.", 
-                        "id": "9", 
-                        "marked": "True", 
-                        "options": {
-                            "blank-1": {
-                                "1": "unpalatable", 
-                                "2": "Productive", 
-                                "3": "Destructive", 
-                                "4": "Fervid", 
-                                "5": "Creative"
-                            }
-                        }
-                    }, 
-                    "10": {
-                        "solution": {
-                            "1": "Productive", 
-                            "2": "Productive"
-                        }, 
-                        "answer": {
-                            "1": "unpalatable", 
-                            "2": "Creative"
-                        }, 
-                        "type": "2-blank", 
-                        "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150", 
-                        "question": "What fraction of internet users in 2012 from country C are the internet users in 2000 from country A", 
-                        "id": "10", 
-                        "marked": "True", 
-                        "options": {
-                            "blank-2": {
-                                "1": "Non proves", 
-                                "2": "Productive", 
-                                "3": "Destructive", 
-                                "4": "Fervid", 
-                                "5": "Creative"
-                            }, 
-                            "blank-1": {
-                                "1": "unpalatable", 
-                                "2": "Productive", 
-                                "3": "Destructive", 
-                                "4": "Fervid", 
-                                "5": "Creative"
-                            }
-                        }
-                    }, 
-                    "11": {
-                        "solution": {
-                            "1": "Destructive", 
-                            "2": "Creative", 
-                            "3": "Creative"
-                        }, 
-                        "answer": {
-                            "1": "Destructive", 
-                            "2": "Productive", 
-                            "3": "Fervid"
-                        }, 
-                        "type": "3-blank", 
-                        "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150", 
-                        "question": "What fraction of internet users in 2012 from country C are the internet users in 2000 from country A", 
-                        "id": "11", 
-                        "marked": true, 
-                        "options": {
-                            "blank-2": {
-                                "1": "Non proves", 
-                                "2": "Productive", 
-                                "3": "Destructive", 
-                                "4": "Fervid", 
-                                "5": "Creative"
-                            }, 
-                            "blank-3": {
-                                "1": "Non provdas", 
-                                "2": "Productive", 
-                                "3": "Destructive", 
-                                "4": "Fervid", 
-                                "5": "Creative"
-                            }, 
-                            "blank-1": {
-                                "1": "unpalatable", 
-                                "2": "Productive", 
-                                "3": "Destructive", 
-                                "4": "Fervid", 
-                                "5": "Creative"
-                            }
-                        }
-                    }
-                }, 
-                "title": "Aptitude & mathematics"
-            }, 
-            "2": {
-                "duration": 1200000, 
-                "timeRemaining": 76400428, 
-                "section": "2", 
-                "questions": {
-                    "1": {
-                        "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150", 
-                        "question": "Chord MN makes an angle of 60o at the centre \u2018O\u2019 and the perimeter of triangle MNO is 18 units.", 
-                        "marked": "True", 
-                        "options": {
-                            "1": "Quantity A is greater", 
-                            "2": "Quantity B is greater", 
-                            "3": "Two quantities are equal", 
-                            "4": "Relationship cannot be determined"
-                        }, 
-                        "answer": "3", 
-                        "type": "mcq", 
-                        "id": "1"
-                    }, 
-                    "2": {
-                        "answer": "0", 
-                        "type": "passage", 
-                        "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150", 
-                        "passage": "<p>I do not know where I can find a better place than just here, to make mention of one or two other things, which to me seem important, as in printed form establishing in all respects the reasonableness of the whole story of the White Whale, more especially the catastrophe. For this is one of those disheartening instances where truth requires full as much bolstering as error. So ignorant are most landsmen of some of the plainest and most palpable wonders of the world, that without some hints touching the plain facts, historical and otherwise, of the fishery, they might scout at Moby Dick as a monstrous fable, or still worse and more detestable, a hideous and intolerable allegory.</p><p>First: Though most men have some vague flitting ideas of the general perils of the grand fishery, yet they have nothing like a fixed, vivid conception of those perils, and the frequency with which they recur. One reason perhaps is, that not one in fifty of the actual disasters and deaths by casualties in the fishery, ever finds a public record at home, however transient and immediately forgotten that record. Do you suppose that that poor fellow there, who this moment perhaps caught by the whale-line off the coast of New Guinea, is being carried down to the bottom of the sea by the sounding leviathan&mdash;do you suppose that that poor fellow's name will appear in the newspaper obituary you will read to-morrow at your breakfast? No: because the mails are very irregular between here and New Guinea. In fact, did you ever hear what might be called regular news direct or indirect from New Guinea? Yet I tell you that upon one particular voyage which I made to the Pacific, among many others we spoke thirty different ships, every one of which had had a death by a whale, some of them more than one, and three that had each lost a boat's crew. For God's sake, be economical with your lamps and candles! not a gallon you burn, but at least one drop of man's blood was spilled for it.</p><p>Secondly: People ashore have indeed some indefinite idea that a whale is an enormous creature of enormous power; but I have ever found that when narrating to them some specific example of this two-fold enormousness, they have significantly complimented me upon my facetiousness; when, I declare upon my soul, I had no more idea of being facetious than Moses, when he wrote the history of the plagues of Egypt.</p><p>But fortunately the special point I here seek can be established upon testimony entirely independent of my own. That point is this: The Sperm Whale is in some cases sufficiently powerful, knowing, and judiciously malicious, as with direct aforethought to stave in, utterly destroy, and sink a large ship; and what is more, the Sperm Whale HAS done it.</p>", 
-                        "question": "Chord MN makes an angle of 60o at the centre \u2018O\u2019 and the perimeter of triangle MNO is 18 units.", 
-                        "id": "2", 
-                        "marked": "True", 
-                        "options": {
-                            "1": "Quantity A is greater", 
-                            "2": "Quantity B is greater", 
-                            "3": "Two quantities are equal", 
-                            "4": "Relationship cannot be determined"
-                        }
-                    }, 
-                    "3": {
-                        "answer": "3", 
-                        "type": "passage", 
-                        "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150", 
-                        "passage": "<p>I do not know where I can find a better place than just here, to make mention of one or two other things, which to me seem important, as in printed form establishing in all respects the reasonableness of the whole story of the White Whale, more especially the catastrophe. For this is one of those disheartening instances where truth requires full as much bolstering as error. So ignorant are most landsmen of some of the plainest and most palpable wonders of the world, that without some hints touching the plain facts, historical and otherwise, of the fishery, they might scout at Moby Dick as a monstrous fable, or still worse and more detestable, a hideous and intolerable allegory.</p><p>First: Though most men have some vague flitting ideas of the general perils of the grand fishery, yet they have nothing like a fixed, vivid conception of those perils, and the frequency with which they recur. One reason perhaps is, that not one in fifty of the actual disasters and deaths by casualties in the fishery, ever finds a public record at home, however transient and immediately forgotten that record. Do you suppose that that poor fellow there, who this moment perhaps caught by the whale-line off the coast of New Guinea, is being carried down to the bottom of the sea by the sounding leviathan&mdash;do you suppose that that poor fellow's name will appear in the newspaper obituary you will read to-morrow at your breakfast? No: because the mails are very irregular between here and New Guinea. In fact, did you ever hear what might be called regular news direct or indirect from New Guinea? Yet I tell you that upon one particular voyage which I made to the Pacific, among many others we spoke thirty different ships, every one of which had had a death by a whale, some of them more than one, and three that had each lost a boat's crew. For God's sake, be economical with your lamps and candles! not a gallon you burn, but at least one drop of man's blood was spilled for it.</p><p>Secondly: People ashore have indeed some indefinite idea that a whale is an enormous creature of enormous power; but I have ever found that when narrating to them some specific example of this two-fold enormousness, they have significantly complimented me upon my facetiousness; when, I declare upon my soul, I had no more idea of being facetious than Moses, when he wrote the history of the plagues of Egypt.</p><p>But fortunately the special point I here seek can be established upon testimony entirely independent of my own. That point is this: The Sperm Whale is in some cases sufficiently powerful, knowing, and judiciously malicious, as with direct aforethought to stave in, utterly destroy, and sink a large ship; and what is more, the Sperm Whale HAS done it.</p>", 
-                        "question": "Next question Chord MN makes an angle of 60o at the centre \u2018O\u2019 and the perimeter of triangle MNO is 18 units.", 
-                        "id": "3", 
-                        "marked": "True", 
-                        "options": {
-                            "1": "Quantity A is greater", 
-                            "2": "Quantity B is greater", 
-                            "3": "Two quantities are equal", 
-                            "4": "Relationship cannot be determined"
-                        }
-                    }, 
-                    "4": {
-                        "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150", 
-                        "question": "A code of six digit number have to be generated. The code should be divisible by both 4 and as well 10. Then the possible number of codes is:", 
-                        "marked": "True", 
-                        "answer": "122", 
-                        "type": "onlyInput", 
-                        "id": "4"
-                    }, 
-                    "5": {
-                        "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150", 
-                        "question": "(x, y) = (2, 1) satisfies the equation 2x+by+c=0. Given 0\u2264b\u22643, then what values can \u2018c\u2019 take? Indicate all such apply:", 
-                        "marked": "True", 
-                        "options": {
-                            "1": "-7", 
-                            "2": "-6", 
-                            "3": "-4", 
-                            "4": "0", 
-                            "5": "4", 
-                            "6": "7"
-                        }, 
-                        "answer": {
-                            "1": " ", 
-                            "2": "-7", 
-                            "3": "0"
-                        }, 
-                        "type": "multi-answer", 
-                        "id": "5"
-                    }, 
-                    "6": {
-                        "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150", 
-                        "question": "What fraction of internet users in 2012 from country C are the internet users in 2000 from country A", 
-                        "marked": "True", 
-                        "answer": {
-                            "1": "12", 
-                            "2": "90"
-                        }, 
-                        "type": "fraction", 
-                        "id": "6"
-                    }, 
-                    "7": {
-                        "solution": {
-                            "1": "Productive", 
-                            "2": 2, 
-                            "3": 3
-                        }, 
-                        "answer": {
-                            "1": "Productive"
-                        }, 
-                        "type": "1-blank", 
-                        "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150", 
-                        "question": "Even a cursory glance at history proves that all war represents a --------- of diplomacy.", 
-                        "id": "7", 
-                        "marked": "True", 
-                        "options": {
-                            "blank-1": {
-                                "1": "unpalatable", 
-                                "2": "Productive", 
-                                "3": "Destructive", 
-                                "4": "Fervid", 
-                                "5": "Creative"
-                            }
-                        }
-                    }, 
-                    "8": {
-                        "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150", 
-                        "question": "What fraction of internet users in 2012 from country C are the internet users in 2000 from country A", 
-                        "marked": "True", 
-                        "options": {
-                            "blank-2": {
-                                "1": "Non proves", 
-                                "2": "Productive", 
-                                "3": "Destructive", 
-                                "4": "Fervid", 
-                                "5": "Creative"
-                            }, 
-                            "blank-1": {
-                                "1": "unpalatable", 
-                                "2": "Productive", 
-                                "3": "Destructive", 
-                                "4": "Fervid", 
-                                "5": "Creative"
-                            }
-                        }, 
-                        "answer": {
-                            "1": "unpalatable", 
-                            "2": "Destructive"
-                        }, 
-                        "type": "2-blank", 
-                        "id": "8"
-                    }, 
-                    "9": {
-                        "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150", 
-                        "question": "What fraction of internet users in 2012 from country C are the internet users in 2000 from country A", 
-                        "marked": "True", 
-                        "options": {
-                            "blank-2": {
-                                "1": "Non proves", 
-                                "2": "Productive", 
-                                "3": "Destructive", 
-                                "4": "Fervid", 
-                                "5": "Creative"
-                            }, 
-                            "blank-3": {
-                                "1": "Non provdas", 
-                                "2": "Productive", 
-                                "3": "Destructive", 
-                                "4": "Fervid", 
-                                "5": "Creative"
-                            }, 
-                            "blank-1": {
-                                "1": "unpalatable", 
-                                "2": "Productive", 
-                                "3": "Destructive", 
-                                "4": "Fervid", 
-                                "5": "Creative"
-                            }
-                        }, 
-                        "answer": {
-                            "1": "Fervid", 
-                            "2": "Productive", 
-                            "3": "Fervid"
-                        }, 
-                        "type": "3-blank", 
-                        "id": "9"
-                    }
-                }, 
-                "title": "Aptitude & mathematics"
+  "1": {
+    "completed": false,
+    "id": 1,
+    "name": "Test 1",
+    "sections": [
+      null,
+      {
+        "duration": 1200000,
+        "questions": [
+          null,
+          {
+            "answer": "3",
+            "id": "1",
+            "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
+            "marked": true,
+            "options": [
+              null,
+              "Quantity A is greater",
+              "Quantity B is greater",
+              "Two quantities are equal",
+              "Relationship cannot be determined"
+            ],
+            "question": "Chord MN makes an angle of 60o at the centre ‘O’ and the perimeter of triangle MNO is 18 units.",
+            "solution": "3",
+            "type": "mcq"
+          },
+          {
+            "answer": "0",
+            "id": "2",
+            "marked": true,
+            "options": [
+              null,
+              "Quantity A is greater",
+              "Quantity B is greater",
+              "Two quantities are equal",
+              "Relationship cannot be determined"
+            ],
+            "passage": "Scholars have hypothesized that the wide clearing at the center of the ruins of the <strike>Maya site might have been a market</strike>, not a ritual plaza, indicating commercial activity as long ago as 300 AD. <strike>Rock alignmentspeeking above</strike> the surface seemed to outline the posaibtionveotfhsetasllusrface seemed to outline the position of stalls and regular pathways.",
+            "question": "In the argument given, the two highlighted portions play which of the following roles?",
+            "solution": "3",
+            "type": "text-selection"
+          },
+          {
+            "answer": "0",
+            "id": "3",
+            "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
+            "marked": false,
+            "options": [
+              null,
+              "Quantity A is greater",
+              "Quantity B is greater",
+              "Two quantities are equal",
+              "Relationship cannot be determined"
+            ],
+            "passage": "<p>I do not know where I can find a better place than just here, to make mention of one or two other things, which to me seem important, as in printed form establishing in all respects the reasonableness of the whole story of the White Whale, more especially the catastrophe. For this is one of those disheartening instances where truth requires full as much bolstering as error. So ignorant are most landsmen of some of the plainest and most palpable wonders of the world, that without some hints touching the plain facts, historical and otherwise, of the fishery, they might scout at Moby Dick as a monstrous fable, or still worse and more detestable, a hideous and intolerable allegory.</p><p>First: Though most men have some vague flitting ideas of the general perils of the grand fishery, yet they have nothing like a fixed, vivid conception of those perils, and the frequency with which they recur. One reason perhaps is, that not one in fifty of the actual disasters and deaths by casualties in the fishery, ever finds a public record at home, however transient and immediately forgotten that record. Do you suppose that that poor fellow there, who this moment perhaps caught by the whale-line off the coast of New Guinea, is being carried down to the bottom of the sea by the sounding leviathan&mdash;do you suppose that that poor fellow's name will appear in the newspaper obituary you will read to-morrow at your breakfast? No: because the mails are very irregular between here and New Guinea. In fact, did you ever hear what might be called regular news direct or indirect from New Guinea? Yet I tell you that upon one particular voyage which I made to the Pacific, among many others we spoke thirty different ships, every one of which had had a death by a whale, some of them more than one, and three that had each lost a boat's crew. For God's sake, be economical with your lamps and candles! not a gallon you burn, but at least one drop of man's blood was spilled for it.</p><p>Secondly: People ashore have indeed some indefinite idea that a whale is an enormous creature of enormous power; but I have ever found that when narrating to them some specific example of this two-fold enormousness, they have significantly complimented me upon my facetiousness; when, I declare upon my soul, I had no more idea of being facetious than Moses, when he wrote the history of the plagues of Egypt.</p><p>But fortunately the special point I here seek can be established upon testimony entirely independent of my own. That point is this: The Sperm Whale is in some cases sufficiently powerful, knowing, and judiciously malicious, as with direct aforethought to stave in, utterly destroy, and sink a large ship; and what is more, the Sperm Whale HAS done it.</p>",
+            "question": "Chord MN makes an angle of 60o at the centre ‘O’ and the perimeter of triangle MNO is 18 units.",
+            "solution": "2",
+            "type": "passage"
+          },
+          {
+            "answer": "1",
+            "id": "4",
+            "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
+            "marked": true,
+            "options": [
+              null,
+              "Quantity A is greater",
+              "Quantity B is greater",
+              "Two quantities are equal",
+              "Relationship cannot be determined"
+            ],
+            "passage": "<p>I do not know where I can find a better place than just here, to make mention of one or two other things, which to me seem important, as in printed form establishing in all respects the reasonableness of the whole story of the White Whale, more especially the catastrophe. For this is one of those disheartening instances where truth requires full as much bolstering as error. So ignorant are most landsmen of some of the plainest and most palpable wonders of the world, that without some hints touching the plain facts, historical and otherwise, of the fishery, they might scout at Moby Dick as a monstrous fable, or still worse and more detestable, a hideous and intolerable allegory.</p><p>First: Though most men have some vague flitting ideas of the general perils of the grand fishery, yet they have nothing like a fixed, vivid conception of those perils, and the frequency with which they recur. One reason perhaps is, that not one in fifty of the actual disasters and deaths by casualties in the fishery, ever finds a public record at home, however transient and immediately forgotten that record. Do you suppose that that poor fellow there, who this moment perhaps caught by the whale-line off the coast of New Guinea, is being carried down to the bottom of the sea by the sounding leviathan&mdash;do you suppose that that poor fellow's name will appear in the newspaper obituary you will read to-morrow at your breakfast? No: because the mails are very irregular between here and New Guinea. In fact, did you ever hear what might be called regular news direct or indirect from New Guinea? Yet I tell you that upon one particular voyage which I made to the Pacific, among many others we spoke thirty different ships, every one of which had had a death by a whale, some of them more than one, and three that had each lost a boat's crew. For God's sake, be economical with your lamps and candles! not a gallon you burn, but at least one drop of man's blood was spilled for it.</p><p>Secondly: People ashore have indeed some indefinite idea that a whale is an enormous creature of enormous power; but I have ever found that when narrating to them some specific example of this two-fold enormousness, they have significantly complimented me upon my facetiousness; when, I declare upon my soul, I had no more idea of being facetious than Moses, when he wrote the history of the plagues of Egypt.</p><p>But fortunately the special point I here seek can be established upon testimony entirely independent of my own. That point is this: The Sperm Whale is in some cases sufficiently powerful, knowing, and judiciously malicious, as with direct aforethought to stave in, utterly destroy, and sink a large ship; and what is more, the Sperm Whale HAS done it.</p>",
+            "question": "Next question Chord MN makes an angle of 60o at the centre ‘O’ and the perimeter of triangle MNO is 18 units.",
+            "solution": "2",
+            "type": "passage"
+          },
+          {
+            "answer": "1",
+            "id": "5",
+            "marked": false,
+            "options": [
+              null,
+              "Quantity A is greater",
+              "Quantity B is greater",
+              "Two quantities are equal",
+              "Relationship cannot be determined"
+            ],
+            "passage": "<p>I do not know where I can find a better place than just here, to make mention of one or two other things, which to me seem important, as in printed form establishing in all respects the reasonableness of the whole story of the White Whale, more especially the catastrophe. For this is one of those disheartening instances where truth requires full as much bolstering as error. So ignorant are most landsmen of some of the plainest and most palpable wonders of the world, that without some hints touching the plain facts, historical and otherwise, of the fishery, they might scout at Moby Dick as a monstrous fable, or still worse and more detestable, a hideous and intolerable allegory.</p> <img src=\"https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=350%C3%97150&amp;w=350&amp;h=150\" class=\"img-thumbnail\">",
+            "question": "Next question Chord MN makes an angle of 60o at the centre ‘O’ and the perimeter of triangle MNO is 18 units.",
+            "solution": "2",
+            "type": "passageOnTop"
+          },
+          {
+            "answer": "awesome",
+            "id": "6",
+            "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
+            "instructions": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum tempore, non magni soluta possimus commodi ipsam quo delectus. Odit, similique, cumque. Itaque nihil asperiores delectus soluta dolor inventore eligendi earum",
+            "marked": true,
+            "question": "A code of six digit number have to be generated. The code should be divisible by both 4 and as well 10. Then the possible number of codes is:",
+            "solution": "myadfa",
+            "type": "onlyInput"
+          },
+          {
+            "answer": [
+              null,
+              "5",
+              "4",
+              "-7"
+            ],
+            "id": "7",
+            "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
+            "marked": false,
+            "options": [
+              null,
+              "-7",
+              "-6",
+              "-4",
+              "0",
+              "4",
+              "7"
+            ],
+            "question": "(x, y) = (2, 1) satisfies the equation 2x+by+c=0. Given 0≤b≤3, then what values can ‘c’ take? Indicate all such apply:",
+            "solution": "['-7', '0', '4']",
+            "type": "multi-answer"
+          },
+          {
+            "answer": [
+              null,
+              "12",
+              "21"
+            ],
+            "id": "8",
+            "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
+            "marked": "True",
+            "question": "What fraction of internet users in 2012 from country C are the internet users in 2000 from country A",
+            "solution": "12/21",
+            "type": "fraction"
+          },
+          {
+            "answer": [
+              null,
+              "unpalatable"
+            ],
+            "id": "9",
+            "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
+            "marked": "True",
+            "options": {
+              "blank-1": [
+                null,
+                "unpalatable",
+                "Productive",
+                "Destructive",
+                "Fervid",
+                "Creative"
+              ]
+            },
+            "question": "Even a cursory glance at history proves that all war represents a --------- of diplomacy.",
+            "solution": [
+              null,
+              "Fervid"
+            ],
+            "type": "1-blank"
+          },
+          {
+            "answer": [
+              null,
+              "unpalatable",
+              "Creative"
+            ],
+            "id": "10",
+            "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
+            "marked": "True",
+            "options": {
+              "blank-1": [
+                null,
+                "unpalatable",
+                "Productive",
+                "Destructive",
+                "Fervid",
+                "Creative"
+              ],
+              "blank-2": [
+                null,
+                "Non proves",
+                "Productive",
+                "Destructive",
+                "Fervid",
+                "Creative"
+              ]
+            },
+            "question": "What fraction of internet users in 2012 from country C are the internet users in 2000 from country A",
+            "solution": [
+              null,
+              "Productive",
+              "Productive"
+            ],
+            "type": "2-blank"
+          },
+          {
+            "answer": [
+              null,
+              "Destructive",
+              "Productive",
+              "Fervid"
+            ],
+            "id": "11",
+            "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
+            "marked": true,
+            "options": {
+              "blank-1": [
+                null,
+                "unpalatable",
+                "Productive",
+                "Destructive",
+                "Fervid",
+                "Creative"
+              ],
+              "blank-2": [
+                null,
+                "Non proves",
+                "Productive",
+                "Destructive",
+                "Fervid",
+                "Creative"
+              ],
+              "blank-3": [
+                null,
+                "Non provdas",
+                "Productive",
+                "Destructive",
+                "Fervid",
+                "Creative"
+              ]
+            },
+            "question": "What fraction of internet users in 2012 from country C are the internet users in 2000 from country A",
+            "solution": [
+              null,
+              "Destructive",
+              "Creative",
+              "Creative"
+            ],
+            "type": "3-blank"
+          }
+        ],
+        "section": "1",
+        "timeRemaining": 12123580739,
+        "title": "Aptitude & mathematics"
+      },
+      {
+        "duration": 1200000,
+        "questions": [
+          null,
+          {
+            "answer": "3",
+            "id": "1",
+            "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
+            "marked": "True",
+            "options": [
+              null,
+              "Quantity A is greater",
+              "Quantity B is greater",
+              "Two quantities are equal",
+              "Relationship cannot be determined"
+            ],
+            "question": "Chord MN makes an angle of 60o at the centre ‘O’ and the perimeter of triangle MNO is 18 units.",
+            "type": "mcq"
+          },
+          {
+            "answer": "0",
+            "id": "2",
+            "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
+            "marked": "True",
+            "options": [
+              null,
+              "Quantity A is greater",
+              "Quantity B is greater",
+              "Two quantities are equal",
+              "Relationship cannot be determined"
+            ],
+            "passage": "<p>I do not know where I can find a better place than just here, to make mention of one or two other things, which to me seem important, as in printed form establishing in all respects the reasonableness of the whole story of the White Whale, more especially the catastrophe. For this is one of those disheartening instances where truth requires full as much bolstering as error. So ignorant are most landsmen of some of the plainest and most palpable wonders of the world, that without some hints touching the plain facts, historical and otherwise, of the fishery, they might scout at Moby Dick as a monstrous fable, or still worse and more detestable, a hideous and intolerable allegory.</p><p>First: Though most men have some vague flitting ideas of the general perils of the grand fishery, yet they have nothing like a fixed, vivid conception of those perils, and the frequency with which they recur. One reason perhaps is, that not one in fifty of the actual disasters and deaths by casualties in the fishery, ever finds a public record at home, however transient and immediately forgotten that record. Do you suppose that that poor fellow there, who this moment perhaps caught by the whale-line off the coast of New Guinea, is being carried down to the bottom of the sea by the sounding leviathan&mdash;do you suppose that that poor fellow's name will appear in the newspaper obituary you will read to-morrow at your breakfast? No: because the mails are very irregular between here and New Guinea. In fact, did you ever hear what might be called regular news direct or indirect from New Guinea? Yet I tell you that upon one particular voyage which I made to the Pacific, among many others we spoke thirty different ships, every one of which had had a death by a whale, some of them more than one, and three that had each lost a boat's crew. For God's sake, be economical with your lamps and candles! not a gallon you burn, but at least one drop of man's blood was spilled for it.</p><p>Secondly: People ashore have indeed some indefinite idea that a whale is an enormous creature of enormous power; but I have ever found that when narrating to them some specific example of this two-fold enormousness, they have significantly complimented me upon my facetiousness; when, I declare upon my soul, I had no more idea of being facetious than Moses, when he wrote the history of the plagues of Egypt.</p><p>But fortunately the special point I here seek can be established upon testimony entirely independent of my own. That point is this: The Sperm Whale is in some cases sufficiently powerful, knowing, and judiciously malicious, as with direct aforethought to stave in, utterly destroy, and sink a large ship; and what is more, the Sperm Whale HAS done it.</p>",
+            "question": "Chord MN makes an angle of 60o at the centre ‘O’ and the perimeter of triangle MNO is 18 units.",
+            "type": "passage"
+          },
+          {
+            "answer": "3",
+            "id": "3",
+            "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
+            "marked": "True",
+            "options": [
+              null,
+              "Quantity A is greater",
+              "Quantity B is greater",
+              "Two quantities are equal",
+              "Relationship cannot be determined"
+            ],
+            "passage": "<p>I do not know where I can find a better place than just here, to make mention of one or two other things, which to me seem important, as in printed form establishing in all respects the reasonableness of the whole story of the White Whale, more especially the catastrophe. For this is one of those disheartening instances where truth requires full as much bolstering as error. So ignorant are most landsmen of some of the plainest and most palpable wonders of the world, that without some hints touching the plain facts, historical and otherwise, of the fishery, they might scout at Moby Dick as a monstrous fable, or still worse and more detestable, a hideous and intolerable allegory.</p><p>First: Though most men have some vague flitting ideas of the general perils of the grand fishery, yet they have nothing like a fixed, vivid conception of those perils, and the frequency with which they recur. One reason perhaps is, that not one in fifty of the actual disasters and deaths by casualties in the fishery, ever finds a public record at home, however transient and immediately forgotten that record. Do you suppose that that poor fellow there, who this moment perhaps caught by the whale-line off the coast of New Guinea, is being carried down to the bottom of the sea by the sounding leviathan&mdash;do you suppose that that poor fellow's name will appear in the newspaper obituary you will read to-morrow at your breakfast? No: because the mails are very irregular between here and New Guinea. In fact, did you ever hear what might be called regular news direct or indirect from New Guinea? Yet I tell you that upon one particular voyage which I made to the Pacific, among many others we spoke thirty different ships, every one of which had had a death by a whale, some of them more than one, and three that had each lost a boat's crew. For God's sake, be economical with your lamps and candles! not a gallon you burn, but at least one drop of man's blood was spilled for it.</p><p>Secondly: People ashore have indeed some indefinite idea that a whale is an enormous creature of enormous power; but I have ever found that when narrating to them some specific example of this two-fold enormousness, they have significantly complimented me upon my facetiousness; when, I declare upon my soul, I had no more idea of being facetious than Moses, when he wrote the history of the plagues of Egypt.</p><p>But fortunately the special point I here seek can be established upon testimony entirely independent of my own. That point is this: The Sperm Whale is in some cases sufficiently powerful, knowing, and judiciously malicious, as with direct aforethought to stave in, utterly destroy, and sink a large ship; and what is more, the Sperm Whale HAS done it.</p>",
+            "question": "Next question Chord MN makes an angle of 60o at the centre ‘O’ and the perimeter of triangle MNO is 18 units.",
+            "type": "passage"
+          },
+          {
+            "answer": "122",
+            "id": "4",
+            "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
+            "marked": "True",
+            "question": "A code of six digit number have to be generated. The code should be divisible by both 4 and as well 10. Then the possible number of codes is:",
+            "type": "onlyInput"
+          },
+          {
+            "answer": [
+              null,
+              " ",
+              "-7",
+              "0"
+            ],
+            "id": "5",
+            "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
+            "marked": "True",
+            "options": [
+              null,
+              "-7",
+              "-6",
+              "-4",
+              "0",
+              "4",
+              "7"
+            ],
+            "question": "(x, y) = (2, 1) satisfies the equation 2x+by+c=0. Given 0≤b≤3, then what values can ‘c’ take? Indicate all such apply:",
+            "type": "multi-answer"
+          },
+          {
+            "answer": [
+              null,
+              "12",
+              "90"
+            ],
+            "id": "6",
+            "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
+            "marked": "True",
+            "question": "What fraction of internet users in 2012 from country C are the internet users in 2000 from country A",
+            "type": "fraction"
+          },
+          {
+            "answer": [
+              null,
+              "Productive"
+            ],
+            "id": "7",
+            "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
+            "marked": "True",
+            "options": {
+              "blank-1": [
+                null,
+                "unpalatable",
+                "Productive",
+                "Destructive",
+                "Fervid",
+                "Creative"
+              ]
+            },
+            "question": "Even a cursory glance at history proves that all war represents a --------- of diplomacy.",
+            "solution": [
+              null,
+              "Productive",
+              2,
+              3
+            ],
+            "type": "1-blank"
+          },
+          {
+            "answer": [
+              null,
+              "unpalatable",
+              "Destructive"
+            ],
+            "id": "8",
+            "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
+            "marked": "True",
+            "options": {
+              "blank-1": [
+                null,
+                "unpalatable",
+                "Productive",
+                "Destructive",
+                "Fervid",
+                "Creative"
+              ],
+              "blank-2": [
+                null,
+                "Non proves",
+                "Productive",
+                "Destructive",
+                "Fervid",
+                "Creative"
+              ]
+            },
+            "question": "What fraction of internet users in 2012 from country C are the internet users in 2000 from country A",
+            "type": "2-blank"
+          },
+          {
+            "answer": [
+              null,
+              "Fervid",
+              "Productive",
+              "Fervid"
+            ],
+            "id": "9",
+            "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
+            "marked": "True",
+            "options": {
+              "blank-1": [
+                null,
+                "unpalatable",
+                "Productive",
+                "Destructive",
+                "Fervid",
+                "Creative"
+              ],
+              "blank-2": [
+                null,
+                "Non proves",
+                "Productive",
+                "Destructive",
+                "Fervid",
+                "Creative"
+              ],
+              "blank-3": [
+                null,
+                "Non provdas",
+                "Productive",
+                "Destructive",
+                "Fervid",
+                "Creative"
+              ]
+            },
+            "question": "What fraction of internet users in 2012 from country C are the internet users in 2000 from country A",
+            "type": "3-blank"
+          }
+        ],
+        "section": "2",
+        "timeRemaining": 76400428,
+        "title": "Aptitude & mathematics"
+      }
+    ]
+  },
+  "2": {
+    "completed": false,
+    "sections": {
+      "1": {
+        "duration": 1200000,
+        "timeRemaining": 12203450316,
+        "section": "1",
+        "questions": {
+          "1": {
+            "solution": "3",
+            "answer": "3",
+            "type": "mcq",
+            "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
+            "question": "Chord MN makes an angle of 60o at the centre ‘O’ and the perimeter of triangle MNO is 18 units.",
+            "id": "1",
+            "marked": false,
+            "options": {
+              "1": "Quantity A is greater",
+              "2": "Quantity B is greater",
+              "3": "Two quantities are equal",
+              "4": "Relationship cannot be determined"
             }
-        }, 
-        "id": 1, 
-        "name": "Test 1"
-    }, 
-    "2":{
-        "completed": false, 
-        "sections": {
-            "1": {
-                "duration": 1200000, 
-                "timeRemaining": 12203450316, 
-                "section": "1", 
-                "questions": {
-                    "1": {
-                        "solution": "3", 
-                        "answer": "3", 
-                        "type": "mcq", 
-                        "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150", 
-                        "question": "Chord MN makes an angle of 60o at the centre \u2018O\u2019 and the perimeter of triangle MNO is 18 units.", 
-                        "id": "1", 
-                        "marked": false, 
-                        "options": {
-                            "1": "Quantity A is greater", 
-                            "2": "Quantity B is greater", 
-                            "3": "Two quantities are equal", 
-                            "4": "Relationship cannot be determined"
-                        }
-                    }, 
-                    "2": {
-                        "answer": "3", 
-                        "type": "text-selection", 
-                        "solution": "3", 
-                        "passage": "Scholars have hypothesized that the wide clearing at the center of the ruins of the <strike>Maya site might have been a market</strike>, not a ritual plaza, indicating commercial activity as long ago as 300 AD. <strike>Rock alignmentspeeking above</strike> the surface seemed to outline the posaibtionveotfhsetasllusrface seemed to outline the position of stalls and regular pathways.", 
-                        "question": "In the argument given, the two highlighted portions play which of the following roles?", 
-                        "id": "2", 
-                        "marked": false, 
-                        "options": {
-                            "1": "Quantity A is greater", 
-                            "2": "Quantity B is greater", 
-                            "3": "Two quantities are equal", 
-                            "4": "Relationship cannot be determined"
-                        }
-                    }, 
-                    "3": {
-                        "solution": "2", 
-                        "answer": "0", 
-                        "type": "passage", 
-                        "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150", 
-                        "passage": "<p>I do not know where I can find a better place than just here, to make mention of one or two other things, which to me seem important, as in printed form establishing in all respects the reasonableness of the whole story of the White Whale, more especially the catastrophe. For this is one of those disheartening instances where truth requires full as much bolstering as error. So ignorant are most landsmen of some of the plainest and most palpable wonders of the world, that without some hints touching the plain facts, historical and otherwise, of the fishery, they might scout at Moby Dick as a monstrous fable, or still worse and more detestable, a hideous and intolerable allegory.</p><p>First: Though most men have some vague flitting ideas of the general perils of the grand fishery, yet they have nothing like a fixed, vivid conception of those perils, and the frequency with which they recur. One reason perhaps is, that not one in fifty of the actual disasters and deaths by casualties in the fishery, ever finds a public record at home, however transient and immediately forgotten that record. Do you suppose that that poor fellow there, who this moment perhaps caught by the whale-line off the coast of New Guinea, is being carried down to the bottom of the sea by the sounding leviathan&mdash;do you suppose that that poor fellow's name will appear in the newspaper obituary you will read to-morrow at your breakfast? No: because the mails are very irregular between here and New Guinea. In fact, did you ever hear what might be called regular news direct or indirect from New Guinea? Yet I tell you that upon one particular voyage which I made to the Pacific, among many others we spoke thirty different ships, every one of which had had a death by a whale, some of them more than one, and three that had each lost a boat's crew. For God's sake, be economical with your lamps and candles! not a gallon you burn, but at least one drop of man's blood was spilled for it.</p><p>Secondly: People ashore have indeed some indefinite idea that a whale is an enormous creature of enormous power; but I have ever found that when narrating to them some specific example of this two-fold enormousness, they have significantly complimented me upon my facetiousness; when, I declare upon my soul, I had no more idea of being facetious than Moses, when he wrote the history of the plagues of Egypt.</p><p>But fortunately the special point I here seek can be established upon testimony entirely independent of my own. That point is this: The Sperm Whale is in some cases sufficiently powerful, knowing, and judiciously malicious, as with direct aforethought to stave in, utterly destroy, and sink a large ship; and what is more, the Sperm Whale HAS done it.</p>", 
-                        "question": "Chord MN makes an angle of 60o at the centre \u2018O\u2019 and the perimeter of triangle MNO is 18 units.", 
-                        "id": "3", 
-                        "marked": "True", 
-                        "options": {
-                            "1": "Quantity A is greater", 
-                            "2": "Quantity B is greater", 
-                            "3": "Two quantities are equal", 
-                            "4": "Relationship cannot be determined"
-                        }
-                    }, 
-                    "4": {
-                        "solution": "2", 
-                        "answer": "1", 
-                        "type": "passage", 
-                        "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150", 
-                        "passage": "<p>I do not know where I can find a better place than just here, to make mention of one or two other things, which to me seem important, as in printed form establishing in all respects the reasonableness of the whole story of the White Whale, more especially the catastrophe. For this is one of those disheartening instances where truth requires full as much bolstering as error. So ignorant are most landsmen of some of the plainest and most palpable wonders of the world, that without some hints touching the plain facts, historical and otherwise, of the fishery, they might scout at Moby Dick as a monstrous fable, or still worse and more detestable, a hideous and intolerable allegory.</p><p>First: Though most men have some vague flitting ideas of the general perils of the grand fishery, yet they have nothing like a fixed, vivid conception of those perils, and the frequency with which they recur. One reason perhaps is, that not one in fifty of the actual disasters and deaths by casualties in the fishery, ever finds a public record at home, however transient and immediately forgotten that record. Do you suppose that that poor fellow there, who this moment perhaps caught by the whale-line off the coast of New Guinea, is being carried down to the bottom of the sea by the sounding leviathan&mdash;do you suppose that that poor fellow's name will appear in the newspaper obituary you will read to-morrow at your breakfast? No: because the mails are very irregular between here and New Guinea. In fact, did you ever hear what might be called regular news direct or indirect from New Guinea? Yet I tell you that upon one particular voyage which I made to the Pacific, among many others we spoke thirty different ships, every one of which had had a death by a whale, some of them more than one, and three that had each lost a boat's crew. For God's sake, be economical with your lamps and candles! not a gallon you burn, but at least one drop of man's blood was spilled for it.</p><p>Secondly: People ashore have indeed some indefinite idea that a whale is an enormous creature of enormous power; but I have ever found that when narrating to them some specific example of this two-fold enormousness, they have significantly complimented me upon my facetiousness; when, I declare upon my soul, I had no more idea of being facetious than Moses, when he wrote the history of the plagues of Egypt.</p><p>But fortunately the special point I here seek can be established upon testimony entirely independent of my own. That point is this: The Sperm Whale is in some cases sufficiently powerful, knowing, and judiciously malicious, as with direct aforethought to stave in, utterly destroy, and sink a large ship; and what is more, the Sperm Whale HAS done it.</p>", 
-                        "question": "Next question Chord MN makes an angle of 60o at the centre \u2018O\u2019 and the perimeter of triangle MNO is 18 units.", 
-                        "id": "4", 
-                        "marked": false, 
-                        "options": {
-                            "1": "Quantity A is greater", 
-                            "2": "Quantity B is greater", 
-                            "3": "Two quantities are equal", 
-                            "4": "Relationship cannot be determined"
-                        }
-                    }, 
-                    "5": {
-                        "answer": "1", 
-                        "type": "passageOnTop", 
-                        "solution": "2", 
-                        "passage": "<p>I do not know where I can find a better place than just here, to make mention of one or two other things, which to me seem important, as in printed form establishing in all respects the reasonableness of the whole story of the White Whale, more especially the catastrophe. For this is one of those disheartening instances where truth requires full as much bolstering as error. So ignorant are most landsmen of some of the plainest and most palpable wonders of the world, that without some hints touching the plain facts, historical and otherwise, of the fishery, they might scout at Moby Dick as a monstrous fable, or still worse and more detestable, a hideous and intolerable allegory.</p> <img src=\"https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=350%C3%97150&amp;w=350&amp;h=150\" class=\"img-thumbnail\">", 
-                        "question": "Next question Chord MN makes an angle of 60o at the centre \u2018O\u2019 and the perimeter of triangle MNO is 18 units.", 
-                        "id": "4", 
-                        "marked": false, 
-                        "options": {
-                            "1": "Quantity A is greater", 
-                            "2": "Quantity B is greater", 
-                            "3": "Two quantities are equal", 
-                            "4": "Relationship cannot be determined"
-                        }
-                    }, 
-                    "6": {
-                        "solution": "myadfa", 
-                        "answer": "awessdome", 
-                        "type": "onlyInput", 
-                        "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150", 
-                        "question": "A code of six digit number have to be generated. The code should be divisible by both 4 and as well 10. Then the possible number of codes is:", 
-                        "id": "5", 
-                        "marked": true, 
-                        "instructions": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum tempore, non magni soluta possimus commodi ipsam quo delectus. Odit, similique, cumque. Itaque nihil asperiores delectus soluta dolor inventore eligendi earum"
-                    }, 
-                    "7": {
-                        "solution": "['-7', '0', '4']", 
-                        "answer": {
-                            "1": "5", 
-                            "2": "4", 
-                            "3": "-7"
-                        }, 
-                        "type": "multi-answer", 
-                        "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150", 
-                        "question": "(x, y) = (2, 1) satisfies the equation 2x+by+c=0. Given 0\u2264b\u22643, then what values can \u2018c\u2019 take? Indicate all such apply:", 
-                        "id": "6", 
-                        "marked": false, 
-                        "options": {
-                            "1": "-7", 
-                            "2": "-6", 
-                            "3": "-4", 
-                            "4": "0", 
-                            "5": "4", 
-                            "6": "7"
-                        }
-                    }, 
-                    "8": {
-                        "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150", 
-                        "question": "What fraction of internet users in 2012 from country C are the internet users in 2000 from country A", 
-                        "solution": "12/21", 
-                        "marked": "True", 
-                        "answer": {
-                            "1": "12", 
-                            "2": "21"
-                        }, 
-                        "type": "fraction", 
-                        "id": "7"
-                    }, 
-                    "9": {
-                        "solution": {
-                            "1": "Fervid"
-                        }, 
-                        "answer": {
-                            "1": "Fervid"
-                        }, 
-                        "type": "1-blank", 
-                        "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150", 
-                        "question": "Even a cursory glance at history proves that all war represents a --------- of diplomacy.", 
-                        "id": "8", 
-                        "marked": false, 
-                        "options": {
-                            "blank-1": {
-                                "1": "unpalatable", 
-                                "2": "Productive", 
-                                "3": "Destructive", 
-                                "4": "Fervid", 
-                                "5": "Creative"
-                            }
-                        }
-                    }, 
-                    "10": {
-                        "solution": {
-                            "1": "Productive", 
-                            "2": "Productive"
-                        }, 
-                        "answer": {
-                            "1": "unpalatable", 
-                            "2": "Creative"
-                        }, 
-                        "type": "2-blank", 
-                        "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150", 
-                        "question": "What fraction of internet users in 2012 from country C are the internet users in 2000 from country A", 
-                        "id": "9", 
-                        "marked": "True", 
-                        "options": {
-                            "blank-2": {
-                                "1": "Non proves", 
-                                "2": "Productive", 
-                                "3": "Destructive", 
-                                "4": "Fervid", 
-                                "5": "Creative"
-                            }, 
-                            "blank-1": {
-                                "1": "unpalatable", 
-                                "2": "Productive", 
-                                "3": "Destructive", 
-                                "4": "Fervid", 
-                                "5": "Creative"
-                            }
-                        }
-                    }, 
-                    "11": {
-                        "solution": {
-                            "1": "Destructive", 
-                            "2": "Creative", 
-                            "3": "Creative"
-                        }, 
-                        "answer": {
-                            "1": "Destructive", 
-                            "2": "Destructive", 
-                            "3": "Destructive"
-                        }, 
-                        "type": "3-blank", 
-                        "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150", 
-                        "question": "What fraction of internet users in 2012 from country C are the internet users in 2000 from country A", 
-                        "id": "10", 
-                        "marked": "True", 
-                        "options": {
-                            "blank-2": {
-                                "1": "Non proves", 
-                                "2": "Productive", 
-                                "3": "Destructive", 
-                                "4": "Fervid", 
-                                "5": "Creative"
-                            }, 
-                            "blank-3": {
-                                "1": "Non provdas", 
-                                "2": "Productive", 
-                                "3": "Destructive", 
-                                "4": "Fervid", 
-                                "5": "Creative"
-                            }, 
-                            "blank-1": {
-                                "1": "unpalatable", 
-                                "2": "Productive", 
-                                "3": "Destructive", 
-                                "4": "Fervid", 
-                                "5": "Creative"
-                            }
-                        }
-                    }
-                }, 
-                "title": "Aptitude & mathematics"
-            }, 
-            "2": {
-                "duration": 1200000, 
-                "timeRemaining": 90879, 
-                "section": "1", 
-                "questions": {
-                    "1": {
-                        "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150", 
-                        "question": "Chord MN makes an angle of 60o at the centre \u2018O\u2019 and the perimeter of triangle MNO is 18 units.", 
-                        "marked": "True", 
-                        "options": {
-                            "1": "Quantity A is greater", 
-                            "2": "Quantity B is greater", 
-                            "3": "Two quantities are equal", 
-                            "4": "Relationship cannot be determined"
-                        }, 
-                        "answer": "3", 
-                        "type": "mcq", 
-                        "id": "1"
-                    }, 
-                    "2": {
-                        "answer": "0", 
-                        "type": "passage", 
-                        "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150", 
-                        "passage": "<p>I do not know where I can find a better place than just here, to make mention of one or two other things, which to me seem important, as in printed form establishing in all respects the reasonableness of the whole story of the White Whale, more especially the catastrophe. For this is one of those disheartening instances where truth requires full as much bolstering as error. So ignorant are most landsmen of some of the plainest and most palpable wonders of the world, that without some hints touching the plain facts, historical and otherwise, of the fishery, they might scout at Moby Dick as a monstrous fable, or still worse and more detestable, a hideous and intolerable allegory.</p><p>First: Though most men have some vague flitting ideas of the general perils of the grand fishery, yet they have nothing like a fixed, vivid conception of those perils, and the frequency with which they recur. One reason perhaps is, that not one in fifty of the actual disasters and deaths by casualties in the fishery, ever finds a public record at home, however transient and immediately forgotten that record. Do you suppose that that poor fellow there, who this moment perhaps caught by the whale-line off the coast of New Guinea, is being carried down to the bottom of the sea by the sounding leviathan&mdash;do you suppose that that poor fellow's name will appear in the newspaper obituary you will read to-morrow at your breakfast? No: because the mails are very irregular between here and New Guinea. In fact, did you ever hear what might be called regular news direct or indirect from New Guinea? Yet I tell you that upon one particular voyage which I made to the Pacific, among many others we spoke thirty different ships, every one of which had had a death by a whale, some of them more than one, and three that had each lost a boat's crew. For God's sake, be economical with your lamps and candles! not a gallon you burn, but at least one drop of man's blood was spilled for it.</p><p>Secondly: People ashore have indeed some indefinite idea that a whale is an enormous creature of enormous power; but I have ever found that when narrating to them some specific example of this two-fold enormousness, they have significantly complimented me upon my facetiousness; when, I declare upon my soul, I had no more idea of being facetious than Moses, when he wrote the history of the plagues of Egypt.</p><p>But fortunately the special point I here seek can be established upon testimony entirely independent of my own. That point is this: The Sperm Whale is in some cases sufficiently powerful, knowing, and judiciously malicious, as with direct aforethought to stave in, utterly destroy, and sink a large ship; and what is more, the Sperm Whale HAS done it.</p>", 
-                        "question": "Chord MN makes an angle of 60o at the centre \u2018O\u2019 and the perimeter of triangle MNO is 18 units.", 
-                        "id": "2", 
-                        "marked": "True", 
-                        "options": {
-                            "1": "Quantity A is greater", 
-                            "2": "Quantity B is greater", 
-                            "3": "Two quantities are equal", 
-                            "4": "Relationship cannot be determined"
-                        }
-                    }, 
-                    "3": {
-                        "answer": "3", 
-                        "type": "passage", 
-                        "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150", 
-                        "passage": "<p>I do not know where I can find a better place than just here, to make mention of one or two other things, which to me seem important, as in printed form establishing in all respects the reasonableness of the whole story of the White Whale, more especially the catastrophe. For this is one of those disheartening instances where truth requires full as much bolstering as error. So ignorant are most landsmen of some of the plainest and most palpable wonders of the world, that without some hints touching the plain facts, historical and otherwise, of the fishery, they might scout at Moby Dick as a monstrous fable, or still worse and more detestable, a hideous and intolerable allegory.</p><p>First: Though most men have some vague flitting ideas of the general perils of the grand fishery, yet they have nothing like a fixed, vivid conception of those perils, and the frequency with which they recur. One reason perhaps is, that not one in fifty of the actual disasters and deaths by casualties in the fishery, ever finds a public record at home, however transient and immediately forgotten that record. Do you suppose that that poor fellow there, who this moment perhaps caught by the whale-line off the coast of New Guinea, is being carried down to the bottom of the sea by the sounding leviathan&mdash;do you suppose that that poor fellow's name will appear in the newspaper obituary you will read to-morrow at your breakfast? No: because the mails are very irregular between here and New Guinea. In fact, did you ever hear what might be called regular news direct or indirect from New Guinea? Yet I tell you that upon one particular voyage which I made to the Pacific, among many others we spoke thirty different ships, every one of which had had a death by a whale, some of them more than one, and three that had each lost a boat's crew. For God's sake, be economical with your lamps and candles! not a gallon you burn, but at least one drop of man's blood was spilled for it.</p><p>Secondly: People ashore have indeed some indefinite idea that a whale is an enormous creature of enormous power; but I have ever found that when narrating to them some specific example of this two-fold enormousness, they have significantly complimented me upon my facetiousness; when, I declare upon my soul, I had no more idea of being facetious than Moses, when he wrote the history of the plagues of Egypt.</p><p>But fortunately the special point I here seek can be established upon testimony entirely independent of my own. That point is this: The Sperm Whale is in some cases sufficiently powerful, knowing, and judiciously malicious, as with direct aforethought to stave in, utterly destroy, and sink a large ship; and what is more, the Sperm Whale HAS done it.</p>", 
-                        "question": "Next question Chord MN makes an angle of 60o at the centre \u2018O\u2019 and the perimeter of triangle MNO is 18 units.", 
-                        "id": "3", 
-                        "marked": "True", 
-                        "options": {
-                            "1": "Quantity A is greater", 
-                            "2": "Quantity B is greater", 
-                            "3": "Two quantities are equal", 
-                            "4": "Relationship cannot be determined"
-                        }
-                    }, 
-                    "4": {
-                        "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150", 
-                        "question": "A code of six digit number have to be generated. The code should be divisible by both 4 and as well 10. Then the possible number of codes is:", 
-                        "marked": "True", 
-                        "answer": "122", 
-                        "type": "onlyInput", 
-                        "id": "4"
-                    }, 
-                    "5": {
-                        "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150", 
-                        "question": "(x, y) = (2, 1) satisfies the equation 2x+by+c=0. Given 0\u2264b\u22643, then what values can \u2018c\u2019 take? Indicate all such apply:", 
-                        "marked": "True", 
-                        "options": {
-                            "1": "-7", 
-                            "2": "-6", 
-                            "3": "-4", 
-                            "4": "0", 
-                            "5": "4", 
-                            "6": "7"
-                        }, 
-                        "answer": {
-                            "1": " ", 
-                            "2": "-7", 
-                            "3": "0"
-                        }, 
-                        "type": "multi-answer", 
-                        "id": "5"
-                    }, 
-                    "6": {
-                        "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150", 
-                        "question": "What fraction of internet users in 2012 from country C are the internet users in 2000 from country A", 
-                        "marked": "True", 
-                        "answer": {
-                            "1": "12", 
-                            "2": "90"
-                        }, 
-                        "type": "fraction", 
-                        "id": "6"
-                    }, 
-                    "7": {
-                        "solution": {
-                            "1": "Productive", 
-                            "2": 2, 
-                            "3": 3
-                        }, 
-                        "answer": {
-                            "1": "Productive"
-                        }, 
-                        "type": "1-blank", 
-                        "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150", 
-                        "question": "Even a cursory glance at history proves that all war represents a --------- of diplomacy.", 
-                        "id": "7", 
-                        "marked": "True", 
-                        "options": {
-                            "blank-1": {
-                                "1": "unpalatable", 
-                                "2": "Productive", 
-                                "3": "Destructive", 
-                                "4": "Fervid", 
-                                "5": "Creative"
-                            }
-                        }
-                    }, 
-                    "8": {
-                        "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150", 
-                        "question": "What fraction of internet users in 2012 from country C are the internet users in 2000 from country A", 
-                        "marked": "True", 
-                        "options": {
-                            "blank-2": {
-                                "1": "Non proves", 
-                                "2": "Productive", 
-                                "3": "Destructive", 
-                                "4": "Fervid", 
-                                "5": "Creative"
-                            }, 
-                            "blank-1": {
-                                "1": "unpalatable", 
-                                "2": "Productive", 
-                                "3": "Destructive", 
-                                "4": "Fervid", 
-                                "5": "Creative"
-                            }
-                        }, 
-                        "answer": {
-                            "1": "unpalatable", 
-                            "2": "Destructive"
-                        }, 
-                        "type": "2-blank", 
-                        "id": "8"
-                    }, 
-                    "9": {
-                        "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150", 
-                        "question": "What fraction of internet users in 2012 from country C are the internet users in 2000 from country A", 
-                        "marked": "True", 
-                        "options": {
-                            "blank-2": {
-                                "1": "Non proves", 
-                                "2": "Productive", 
-                                "3": "Destructive", 
-                                "4": "Fervid", 
-                                "5": "Creative"
-                            }, 
-                            "blank-3": {
-                                "1": "Non provdas", 
-                                "2": "Productive", 
-                                "3": "Destructive", 
-                                "4": "Fervid", 
-                                "5": "Creative"
-                            }, 
-                            "blank-1": {
-                                "1": "unpalatable", 
-                                "2": "Productive", 
-                                "3": "Destructive", 
-                                "4": "Fervid", 
-                                "5": "Creative"
-                            }
-                        }, 
-                        "answer": {
-                            "1": "Fervid", 
-                            "2": "Productive", 
-                            "3": "Fervid"
-                        }, 
-                        "type": "3-blank", 
-                        "id": "9"
-                    }
-                }, 
-                "title": "Aptitude & mathematics"
+          },
+          "2": {
+            "answer": "3",
+            "type": "text-selection",
+            "solution": "3",
+            "passage": "Scholars have hypothesized that the wide clearing at the center of the ruins of the <strike>Maya site might have been a market</strike>, not a ritual plaza, indicating commercial activity as long ago as 300 AD. <strike>Rock alignmentspeeking above</strike> the surface seemed to outline the posaibtionveotfhsetasllusrface seemed to outline the position of stalls and regular pathways.",
+            "question": "In the argument given, the two highlighted portions play which of the following roles?",
+            "id": "2",
+            "marked": false,
+            "options": {
+              "1": "Quantity A is greater",
+              "2": "Quantity B is greater",
+              "3": "Two quantities are equal",
+              "4": "Relationship cannot be determined"
             }
-        }, 
-        "id": 2, 
-        "name": "Test 1"
-    }
+          },
+          "3": {
+            "solution": "2",
+            "answer": "0",
+            "type": "passage",
+            "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
+            "passage": "<p>I do not know where I can find a better place than just here, to make mention of one or two other things, which to me seem important, as in printed form establishing in all respects the reasonableness of the whole story of the White Whale, more especially the catastrophe. For this is one of those disheartening instances where truth requires full as much bolstering as error. So ignorant are most landsmen of some of the plainest and most palpable wonders of the world, that without some hints touching the plain facts, historical and otherwise, of the fishery, they might scout at Moby Dick as a monstrous fable, or still worse and more detestable, a hideous and intolerable allegory.</p><p>First: Though most men have some vague flitting ideas of the general perils of the grand fishery, yet they have nothing like a fixed, vivid conception of those perils, and the frequency with which they recur. One reason perhaps is, that not one in fifty of the actual disasters and deaths by casualties in the fishery, ever finds a public record at home, however transient and immediately forgotten that record. Do you suppose that that poor fellow there, who this moment perhaps caught by the whale-line off the coast of New Guinea, is being carried down to the bottom of the sea by the sounding leviathan&mdash;do you suppose that that poor fellow's name will appear in the newspaper obituary you will read to-morrow at your breakfast? No: because the mails are very irregular between here and New Guinea. In fact, did you ever hear what might be called regular news direct or indirect from New Guinea? Yet I tell you that upon one particular voyage which I made to the Pacific, among many others we spoke thirty different ships, every one of which had had a death by a whale, some of them more than one, and three that had each lost a boat's crew. For God's sake, be economical with your lamps and candles! not a gallon you burn, but at least one drop of man's blood was spilled for it.</p><p>Secondly: People ashore have indeed some indefinite idea that a whale is an enormous creature of enormous power; but I have ever found that when narrating to them some specific example of this two-fold enormousness, they have significantly complimented me upon my facetiousness; when, I declare upon my soul, I had no more idea of being facetious than Moses, when he wrote the history of the plagues of Egypt.</p><p>But fortunately the special point I here seek can be established upon testimony entirely independent of my own. That point is this: The Sperm Whale is in some cases sufficiently powerful, knowing, and judiciously malicious, as with direct aforethought to stave in, utterly destroy, and sink a large ship; and what is more, the Sperm Whale HAS done it.</p>",
+            "question": "Chord MN makes an angle of 60o at the centre ‘O’ and the perimeter of triangle MNO is 18 units.",
+            "id": "3",
+            "marked": "True",
+            "options": {
+              "1": "Quantity A is greater",
+              "2": "Quantity B is greater",
+              "3": "Two quantities are equal",
+              "4": "Relationship cannot be determined"
+            }
+          },
+          "4": {
+            "solution": "2",
+            "answer": "1",
+            "type": "passage",
+            "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
+            "passage": "<p>I do not know where I can find a better place than just here, to make mention of one or two other things, which to me seem important, as in printed form establishing in all respects the reasonableness of the whole story of the White Whale, more especially the catastrophe. For this is one of those disheartening instances where truth requires full as much bolstering as error. So ignorant are most landsmen of some of the plainest and most palpable wonders of the world, that without some hints touching the plain facts, historical and otherwise, of the fishery, they might scout at Moby Dick as a monstrous fable, or still worse and more detestable, a hideous and intolerable allegory.</p><p>First: Though most men have some vague flitting ideas of the general perils of the grand fishery, yet they have nothing like a fixed, vivid conception of those perils, and the frequency with which they recur. One reason perhaps is, that not one in fifty of the actual disasters and deaths by casualties in the fishery, ever finds a public record at home, however transient and immediately forgotten that record. Do you suppose that that poor fellow there, who this moment perhaps caught by the whale-line off the coast of New Guinea, is being carried down to the bottom of the sea by the sounding leviathan&mdash;do you suppose that that poor fellow's name will appear in the newspaper obituary you will read to-morrow at your breakfast? No: because the mails are very irregular between here and New Guinea. In fact, did you ever hear what might be called regular news direct or indirect from New Guinea? Yet I tell you that upon one particular voyage which I made to the Pacific, among many others we spoke thirty different ships, every one of which had had a death by a whale, some of them more than one, and three that had each lost a boat's crew. For God's sake, be economical with your lamps and candles! not a gallon you burn, but at least one drop of man's blood was spilled for it.</p><p>Secondly: People ashore have indeed some indefinite idea that a whale is an enormous creature of enormous power; but I have ever found that when narrating to them some specific example of this two-fold enormousness, they have significantly complimented me upon my facetiousness; when, I declare upon my soul, I had no more idea of being facetious than Moses, when he wrote the history of the plagues of Egypt.</p><p>But fortunately the special point I here seek can be established upon testimony entirely independent of my own. That point is this: The Sperm Whale is in some cases sufficiently powerful, knowing, and judiciously malicious, as with direct aforethought to stave in, utterly destroy, and sink a large ship; and what is more, the Sperm Whale HAS done it.</p>",
+            "question": "Next question Chord MN makes an angle of 60o at the centre ‘O’ and the perimeter of triangle MNO is 18 units.",
+            "id": "4",
+            "marked": false,
+            "options": {
+              "1": "Quantity A is greater",
+              "2": "Quantity B is greater",
+              "3": "Two quantities are equal",
+              "4": "Relationship cannot be determined"
+            }
+          },
+          "5": {
+            "answer": "1",
+            "type": "passageOnTop",
+            "solution": "2",
+            "passage": "<p>I do not know where I can find a better place than just here, to make mention of one or two other things, which to me seem important, as in printed form establishing in all respects the reasonableness of the whole story of the White Whale, more especially the catastrophe. For this is one of those disheartening instances where truth requires full as much bolstering as error. So ignorant are most landsmen of some of the plainest and most palpable wonders of the world, that without some hints touching the plain facts, historical and otherwise, of the fishery, they might scout at Moby Dick as a monstrous fable, or still worse and more detestable, a hideous and intolerable allegory.</p> <img src=\"https://placeholdit.imgix.net/~text?txtsize=33&amp;txt=350%C3%97150&amp;w=350&amp;h=150\" class=\"img-thumbnail\">",
+            "question": "Next question Chord MN makes an angle of 60o at the centre ‘O’ and the perimeter of triangle MNO is 18 units.",
+            "id": "4",
+            "marked": false,
+            "options": {
+              "1": "Quantity A is greater",
+              "2": "Quantity B is greater",
+              "3": "Two quantities are equal",
+              "4": "Relationship cannot be determined"
+            }
+          },
+          "6": {
+            "solution": "myadfa",
+            "answer": "awessdome",
+            "type": "onlyInput",
+            "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
+            "question": "A code of six digit number have to be generated. The code should be divisible by both 4 and as well 10. Then the possible number of codes is:",
+            "id": "5",
+            "marked": true,
+            "instructions": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum tempore, non magni soluta possimus commodi ipsam quo delectus. Odit, similique, cumque. Itaque nihil asperiores delectus soluta dolor inventore eligendi earum"
+          },
+          "7": {
+            "solution": "['-7', '0', '4']",
+            "answer": {
+              "1": "5",
+              "2": "4",
+              "3": "-7"
+            },
+            "type": "multi-answer",
+            "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
+            "question": "(x, y) = (2, 1) satisfies the equation 2x+by+c=0. Given 0≤b≤3, then what values can ‘c’ take? Indicate all such apply:",
+            "id": "6",
+            "marked": false,
+            "options": {
+              "1": "-7",
+              "2": "-6",
+              "3": "-4",
+              "4": "0",
+              "5": "4",
+              "6": "7"
+            }
+          },
+          "8": {
+            "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
+            "question": "What fraction of internet users in 2012 from country C are the internet users in 2000 from country A",
+            "solution": "12/21",
+            "marked": "True",
+            "answer": {
+              "1": "12",
+              "2": "21"
+            },
+            "type": "fraction",
+            "id": "7"
+          },
+          "9": {
+            "solution": {
+              "1": "Fervid"
+            },
+            "answer": {
+              "1": "Fervid"
+            },
+            "type": "1-blank",
+            "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
+            "question": "Even a cursory glance at history proves that all war represents a --------- of diplomacy.",
+            "id": "8",
+            "marked": false,
+            "options": {
+              "blank-1": {
+                "1": "unpalatable",
+                "2": "Productive",
+                "3": "Destructive",
+                "4": "Fervid",
+                "5": "Creative"
+              }
+            }
+          },
+          "10": {
+            "solution": {
+              "1": "Productive",
+              "2": "Productive"
+            },
+            "answer": {
+              "1": "unpalatable",
+              "2": "Creative"
+            },
+            "type": "2-blank",
+            "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
+            "question": "What fraction of internet users in 2012 from country C are the internet users in 2000 from country A",
+            "id": "9",
+            "marked": "True",
+            "options": {
+              "blank-2": {
+                "1": "Non proves",
+                "2": "Productive",
+                "3": "Destructive",
+                "4": "Fervid",
+                "5": "Creative"
+              },
+              "blank-1": {
+                "1": "unpalatable",
+                "2": "Productive",
+                "3": "Destructive",
+                "4": "Fervid",
+                "5": "Creative"
+              }
+            }
+          },
+          "11": {
+            "solution": {
+              "1": "Destructive",
+              "2": "Creative",
+              "3": "Creative"
+            },
+            "answer": {
+              "1": "Destructive",
+              "2": "Destructive",
+              "3": "Destructive"
+            },
+            "type": "3-blank",
+            "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
+            "question": "What fraction of internet users in 2012 from country C are the internet users in 2000 from country A",
+            "id": "10",
+            "marked": "True",
+            "options": {
+              "blank-2": {
+                "1": "Non proves",
+                "2": "Productive",
+                "3": "Destructive",
+                "4": "Fervid",
+                "5": "Creative"
+              },
+              "blank-3": {
+                "1": "Non provdas",
+                "2": "Productive",
+                "3": "Destructive",
+                "4": "Fervid",
+                "5": "Creative"
+              },
+              "blank-1": {
+                "1": "unpalatable",
+                "2": "Productive",
+                "3": "Destructive",
+                "4": "Fervid",
+                "5": "Creative"
+              }
+            }
+          }
+        },
+        "title": "Aptitude & mathematics"
+      },
+      "2": {
+        "duration": 1200000,
+        "timeRemaining": 90879,
+        "section": "1",
+        "questions": {
+          "1": {
+            "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
+            "question": "Chord MN makes an angle of 60o at the centre ‘O’ and the perimeter of triangle MNO is 18 units.",
+            "marked": "True",
+            "options": {
+              "1": "Quantity A is greater",
+              "2": "Quantity B is greater",
+              "3": "Two quantities are equal",
+              "4": "Relationship cannot be determined"
+            },
+            "answer": "3",
+            "type": "mcq",
+            "id": "1"
+          },
+          "2": {
+            "answer": "0",
+            "type": "passage",
+            "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
+            "passage": "<p>I do not know where I can find a better place than just here, to make mention of one or two other things, which to me seem important, as in printed form establishing in all respects the reasonableness of the whole story of the White Whale, more especially the catastrophe. For this is one of those disheartening instances where truth requires full as much bolstering as error. So ignorant are most landsmen of some of the plainest and most palpable wonders of the world, that without some hints touching the plain facts, historical and otherwise, of the fishery, they might scout at Moby Dick as a monstrous fable, or still worse and more detestable, a hideous and intolerable allegory.</p><p>First: Though most men have some vague flitting ideas of the general perils of the grand fishery, yet they have nothing like a fixed, vivid conception of those perils, and the frequency with which they recur. One reason perhaps is, that not one in fifty of the actual disasters and deaths by casualties in the fishery, ever finds a public record at home, however transient and immediately forgotten that record. Do you suppose that that poor fellow there, who this moment perhaps caught by the whale-line off the coast of New Guinea, is being carried down to the bottom of the sea by the sounding leviathan&mdash;do you suppose that that poor fellow's name will appear in the newspaper obituary you will read to-morrow at your breakfast? No: because the mails are very irregular between here and New Guinea. In fact, did you ever hear what might be called regular news direct or indirect from New Guinea? Yet I tell you that upon one particular voyage which I made to the Pacific, among many others we spoke thirty different ships, every one of which had had a death by a whale, some of them more than one, and three that had each lost a boat's crew. For God's sake, be economical with your lamps and candles! not a gallon you burn, but at least one drop of man's blood was spilled for it.</p><p>Secondly: People ashore have indeed some indefinite idea that a whale is an enormous creature of enormous power; but I have ever found that when narrating to them some specific example of this two-fold enormousness, they have significantly complimented me upon my facetiousness; when, I declare upon my soul, I had no more idea of being facetious than Moses, when he wrote the history of the plagues of Egypt.</p><p>But fortunately the special point I here seek can be established upon testimony entirely independent of my own. That point is this: The Sperm Whale is in some cases sufficiently powerful, knowing, and judiciously malicious, as with direct aforethought to stave in, utterly destroy, and sink a large ship; and what is more, the Sperm Whale HAS done it.</p>",
+            "question": "Chord MN makes an angle of 60o at the centre ‘O’ and the perimeter of triangle MNO is 18 units.",
+            "id": "2",
+            "marked": "True",
+            "options": {
+              "1": "Quantity A is greater",
+              "2": "Quantity B is greater",
+              "3": "Two quantities are equal",
+              "4": "Relationship cannot be determined"
+            }
+          },
+          "3": {
+            "answer": "3",
+            "type": "passage",
+            "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
+            "passage": "<p>I do not know where I can find a better place than just here, to make mention of one or two other things, which to me seem important, as in printed form establishing in all respects the reasonableness of the whole story of the White Whale, more especially the catastrophe. For this is one of those disheartening instances where truth requires full as much bolstering as error. So ignorant are most landsmen of some of the plainest and most palpable wonders of the world, that without some hints touching the plain facts, historical and otherwise, of the fishery, they might scout at Moby Dick as a monstrous fable, or still worse and more detestable, a hideous and intolerable allegory.</p><p>First: Though most men have some vague flitting ideas of the general perils of the grand fishery, yet they have nothing like a fixed, vivid conception of those perils, and the frequency with which they recur. One reason perhaps is, that not one in fifty of the actual disasters and deaths by casualties in the fishery, ever finds a public record at home, however transient and immediately forgotten that record. Do you suppose that that poor fellow there, who this moment perhaps caught by the whale-line off the coast of New Guinea, is being carried down to the bottom of the sea by the sounding leviathan&mdash;do you suppose that that poor fellow's name will appear in the newspaper obituary you will read to-morrow at your breakfast? No: because the mails are very irregular between here and New Guinea. In fact, did you ever hear what might be called regular news direct or indirect from New Guinea? Yet I tell you that upon one particular voyage which I made to the Pacific, among many others we spoke thirty different ships, every one of which had had a death by a whale, some of them more than one, and three that had each lost a boat's crew. For God's sake, be economical with your lamps and candles! not a gallon you burn, but at least one drop of man's blood was spilled for it.</p><p>Secondly: People ashore have indeed some indefinite idea that a whale is an enormous creature of enormous power; but I have ever found that when narrating to them some specific example of this two-fold enormousness, they have significantly complimented me upon my facetiousness; when, I declare upon my soul, I had no more idea of being facetious than Moses, when he wrote the history of the plagues of Egypt.</p><p>But fortunately the special point I here seek can be established upon testimony entirely independent of my own. That point is this: The Sperm Whale is in some cases sufficiently powerful, knowing, and judiciously malicious, as with direct aforethought to stave in, utterly destroy, and sink a large ship; and what is more, the Sperm Whale HAS done it.</p>",
+            "question": "Next question Chord MN makes an angle of 60o at the centre ‘O’ and the perimeter of triangle MNO is 18 units.",
+            "id": "3",
+            "marked": "True",
+            "options": {
+              "1": "Quantity A is greater",
+              "2": "Quantity B is greater",
+              "3": "Two quantities are equal",
+              "4": "Relationship cannot be determined"
+            }
+          },
+          "4": {
+            "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
+            "question": "A code of six digit number have to be generated. The code should be divisible by both 4 and as well 10. Then the possible number of codes is:",
+            "marked": "True",
+            "answer": "122",
+            "type": "onlyInput",
+            "id": "4"
+          },
+          "5": {
+            "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
+            "question": "(x, y) = (2, 1) satisfies the equation 2x+by+c=0. Given 0≤b≤3, then what values can ‘c’ take? Indicate all such apply:",
+            "marked": "True",
+            "options": {
+              "1": "-7",
+              "2": "-6",
+              "3": "-4",
+              "4": "0",
+              "5": "4",
+              "6": "7"
+            },
+            "answer": {
+              "1": " ",
+              "2": "-7",
+              "3": "0"
+            },
+            "type": "multi-answer",
+            "id": "5"
+          },
+          "6": {
+            "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
+            "question": "What fraction of internet users in 2012 from country C are the internet users in 2000 from country A",
+            "marked": "True",
+            "answer": {
+              "1": "12",
+              "2": "90"
+            },
+            "type": "fraction",
+            "id": "6"
+          },
+          "7": {
+            "solution": {
+              "1": "Productive",
+              "2": 2,
+              "3": 3
+            },
+            "answer": {
+              "1": "Productive"
+            },
+            "type": "1-blank",
+            "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
+            "question": "Even a cursory glance at history proves that all war represents a --------- of diplomacy.",
+            "id": "7",
+            "marked": "True",
+            "options": {
+              "blank-1": {
+                "1": "unpalatable",
+                "2": "Productive",
+                "3": "Destructive",
+                "4": "Fervid",
+                "5": "Creative"
+              }
+            }
+          },
+          "8": {
+            "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
+            "question": "What fraction of internet users in 2012 from country C are the internet users in 2000 from country A",
+            "marked": "True",
+            "options": {
+              "blank-2": {
+                "1": "Non proves",
+                "2": "Productive",
+                "3": "Destructive",
+                "4": "Fervid",
+                "5": "Creative"
+              },
+              "blank-1": {
+                "1": "unpalatable",
+                "2": "Productive",
+                "3": "Destructive",
+                "4": "Fervid",
+                "5": "Creative"
+              }
+            },
+            "answer": {
+              "1": "unpalatable",
+              "2": "Destructive"
+            },
+            "type": "2-blank",
+            "id": "8"
+          },
+          "9": {
+            "imageUrl": "https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97150&w=350&h=150",
+            "question": "What fraction of internet users in 2012 from country C are the internet users in 2000 from country A",
+            "marked": "True",
+            "options": {
+              "blank-2": {
+                "1": "Non proves",
+                "2": "Productive",
+                "3": "Destructive",
+                "4": "Fervid",
+                "5": "Creative"
+              },
+              "blank-3": {
+                "1": "Non provdas",
+                "2": "Productive",
+                "3": "Destructive",
+                "4": "Fervid",
+                "5": "Creative"
+              },
+              "blank-1": {
+                "1": "unpalatable",
+                "2": "Productive",
+                "3": "Destructive",
+                "4": "Fervid",
+                "5": "Creative"
+              }
+            },
+            "answer": {
+              "1": "Fervid",
+              "2": "Productive",
+              "3": "Fervid"
+            },
+            "type": "3-blank",
+            "id": "9"
+          }
+        },
+        "title": "Aptitude & mathematics"
+      }
+    },
+    "id": 2,
+    "name": "Test 1"
+  }
 }
