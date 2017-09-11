@@ -44,7 +44,8 @@ export function completeTest (testId) {
   return {type: TEST_OVER, testId}
 }
 
-const user = firebaseDB.ref(`/users/${window.session.user_id}`)
+// const user = firebaseDB.ref(`/users/${window.session.user_id}`)
+const user = firebaseDB.ref(`/users/108572626634547513663`)
 
 export function fetchTests () {
   return dispatch => {
