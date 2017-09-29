@@ -99,7 +99,12 @@ class TestTools extends React.Component {
       return (
         <div>
           <Col md={6}>
-            Practice Test-{this.props.testId} Section {this.props.sectionId}
+            <div style={{fontSize:'16px', fontWeight:'bold'}}>
+              GREOnline® Practice Test-{this.props.testId} Section {this.props.sectionId}
+            </div>
+            <div>
+              [[Logo]]
+            </div>
           </Col>
           <Col xs={2} md={1} className='button-bg-tools'>
             <CalculatorHelp arg={{ qId }} />
@@ -118,7 +123,12 @@ class TestTools extends React.Component {
       return (
         <div>
           <Col md={6}>
-            Practice Test-{this.props.testId} Section {this.props.sectionId}
+            <div style={{fontSize:'16px', fontWeight:'bold'}}>
+              GREOnline® Practice Test-{this.props.testId} Section {this.props.sectionId}
+            </div>
+            <div>
+              [[Logo]]
+            </div>
           </Col>
           <Col xs={2} md={1} className='button-bg-tools'>
             <Review arg={{ qId }} />

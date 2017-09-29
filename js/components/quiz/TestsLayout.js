@@ -11,16 +11,6 @@ const TestsLayout = React.createClass({
   render () {
     return (
       <Grid>
-        <Navbar inverse collapseOnSelect>
-          <Navbar.Header>
-            <Navbar.Brand>
-              <Link to='/tests' className='brand-link'>
-                GRE Online
-              </Link>
-            </Navbar.Brand>
-            <Navbar.Toggle />
-          </Navbar.Header>
-        </Navbar>
         {this.props.children}
       </Grid>
     )
