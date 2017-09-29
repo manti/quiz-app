@@ -29,29 +29,29 @@ const QtyAQtyB = React.createClass({
     return (
       <div>
         <Grid>
-          <Row className="show-grid">
+          <Row className='show-grid'>
             <Col md={6} mdPush={3}>
               <Image src={q.imageUrl} thumbnail />
             </Col>
           </Row>
-          <Row className="show-grid">
+          <Row className='show-grid'>
             <Col md={12}>
               <p dangerouslySetInnerHTML={this.createMarkup(q.question)} />
             </Col>
           </Row>
-          <Row className="show-grid">
+          <Row className='show-grid'>
             <Col md={6}>
-              <div style={{textDecoration:'underline', fontWeight:'bold'}}>Quantity A</div>
+              <div style={{textDecoration: 'underline', fontWeight: 'bold'}}>Quantity A</div>
               <div>{this.props.question.quantityA}</div>
             </Col>
             <Col md={6}>
-              <div style={{textDecoration:'underline', fontWeight:'bold'}}>Quantity B</div>
+              <div style={{textDecoration: 'underline', fontWeight: 'bold'}}>Quantity B</div>
               <div>{this.props.question.quantityB}</div>
             </Col>
           </Row>
           <br />
           <br />
-          <Row className="show-grid">
+          <Row className='show-grid'>
             <Col md={6} mdPush={3}>
               <form>
                 {q.options.map((val, i) => {

@@ -38,8 +38,8 @@ const Fraction = React.createClass({
             {q.question}
           </Col>
         </Row>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <Row>
           <Col xs={3} mdPush={3}>
             <input type='text' disabled={this.props.isReview} className='form-control' onChange={this.handleNumerator} value={q.answer[0]} />

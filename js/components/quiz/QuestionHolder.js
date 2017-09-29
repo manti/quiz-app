@@ -38,8 +38,8 @@ const QuestionHolder = React.createClass({
     this.props.dispatch(setNextPrevQuestion(id, sectionId, qId))
     this.props.dispatch(setQuizParams(id, sectionId, qId))
   },
-  wrapComponentInGrid(comp) {
-    return(
+  wrapComponentInGrid (comp) {
+    return (
       <Grid>
         {comp}
       </Grid>
