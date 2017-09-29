@@ -21,6 +21,9 @@ class TestTools extends React.Component {
     let prefix = this.props.isReview ? 'review/' : ''
     return `/tests/${prefix}${testId}/${sectionId}/${qId}`
   }
+  gotoTestsPage() {
+    hashHistory.push(`/tests`)
+  }
   render () {
     const { qId } = this.props
     let backButton = <br />
@@ -119,7 +122,7 @@ class TestTools extends React.Component {
               [[Logo]]
             </div>
           </Col>
-           <Col xs={2} md={1} className='button-bg-tools'>
+           <Col xs={2} md={1} className='button-bg-tools' onClick={this.gotoTestsPage}>
             <div style={{textAlign: 'center'}}>
               <div>Quit w/ Save</div>
             </div>
