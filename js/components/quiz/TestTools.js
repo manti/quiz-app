@@ -21,17 +21,6 @@ class TestTools extends React.Component {
     let prefix = this.props.isReview ? 'review/' : ''
     return `/tests/${prefix}${testId}/${sectionId}/${qId}`
   }
-  showGotoNextPrompt () {
-    if (this.props.isReview) {
-      console.log('go to next section')
-      hashHistory.push(
-        `/tests/review/${this.props.testId}/${Number(this.props.sectionId) +
-          1}/1`
-      )
-    } else {
-      this.props.dispatch(toggleGotoPrompt())
-    }
-  }
   render () {
     const { qId } = this.props
     let backButton = <br />
