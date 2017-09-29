@@ -8,6 +8,7 @@ import TestTools from './TestTools'
 import MultiAnswer from './MultiAnswer'
 import TextSelection from './TextSelection'
 import PassageOnTop from './PassageOnTop'
+import QtyAQtyB from './QtyAQtyB'
 import { connect } from 'react-redux'
 import { Col } from 'react-bootstrap'
 // import QuestionInstructions from './QuestionInstructions'
@@ -91,6 +92,9 @@ const QuestionHolder = React.createClass({
           break
         case 'passageOnTop':
           questionComponent = <PassageOnTop question={q} />
+          break
+        case 'qtyaqtyb':
+          questionComponent = <QtyAQtyB question={q} />
           break
         default:
           questionComponent = q.type

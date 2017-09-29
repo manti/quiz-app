@@ -256,8 +256,8 @@
               "Relationship cannot be determined"
             ],
             "question": "Chord MN makes an angle of 60o at the centre ‘O’ and the perimeter of triangle MNO is 18 units.",
-            "quantity-a": "Radius of the circle",
-            "quantity-b": "4.5",
+            "quantityA": "Radius of the circle",
+            "quantityB": "4.5",
             "solution": "3",
             "type": "qtyaqtyb"
           }
