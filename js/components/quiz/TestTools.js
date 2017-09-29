@@ -24,6 +24,9 @@ class TestTools extends React.Component {
   gotoTestsPage() {
     hashHistory.push(`/tests`)
   }
+  exitSection() {
+    hashHistory.push(`/seenAllQs`)
+  }
   render () {
     const { qId } = this.props
     let backButton = <br />
@@ -127,7 +130,7 @@ class TestTools extends React.Component {
               <div>Quit w/ Save</div>
             </div>
           </Col>
-          <Col xs={2} md={1} className='button-bg-tools'>
+          <Col xs={2} md={1} className='button-bg-tools' onClick={this.exitSection}>
             <div style={{textAlign: 'center'}}>
               <div>Exit section</div>
             </div>
