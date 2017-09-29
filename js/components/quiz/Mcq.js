@@ -30,7 +30,7 @@ const Mcq = React.createClass({
       <div>
         <Row>
           <Col md={6} mdPush={3}>
-           { q.imageUrl ? (<Image src={q.imageUrl} thumbnail />) : (null) }
+            { q.imageUrl ? (<Image src={q.imageUrl} thumbnail />) : (null) }
           </Col>
         </Row>
         <Row>
