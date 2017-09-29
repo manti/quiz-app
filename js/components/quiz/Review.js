@@ -34,8 +34,8 @@ const Review = React.createClass({
       const notMarked = <Glyphicon glyph='remove' />
       return (
         <div>
-          <div onClick={this.showModal}>
-            <span>Review</span>
+          <div onClick={this.showModal} style={{textAlign: 'center'}}>
+            <div>Review</div>
             <Glyphicon className='center-the-icon' glyph='list-alt' />
           </div>
           <Modal

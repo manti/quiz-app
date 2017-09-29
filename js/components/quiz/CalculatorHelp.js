@@ -25,8 +25,10 @@ const CalculatorHelp = React.createClass({
       return (
         <div>
           <div onClick={this.showModal}>
-            <div>Calc</div>
-            <Glyphicon className='center-the-icon' glyph='calendar' />
+            <div style={{textAlign: 'center'}}>
+              <div>Calc</div>
+              <Glyphicon className='center-the-icon' glyph='calendar' />
+            </div>
           </div>
           <Modal
             show={this.state.show}

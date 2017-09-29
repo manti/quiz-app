@@ -98,39 +98,33 @@ class TestTools extends React.Component {
     if (this.props.isReview) {
       return (
         <div>
-          <h4 style={{ position: 'absolute', left: '100px' }}>
+          <Col md={6}>
             Practice Test-{this.props.testId} Section {this.props.sectionId}
-          </h4>
-          <div
-            className='util-box'
-            style={{ display: 'flex', justifyContent: 'flex-end' }}
-          >
-            <Col xs={2} md={1} className='button-bg-tools'>
-              <CalculatorHelp arg={{ qId }} />
-            </Col>
-            <Col xs={2} md={1} className='button-bg-tools'>
+          </Col>
+          <Col xs={2} md={1} className='button-bg-tools'>
+            <CalculatorHelp arg={{ qId }} />
+          </Col>
+          <Col xs={2} md={1} className='button-bg-tools'>
+            <div style={{textAlign: 'center'}}>
               <div>Help</div>
               <Glyphicon className='center-the-icon' glyph='question-sign' />
-            </Col>
-            {backButton}
-            {nextButton}
-          </div>
+            </div>
+          </Col>
+          {backButton}
+          {nextButton}
         </div>
       )
     } else {
       return (
         <div>
-          <h4 style={{ position: 'absolute', left: '100px' }}>
+          <Col md={6}>
             Practice Test-{this.props.testId} Section {this.props.sectionId}
-          </h4>
-          <div
-            className='util-box'
-            style={{ display: 'flex', justifyContent: 'flex-end' }}
-          >
-            <Col xs={2} md={1} className='button-bg-tools'>
-              <Review arg={{ qId }} />
-            </Col>
-            <Col xs={2} md={1} className='button-bg-tools'>
+          </Col>
+          <Col xs={2} md={1} className='button-bg-tools'>
+            <Review arg={{ qId }} />
+          </Col>
+          <Col xs={2} md={1} className='button-bg-tools'>
+            <div style={{textAlign: 'center'}}>
               <div>Mark</div>
               <Checkbox
                 style={{ margin: '0 5px' }}
@@ -139,17 +133,19 @@ class TestTools extends React.Component {
                 }}
                 checked={this.props.q.marked}
               />
-            </Col>
-            <Col xs={2} md={1} className='button-bg-tools'>
-              <CalculatorHelp arg={{ qId }} />
-            </Col>
-            <Col xs={2} md={1} className='button-bg-tools'>
+            </div>
+          </Col>
+          <Col xs={2} md={1} className='button-bg-tools'>
+            <CalculatorHelp arg={{ qId }} />
+          </Col>
+          <Col xs={2} md={1} className='button-bg-tools'>
+            <div style={{textAlign: 'center'}}>
               <div>Help</div>
               <Glyphicon className='center-the-icon' glyph='question-sign' />
-            </Col>
-            {backButton}
-            {nextButton}
-          </div>
+            </div>
+          </Col>
+          {backButton}
+          {nextButton}
         </div>
       )
     }

@@ -17,10 +17,10 @@ class CurrentTestStatus extends React.Component {
     }
     return (
       <div>
-        <Col xs={16} md={11}>
+        <Col md={6} mdPush={5}>
           <div style={{'fontWeight': 'bold', 'fontSize': '16px'}} className='i-am-center'>Question {Number(this.props.qId)} of {this.props.questionsCount}</div>
         </Col>
-        <Col xs={2} md={1}>
+        <Col mdOffset={4} md={2} pullRight>
           <SectionTimer arg={this.props.arg} />
         </Col>
       </div>
