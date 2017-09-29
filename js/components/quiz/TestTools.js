@@ -122,12 +122,22 @@ class TestTools extends React.Component {
     } else {
       return (
         <div>
-          <Col md={6}>
+          <Col md={4}>
             <div style={{fontSize:'16px', fontWeight:'bold'}}>
               GREOnline® Practice Test-{this.props.testId} Section {this.props.sectionId}
             </div>
             <div>
               [[Logo]]
+            </div>
+          </Col>
+           <Col xs={2} md={1} className='button-bg-tools'>
+            <div style={{textAlign: 'center'}}>
+              <div>Quit w/ Save</div>
+            </div>
+          </Col>
+          <Col xs={2} md={1} className='button-bg-tools'>
+            <div style={{textAlign: 'center'}}>
+              <div>Exit section</div>
             </div>
           </Col>
           <Col xs={2} md={1} className='button-bg-tools'>
