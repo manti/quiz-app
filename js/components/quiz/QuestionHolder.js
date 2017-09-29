@@ -10,7 +10,7 @@ import TextSelection from './TextSelection'
 import PassageOnTop from './PassageOnTop'
 import QtyAQtyB from './QtyAQtyB'
 import { connect } from 'react-redux'
-import { Col } from 'react-bootstrap'
+import { Col, Grid } from 'react-bootstrap'
 // import QuestionInstructions from './QuestionInstructions'
 import CurrentTestStatus from './CurrentTestStatus'
 import { hashHistory } from 'react-router'
@@ -37,6 +37,13 @@ const QuestionHolder = React.createClass({
     let {id, sectionId, qId} = this.props.params
     this.props.dispatch(setNextPrevQuestion(id, sectionId, qId))
     this.props.dispatch(setQuizParams(id, sectionId, qId))
+  },
+  wrapComponentInGrid(comp) {
+    return(
+      <Grid>
+        {comp}
+      </Grid>
+    )
   },
   render () {
     if (this.props.fetchingTests) {
@@ -107,7 +114,7 @@ const QuestionHolder = React.createClass({
             <br />
             <br />
             <p style={{clear: 'left'}}>
-              {questionComponent}
+              {this.wrapComponentInGrid(questionComponent)}
             </p>
           </Col>
         </div>

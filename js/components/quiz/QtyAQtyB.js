@@ -49,7 +49,8 @@ const QtyAQtyB = React.createClass({
               <div>{this.props.question.quantityB}</div>
             </Col>
           </Row>
-          <hr />
+          <br />
+          <br />
           <Row className="show-grid">
             <Col md={6} mdPush={3}>
               <form>

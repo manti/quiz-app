@@ -1,6 +1,6 @@
 import React from 'react'
 import FourChoices from './FourChoices'
-import { Image } from 'react-bootstrap'
+import { Image, Row, Col } from 'react-bootstrap'
 import { updateAnswer } from './actionCreators'
 import { connect } from 'react-redux'
 
@@ -28,13 +28,25 @@ const Mcq = React.createClass({
     let q = this.props.question
     return (
       <div>
-        <Image src={q.imageUrl} thumbnail />
-        <p dangerouslySetInnerHTML={this.createMarkup(q.question)} />
-        <form>
-          {q.options.map((val, i) => {
-            return <FourChoices isReview={this.props.isReview} index={i} key={i} checked={String(q.answer) === String(i)} isSolution={String(q.solution) === String(i)} changeHandler={this.changeRadio} choices={val} />
-          })}
-        </form>
+        <Row>
+          <Col md={6} mdPush={3}>
+           { q.imageUrl ? (<Image src={q.imageUrl} thumbnail />) : (null) }
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <p dangerouslySetInnerHTML={this.createMarkup(q.question)} />
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <form>
+              {q.options.map((val, i) => {
+                return <FourChoices isReview={this.props.isReview} index={i} key={i} checked={String(q.answer) === String(i)} isSolution={String(q.solution) === String(i)} changeHandler={this.changeRadio} choices={val} />
+              })}
+            </form>
+          </Col>
+        </Row>
       </div>
     )
   }

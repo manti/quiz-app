@@ -33,19 +33,23 @@ const Fraction = React.createClass({
     }
     return (
       <div>
-        {q.question}
-        <br />
-        <br />
         <Row>
-          <Col xs={2}>
+          <Col>
+            {q.question}
+          </Col>
+        </Row>
+        <br/>
+        <br/>
+        <Row>
+          <Col xs={3} mdPush={3}>
             <input type='text' disabled={this.props.isReview} className='form-control' onChange={this.handleNumerator} value={q.answer[0]} />
           </Col>
         </Row>
         <Row>
-          <hr className='col-xs-2' style={{marginBottom: '10px', 'marginTop': '10px'}} />
+          <hr className='col-xs-3 col-xs-offset-3' style={{marginBottom: '10px', 'marginTop': '10px'}} />
         </Row>
         <Row>
-          <Col xs={2}>
+          <Col xs={3} mdPush={3}>
             <input type='text' disabled={this.props.isReview} className='form-control' onChange={this.handleDenominator} value={q.answer[1]} />
           </Col>
         </Row>
