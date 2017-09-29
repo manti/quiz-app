@@ -1,5 +1,5 @@
 import React from 'react'
-import { FormGroup, FormControl, Alert } from 'react-bootstrap'
+import { FormGroup, FormControl, Alert, InputGroup, Col } from 'react-bootstrap'
 import { connect } from 'react-redux'
 import { updateAnswer } from './actionCreators'
 const { object, func, string } = React.PropTypes
@@ -26,7 +26,12 @@ const OnlyInput = React.createClass({
       <div className='OnlyInput'>
         <p>{this.props.question.question}</p>
         <FormGroup>
-          <FormControl disabled={this.props.isReview} onChange={this.handleInputChange} type='text' placeholder='Answer' value={this.props.question.answer} />
+        <Col sm={6}>
+          <InputGroup>
+            <FormControl disabled={this.props.isReview} onChange={this.handleInputChange} type='text' placeholder='Answer' value={this.props.question.answer} />
+            <InputGroup.Addon>{this.props.question.suffix}</InputGroup.Addon>
+          </InputGroup>
+        </Col>
         </FormGroup>
         {solText}
       </div>
