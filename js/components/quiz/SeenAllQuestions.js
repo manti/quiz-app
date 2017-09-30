@@ -40,7 +40,6 @@ class SeenAllQuestions extends React.Component {
           </Col>
           <Col xs={2} md={1} className='button-bg-tools pull-right' onClick={this.onContinueClick}>
             <div style={{textAlign: 'center', position: 'relative', top: '10px'}}>
-              <div>Review</div>
               <Review />
             </div>
           </Col>

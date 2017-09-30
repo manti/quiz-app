@@ -34,6 +34,8 @@ const TestsList = React.createClass({
               </div>
             </Col>
           </Row>
+          <br/>
+          <br/>
           <Row>
             <Col md={12}>
               <div className='TestsList'>

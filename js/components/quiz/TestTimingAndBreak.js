@@ -30,12 +30,21 @@ class TestTimingAndBreak extends React.Component {
           </Col>
         </Row>
         <Row>
-          <Col>
+          <Col md={5} mdPush={4}>
+            <h2 className='i-am-center'>Test Timing And Break</h2>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={5} mdPush={3}>
             <div >
-              <h2 className='i-am-center'>Test Timing And Break</h2>
               <p className='i-am-center'>There will be a 10-minute break following section 3 of the test. Between sections you may pause for 60 seconds, if you choose.</p>
-              <h4 className='i-am-center'>Click Continue to proceed.</h4>
+              
             </div>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={5} mdPush={4}>
+            <h4 className='i-am-center'>Click Continue to proceed.</h4>
           </Col>
         </Row>
       </div>
