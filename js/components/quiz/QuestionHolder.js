@@ -109,7 +109,7 @@ const QuestionHolder = React.createClass({
       return (
         <div>
           <Grid>
-            <Row style={{backgroundColor:'#a5c5ef', padding:'15px'}}> 
+            <Row style={{backgroundColor: '#a5c5ef', padding: '15px'}}>
               <Col md={12}>
                 <TestTools q={q} />
               </Col>

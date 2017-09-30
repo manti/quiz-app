@@ -21,10 +21,10 @@ class TestTools extends React.Component {
     let prefix = this.props.isReview ? 'review/' : ''
     return `/tests/${prefix}${testId}/${sectionId}/${qId}`
   }
-  gotoTestsPage() {
+  gotoTestsPage () {
     hashHistory.push(`/tests`)
   }
-  exitSection() {
+  exitSection () {
     hashHistory.push(`/seenAllQs`)
   }
   render () {
@@ -94,7 +94,7 @@ class TestTools extends React.Component {
       return (
         <div>
           <Col md={6}>
-            <div style={{fontSize:'16px', fontWeight:'bold'}}>
+            <div style={{fontSize: '16px', fontWeight: 'bold'}}>
               GREOnline® Practice Test-{this.props.testId} Section {this.props.sectionId}
             </div>
             <div>
@@ -118,7 +118,7 @@ class TestTools extends React.Component {
       return (
         <div>
           <Col md={4}>
-            <div style={{fontSize:'16px', fontWeight:'bold'}}>
+            <div style={{fontSize: '16px', fontWeight: 'bold'}}>
               GREOnline® Practice Test-{this.props.testId} Section {this.props.sectionId}
             </div>
             <div>

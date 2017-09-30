@@ -33,17 +33,17 @@ const QnA = React.createClass({
     if (!this.props.fetchingTests && !this.props.tests[this.props.params.id].completed) {
       return (
         <div>
-          <Row style={{backgroundColor:'#a5c5ef', padding:'15px'}}>
+          <Row style={{backgroundColor: '#a5c5ef', padding: '15px'}}>
             <Col md={4}>
-              <div style={{fontSize:'16px', fontWeight:'bold'}}>
-                GREOnline® 
+              <div style={{fontSize: '16px', fontWeight: 'bold'}}>
+                GREOnline®
               </div>
               <div>
                 [[Logo]]
               </div>
             </Col>
             <Col xs={2} md={1} className='button-bg-tools pull-right' onClick={this.onContinueClick}>
-              <div style={{textAlign: 'center', position:'relative', top: '10px'}}>
+              <div style={{textAlign: 'center', position: 'relative', top: '10px'}}>
                 <Link className='i-am-center' to={`/testTimingAndBreak`}>
                   <div>Continue</div>
                 </Link>
@@ -57,7 +57,7 @@ const QnA = React.createClass({
           </Row>
           <Row>
             <Col>
-              <h5>These tests will help you in honing your skills and quantifies your expertise. The scores from GREOnline.in tests does not guarantee you will get the same range of scores in original GRE General Test</h5>  
+              <h5>These tests will help you in honing your skills and quantifies your expertise. The scores from GREOnline.in tests does not guarantee you will get the same range of scores in original GRE General Test</h5>
             </Col>
           </Row>
         </div>

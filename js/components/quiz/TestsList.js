@@ -24,10 +24,10 @@ const TestsList = React.createClass({
     if (!this.props.fetchingTests) {
       return (
         <div>
-          <Row style={{backgroundColor:'#a5c5ef', padding:'15px'}}>
+          <Row style={{backgroundColor: '#a5c5ef', padding: '15px'}}>
             <Col md={4}>
-              <div style={{fontSize:'16px', fontWeight:'bold'}}>
-                GREOnline® 
+              <div style={{fontSize: '16px', fontWeight: 'bold'}}>
+                GREOnline®
               </div>
               <div>
                 [[Logo]]
