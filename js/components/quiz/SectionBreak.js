@@ -1,5 +1,5 @@
 import React from 'react'
-import { Col, Button } from 'react-bootstrap'
+import { Col, Button, Row } from 'react-bootstrap'
 import {hashHistory} from 'react-router'
 import {setTestStatus} from './actionCreators'
 import {connect} from 'react-redux'
@@ -23,15 +23,29 @@ class SectionBreak extends React.Component {
   render () {
     return (
       <div>
-        <div style={{'display': 'flex', 'justifyContent': 'flex-end'}} >
-          <Col xs={2} md={1}>
-            <Button onClick={this.onContinueClick}>Continue</Button>
+        <Row style={{backgroundColor: '#a5c5ef', padding: '15px'}}>
+          <Col md={4}>
+            <div style={{fontSize: '16px', fontWeight: 'bold'}}>
+              GREOnline®
+            </div>
+            <div>
+              [[Logo]]
+            </div>
           </Col>
-        </div>
-        <br />
-        <p>There will be a 60 second pause unless you wish to continue immediately.</p>
-        <p>The test will automatically continue when the pause time expires.</p>
-        <p>If you do not wish to pause, click Continue.</p>
+          <Col xs={2} md={1} className='button-bg-tools pull-right' onClick={this.onContinueClick}>
+            <div style={{textAlign: 'center', position: 'relative', top: '10px'}}>
+              <div>Continue</div>
+            </div>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <br />
+            <p>There will be a 60 second pause unless you wish to continue immediately.</p>
+            <p>The test will automatically continue when the pause time expires.</p>
+            <p>If you do not wish to pause, click Continue.</p>
+          </Col>
+        </Row>
       </div>
     )
   }
