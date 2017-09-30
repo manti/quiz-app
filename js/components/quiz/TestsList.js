@@ -1,6 +1,7 @@
 import React from 'react'
 import TestCard from './TestCard'
 import { connect } from 'react-redux'
+import { Col, Row} from 'react-bootstrap'
 import { setTestStatus, fetchTests } from './actionCreators'
 const { func, bool, object } = React.PropTypes
 
@@ -23,11 +24,25 @@ const TestsList = React.createClass({
     if (!this.props.fetchingTests) {
       return (
         <div>
-          <div className='TestsList'>
-            {tests.map((test, i) => {
-              return <TestCard title={`Test-${test}`} testId={test} key={i} />
-            })}
-          </div>
+          <Row style={{backgroundColor:'#a5c5ef', padding:'15px'}}>
+            <Col md={4}>
+              <div style={{fontSize:'16px', fontWeight:'bold'}}>
+                GREOnline® 
+              </div>
+              <div>
+                [[Logo]]
+              </div>
+            </Col>
+          </Row>
+          <Row>
+            <Col md={12}>
+              <div className='TestsList'>
+                {tests.map((test, i) => {
+                  return <TestCard title={`Test-${test}`} testId={test} key={i} />
+                })}
+              </div>
+            </Col>
+          </Row>
         </div>
       )
     } else {

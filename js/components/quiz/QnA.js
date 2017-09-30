@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Button } from 'react-bootstrap'
+import { Button, Row, Col } from 'react-bootstrap'
 import {fetchTests, setTestStatus} from './actionCreators'
 import { hashHistory, Link } from 'react-router'
 
@@ -33,11 +33,33 @@ const QnA = React.createClass({
     if (!this.props.fetchingTests && !this.props.tests[this.props.params.id].completed) {
       return (
         <div>
-          <h3 className='i-am-center'>Disclaimer</h3>
-          <h6>These tests will help you in honing your skills and quantifies your expertise. The scores from GREOnline.in tests does not guarantee you will get the same range of scores in original GRE General Test</h6>
-          <Link className='i-am-center' to={`/testTimingAndBreak`}>
-            <Button>Start test</Button>
-          </Link>
+          <Row style={{backgroundColor:'#a5c5ef', padding:'15px'}}>
+            <Col md={4}>
+              <div style={{fontSize:'16px', fontWeight:'bold'}}>
+                GREOnline® 
+              </div>
+              <div>
+                [[Logo]]
+              </div>
+            </Col>
+            <Col xs={2} md={1} className='button-bg-tools pull-right' onClick={this.onContinueClick}>
+              <div style={{textAlign: 'center', position:'relative', top: '10px'}}>
+                <Link className='i-am-center' to={`/testTimingAndBreak`}>
+                  <div>Continue</div>
+                </Link>
+              </div>
+            </Col>
+          </Row>
+          <Row>
+            <Col mdPush={5} md={6}>
+              <h4>Disclaimer</h4>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <h5>These tests will help you in honing your skills and quantifies your expertise. The scores from GREOnline.in tests does not guarantee you will get the same range of scores in original GRE General Test</h5>  
+            </Col>
+          </Row>
         </div>
       )
     } else {
