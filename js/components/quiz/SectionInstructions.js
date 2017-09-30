@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 const {object, func, string} = React.PropTypes
-import { Col, Button } from 'react-bootstrap'
+import { Col, Button, Row } from 'react-bootstrap'
 import {hashHistory} from 'react-router'
 
 class SectionInstructions extends React.Component {
@@ -28,18 +28,42 @@ class SectionInstructions extends React.Component {
     const questionsCount = currentSection.questions.filter(val => val !== undefined).length
     return (
       <div>
-        <div style={{'display': 'flex', 'justifyContent': 'flex-end'}} >
-          <Col xs={2} md={1}>
-            <Button onClick={this.onContinueClick}>Continue</Button>
+        <Row style={{backgroundColor: '#a5c5ef', padding: '15px'}}>
+          <Col md={4}>
+            <div style={{fontSize: '16px', fontWeight: 'bold'}}>
+              GREOnline®
+            </div>
+            <div>
+              [[Logo]]
+            </div>
           </Col>
-          <Col xs={2} md={1}>
-            <Button onClick={this.onContinueClick}>Exit Section</Button>
+          <Col xs={2} md={1} className='button-bg-tools pull-right' onClick={this.onContinueClick}>
+            <div style={{textAlign: 'center', position: 'relative', top: '10px'}}>
+              <div>Continue</div>
+            </div>
           </Col>
-        </div>
-        <h2 className='i-am-center'>{currentSection.title}</h2>
-        <h3 className='i-am-center'>{questionsCount} questions</h3>
-        <h3 className='i-am-center'>{currentSection.duration / 60000} minutes</h3>
-        <p className='i-am-center'>{currentSection.instructions}</p>
+          <Col xs={2} md={1} className='button-bg-tools pull-right' onClick={this.onContinueClick}>
+            <div style={{textAlign: 'center', position: 'relative', top: '10px'}}>
+              <div>Exit Section</div>
+            </div>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={5} mdPush={4}>
+            <h2 className='i-am-center'>{currentSection.title}</h2>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={5} mdPush={4}>
+            <h3 className='i-am-center'>{questionsCount} questions</h3>
+          </Col>
+        </Row>
+        <Row>
+          <Col md={5} mdPush={4}>
+            <h3 className='i-am-center'>{currentSection.duration / 60000} minutes</h3>
+            <p className='i-am-center'>{currentSection.instructions}</p>
+          </Col>
+        </Row>
       </div>
     )
   }
