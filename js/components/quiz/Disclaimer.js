@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
-import { Button, Row, Col } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 
 const Disclaimer = () => {
   return (

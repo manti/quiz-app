@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 const {object, func, string} = React.PropTypes
-import { Col, Button, Row } from 'react-bootstrap'
+import { Col, Row } from 'react-bootstrap'
 import {hashHistory} from 'react-router'
 
 class SectionInstructions extends React.Component {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Col, Button, Row } from 'react-bootstrap'
+import { Col, Row } from 'react-bootstrap'
 import Review from './Review'
 import {zeroSectionTime} from './actionCreators'
 import {connect} from 'react-redux'

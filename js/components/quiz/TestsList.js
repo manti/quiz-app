@@ -1,7 +1,7 @@
 import React from 'react'
 import TestCard from './TestCard'
 import { connect } from 'react-redux'
-import { Col, Row} from 'react-bootstrap'
+import { Col, Row } from 'react-bootstrap'
 import { setTestStatus, fetchTests } from './actionCreators'
 const { func, bool, object } = React.PropTypes
 
@@ -34,8 +34,8 @@ const TestsList = React.createClass({
               </div>
             </Col>
           </Row>
-          <br/>
-          <br/>
+          <br />
+          <br />
           <Row>
             <Col md={12}>
               <div className='TestsList'>
