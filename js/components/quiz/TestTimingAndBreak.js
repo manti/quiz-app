@@ -1,5 +1,5 @@
 import React from 'react'
-import { Col, Button, Row } from 'react-bootstrap'
+import { Col, Row } from 'react-bootstrap'
 import {hashHistory} from 'react-router'
 
 class TestTimingAndBreak extends React.Component {
@@ -38,7 +38,7 @@ class TestTimingAndBreak extends React.Component {
           <Col md={5} mdPush={3}>
             <div >
               <p className='i-am-center'>There will be a 10-minute break following section 3 of the test. Between sections you may pause for 60 seconds, if you choose.</p>
-              
+
             </div>
           </Col>
         </Row>

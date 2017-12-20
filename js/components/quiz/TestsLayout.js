@@ -1,6 +1,5 @@
 import React from 'react'
-import { Navbar, Grid } from 'react-bootstrap'
-import { Link } from 'react-router'
+import { Grid } from 'react-bootstrap'
 const { object } = React.PropTypes
 
 const TestsLayout = React.createClass({

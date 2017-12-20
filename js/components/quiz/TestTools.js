@@ -1,7 +1,7 @@
 import React from 'react'
 import { Col, Checkbox, Glyphicon } from 'react-bootstrap'
 import { Link, hashHistory } from 'react-router'
-import { markQuestion, toggleGotoPrompt } from './actionCreators'
+import { markQuestion } from './actionCreators'
 import { connect } from 'react-redux'
 import CalculatorHelp from './CalculatorHelp'
 import Review from './Review'
@@ -125,7 +125,7 @@ class TestTools extends React.Component {
               [[Logo]]
             </div>
           </Col>
-           <Col xs={2} md={1} className='button-bg-tools' onClick={this.gotoTestsPage}>
+          <Col xs={2} md={1} className='button-bg-tools' onClick={this.gotoTestsPage}>
             <div style={{textAlign: 'center'}}>
               <div>Quit w/ Save</div>
             </div>

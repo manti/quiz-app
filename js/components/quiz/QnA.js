@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Button, Row, Col } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap'
 import {fetchTests, setTestStatus} from './actionCreators'
 import { hashHistory, Link } from 'react-router'
 
